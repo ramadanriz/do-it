@@ -11,6 +11,10 @@ body{
     flex-direction: column;
 }
 
+a{
+    text-decoration: none !important;
+}
+
 .app-bar {
     padding: 8px 20px !important;
     display: grid;
@@ -90,6 +94,10 @@ main {
 
 footer{
     bottom: 0;
+}
+
+ion-icon {
+    font-size: 25px;
 }
 
 @media screen and (min-width: 750px) {

@@ -7,7 +7,8 @@ $custom-theme-colors: (
     "altyellow": #f3f37b,
     "altblue": #bedce4,
     "altblack": #03071e,
-    "altgray": #fef2ee
+    "altgray": #fef2ee,
+    "altpink": #ff0a54
 );
 
 $theme-colors: map-merge($custom-theme-colors, $theme-colors);
