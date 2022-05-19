@@ -72,7 +72,7 @@ a{
     text-decoration: none;
     color: black;
     padding: 8px;
-    margin-bottom: 5px;
+    margin-bottom: 5px !important;
     width: 100%;
     font-size: 1.2rem;
 }
@@ -100,6 +100,93 @@ ion-icon {
     font-size: 25px;
 }
 
+.quotes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper{
+    width: 90%;
+    border-radius: 15px;
+    padding: 30px 30px 25px;
+}
+
+.wrapper header{
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.wrapper .content{
+    margin: 35px 0 !important;
+}
+
+.wrapper .content .quote-area{
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper .content .quote-area i{
+    font-size: 15px;
+}
+
+.wrapper .content .quote-area i:first-child{
+    margin: 3px 10px 0 0 !important;
+}
+
+.wrapper .content .quote-area i:last-child{
+    display: flex;
+    align-items: flex-end;
+    margin: 0 0 3px 10px !important;
+}
+
+.wrapper .content .quote-area .quote{
+    font-size: 22px;
+    text-align: center;
+    word-break: break-all;
+}
+
+.wrapper .content .author{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px !important;
+    font-size: 18px;
+    font-style: italic;
+}
+
+.wrapper .content .author span:first-child{
+    margin: -7px 5px 0 0 !important;
+    font-family: monospace !important;
+}
+
+.wrapper .buttons{
+    border-top: 1px solid #d8cbf7;
+}
+
+.wrapper .buttons .features{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px !important;
+}
+
+.wrapper .buttons .features button{
+    border: none;
+    outline: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 13px 22px;
+    border-radius: 30px;
+    background: #5372f0;
+}
+
+.wrapper .buttons .features button.loading{
+    opacity: .7;
+    pointer-events: none;
+}
+
 @media screen and (min-width: 750px) {
     .app-bar {
         grid-template-columns: 1fr auto;
@@ -124,7 +211,7 @@ ion-icon {
         display: inline-block;
         width: 120px;
         text-align: center;
-        margin: 0;
+        margin: 0 !important;
     }
 }
    

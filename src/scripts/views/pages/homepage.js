@@ -1,3 +1,5 @@
+import QuotesDbSource from '../../data/quotesdb-source'
+
 const Homepage = {
   async render () {
     return `
@@ -34,11 +36,33 @@ const Homepage = {
         </div>
       </div>
     <section>
+    <section class="quotes my-5 bg-altgray">
+      <div class="wrapper">
+        <header>Quote of the Day</header>
+        <div class="content">
+          <div class="quote-area">
+            <i class="fa-solid fa-quote-left"></i>
+            <p class="quote">Never give up because you never know if the next try is going to be the one that works.</p>
+            <i class="fa-solid fa-quote-right"></i>
+          </div>
+          <div class="author">
+            <span>__</span>
+            <span class="name">Kevin Mcalistar</span>
+          </div>
+        </div>
+        <div class="buttons">
+          <div class="features">
+            <button>Generate Quote</button>
+          </div>
+        </div>
+      </div>
+    </section>
     `
   },
 
   async afterRender () {
-    // Fungsi ini akan dipanggil setelah render()
+    const quotes = await QuotesDbSource.homePage()
+    console.log(quotes)
   }
 }
 
