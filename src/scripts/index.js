@@ -2,6 +2,8 @@ import 'regenerator-runtime'
 import '../styles/style.css'
 import 'bootstrap'
 import '../styles/bootstrap.css'
+import './component/app-bar'
+import './component/app-footer'
 import App from './views/app'
 
 const app = new App({

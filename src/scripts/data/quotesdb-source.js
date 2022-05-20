@@ -4,7 +4,7 @@ class QuotesDbSource {
   static async homePage () {
     const response = await fetch(API_ENDPOINT.HOMEPAGE)
     const responseJson = await response.json()
-    return responseJson.results
+    return responseJson
   }
 }
 
