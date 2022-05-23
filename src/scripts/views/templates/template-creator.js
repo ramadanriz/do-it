@@ -19,22 +19,22 @@ const heroTemplate = () => `
 
 const sectionFirst = () => `
   <section class="section-first my-5">
-      <div class="container-fluid">
+      <div class="container mx-auto">
         <div class="row">
-          <div class="col">
+          <div class="col py-3">
             <h3 class="text-center text-altblack fw-bold">Mengapa Harus Punya 'Goals' Dalam Hidup?</h3>
           </div>
         </div>
-        <div class="row justify-content-center">
+        <div class="row justify-content-between align-items-center">
           <div class="col-lg-5">
-            <img src="question-man.jpg" class="img-fluid" alt="Confused business character making important decision">
+            <img src="confused-character.png" class="img-fluid" alt="Confused business character making important decision">
           </div>
-          <div class="col-lg-6 align-self-center">
+          <div class="col-lg-7">
             <p class="lh-lg">"Goals" adalah sesuatu yang ingin kita capai atau peroleh. Tanpanya hidup akan berputar tanpa arah dan tujuan hidup tak akan jelas. Tanpa "Goals" hidup kita layaknya sebuah perjalanan tanpa sebuah peta dan alamat. Kita terus berputar mencari sesuatu yang tak jelas dan terjebak dalam rute yang sama tanpa kejelasan. "Goals" adalah sebuah tujuan yang kita tetapkan. Dengan adanya "Goals" kita tahu ke arah mana harus melangkah. "Goals" akan berfungsi sebagai kompas untuk menuju ke tempat yang kita inginkan.</p>
           </div>
         </div>
       </div>
-    <section>
+  <section>
 `
 
 const sectionDailyMotivation = () => `
@@ -52,6 +52,58 @@ const sectionDailyMotivation = () => `
       </div>
     </div>
   </section>
+`
+
+const sectionThird = () => `
+  <section class="section-third my-5">
+    <div class="container mx-auto">
+      <div class="row">
+        <div class="col py-3 text-center">
+          <h3 class="text-altblack fw-bold">Panduan Dalam Menetapkan Goals</h3>
+          <span>Sumber: There is a S.M.A.R.T Way to Write Management’s Goals and Objective (George T. Doran, 1981)</span>
+        </div>
+      </div>
+      <div class="row justify-content-between align-items-center">
+        <div class="col-lg-5">
+          <img src="woman-checking.png" class="img-fluid" alt="woman checking giant check list">
+        </div>
+        <div class="col-lg-7">
+          <ol class="list-group list-group-numbered list-group-flush">
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">Specific (spesifik)</div>
+                "Goals" harus spesifik menunjukkan apa yang harus dilakukan disertai prosedur pencapaian, dan hasil yang diharapkan.
+              </div>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">Measurable (terukur)</div>
+                "Goals" yang ditetapkan harus dapat diukur baik secara kuantitatif dan kualitatif.
+              </div>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">Achievable (dapat dicapai)</div>
+                "Goals" yang dibuat harus bisa di kerjakan oleh individual maupun grup.
+              </div>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">Relevant (relevan)</div>
+                Pastikan "Goals" yang ingin dicapai selaras dengan misi perusahaan.
+              </div>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">Time-bound goals (tepat waktu)</div>
+                Pencapaian "Goals" harus tetap dan dalam kurun waktu yang telah ditentukan.
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  <section>
 `
 
 const aboutPageTemplate = () => `
@@ -131,4 +183,4 @@ const aboutPageTemplate = () => `
   </div>
 `
 
-export { heroTemplate, sectionFirst, sectionDailyMotivation, aboutPageTemplate }
+export { heroTemplate, sectionFirst, sectionDailyMotivation, sectionThird, aboutPageTemplate }

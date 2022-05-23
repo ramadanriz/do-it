@@ -1,5 +1,5 @@
 import QuotesDbSource from '../../data/quotesdb-source'
-import { heroTemplate, sectionDailyMotivation, sectionFirst } from '../templates/template-creator'
+import { heroTemplate, sectionDailyMotivation, sectionThird, sectionFirst } from '../templates/template-creator'
 
 const Homepage = {
   async render () {
@@ -7,6 +7,7 @@ const Homepage = {
     ${heroTemplate()}
     ${sectionFirst()}
     ${sectionDailyMotivation()}
+    ${sectionThird()}
     `
   },
 
