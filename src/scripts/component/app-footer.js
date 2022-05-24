@@ -5,7 +5,7 @@ class AppFooter extends HTMLElement {
 
   render () {
     this.innerHTML = `
-        <section class="d-flex justify-content-between p-4 bg-altpink">
+        <section class="d-flex justify-content-between p-4 bg-altviolet">
             <div class="me-5">
                 <span>Mari terhubung dengan kami di:</span>
             </div>
@@ -18,7 +18,7 @@ class AppFooter extends HTMLElement {
         </section>
 
         <section>
-            <div class="container-fluid text-center text-md-start mt-5">
+            <div class="container-fluid text-center text-md-start mt-5 text-altblack">
                 <div class="row mt-3">
                     <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                         <h6 class="text-uppercase fw-bold">DO.IT</h6>
@@ -28,7 +28,7 @@ class AppFooter extends HTMLElement {
                     <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
                         <h6 class="text-uppercase fw-bold">Layanan Kami</h6>
                         <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px"/>
-                        <p><a href="#/todo" class="text-white">Todo Apps</a></p>
+                        <p><a href="#/todo" class="text-altblack">Todo Apps</a></p>
                     </div>
                     <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
                         <h6 class="text-uppercase fw-bold">Kantor Kami</h6>
@@ -46,7 +46,7 @@ class AppFooter extends HTMLElement {
             </div>
         </section>
         
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        <div class="text-center p-3 bg-altpurple text-altblack">
             Copyright © 2022 Do.it.
         </div>
     `

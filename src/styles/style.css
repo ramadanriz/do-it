@@ -38,7 +38,7 @@ app-bar .app-bar__menu button {
     background-color: transparent;
     border: none;
     font-size: 30px;
-    padding: 8px;
+    padding: 10px;
     cursor: pointer;
 }
    
@@ -81,19 +81,18 @@ app-bar .app-bar__navigation ul li a {
 }
 
 app-bar .app-bar__navigation ul li a:hover{
-    color: red;
+    color: #ff0a54;
 }
 
 main {
     flex: 1;
 }
 
-.featurette-heading {
+/* .featurette-heading {
     font-weight: 300;
     line-height: 1;
-    /* rtl:remove */
     letter-spacing: -.05rem;
-}
+} */
 
 footer{
     bottom: 0;

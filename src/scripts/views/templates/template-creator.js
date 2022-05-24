@@ -107,7 +107,7 @@ const sectionThird = () => `
 `
 
 const aboutPageTemplate = () => `
-  <h2 class="fw-bold mb-2 text-center text-altblack py-5">Our Team</h2>
+  <h2 class="fw-bold mb-2 text-center text-altblack py-5">Tim Kami</h2>
   <div class="row pb-5 mb-4">
     <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
       
