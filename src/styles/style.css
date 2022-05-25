@@ -1,6 +1,6 @@
 *{
     box-sizing: border-box;
-    margin: 0 !important;
+    margin: 0;
     font-family: 'Poppins', sans-serif !important;
 }
 
@@ -93,6 +93,18 @@ main {
     line-height: 1;
     letter-spacing: -.05rem;
 } */
+
+/* styling untuk todo */
+.add-todo-btn {
+    border: none;
+    border-radius: 30px;
+    background-color: #f4f4f4;
+    color: grey;
+}
+
+.add-todo-btn:hover {
+    background-color: #f3f37b;
+}
 
 footer{
     bottom: 0;

@@ -8,8 +8,31 @@
     <title>Do.it</title>
 </head>
 <body>
-    <header class="bg-altpurple"><app-bar></app-bar></header>
-    <main id="mainContent"></main>
+    <!-- <header class="bg-altpurple"><app-bar></app-bar></header> -->
+    <main id="mainContent">
+        <div class="d-flex justify-content-between w-50">
+            <h3 class="d-flex align-items-center mb-0">Tugas Harian</h3>
+
+            <button type="button" class="add-todo-btn d-flex align-items-center justify-content-center px-3 py-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <ion-icon class="me-2" name="add-circle"></ion-icon> Tambah tugas
+            </button>
+        </div>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                    ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                        <button type="button" class="btn btn-primary">Tambah</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
     <footer class="text-center text-lg-start text-white bg-altpurple"><app-footer></app-footer></footer>
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
