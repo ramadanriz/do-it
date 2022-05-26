@@ -1,6 +1,6 @@
 import 'regenerator-runtime'
-import '../styles/style.css'
 import 'bootstrap'
+import '../styles/style.css'
 import '../styles/bootstrap.css'
 import './component/app-bar'
 import './component/app-footer'

@@ -107,75 +107,77 @@ const sectionThird = () => `
 `
 
 const aboutPageTemplate = () => `
-  <h2 class="fw-bold mb-2 text-center text-altblack py-5">Tim Kami</h2>
-  <div class="row pb-5 mb-4">
-    <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-      
-      <div class="card shadow-sm border-0 rounded">
-        <div class="card-body p-0"><img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bWFuJTIwZmFjZXxlbnwwfDJ8MHx8&auto=format&fit=crop&w=500" alt="" class="w-100 card-img-top">
-          <div class="p-4">
-            <h5 class="mb-0">Dwiky Darmawansyah</h5>
-            <p class="small text-muted">Web Developer</p>
-            <ul class="social mb-0 list-inline mt-3">
-              <li class="list-inline-item m-0"><a href="#" class="social-link"><ion-icon name="logo-twitter" size="small"></ion-icon></a></li>
-              <li class="list-inline-item m-0"><a href="#" class="social-link"><ion-icon name="logo-instagram" size="small"></ion-icon></a></li>
-              <li class="list-inline-item m-0"><a href="#" class="social-link"><ion-icon name="logo-github" size="small"></ion-icon></a></li>
-              <li class="list-inline-item m-0"><a href="#" class="social-link"><ion-icon name="logo-linkedin" size="small"></ion-icon></a></li>
-            </ul>
+  <div class="container-fluid mx-auto">
+    <h2 class="fw-bold mb-2 text-center text-altblack py-5">Tim Kami</h2>
+    <div class="row pb-5 mb-4">
+      <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+        
+        <div class="card shadow-sm border-0 rounded">
+          <div class="card-body p-0"><img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bWFuJTIwZmFjZXxlbnwwfDJ8MHx8&auto=format&fit=crop&w=500" alt="" class="w-100 card-img-top">
+            <div class="p-4">
+              <h5 class="mb-0">Dwiky Darmawansyah</h5>
+              <p class="small text-muted">Web Developer</p>
+              <ul class="social mb-0 list-inline mt-3">
+                <li class="list-inline-item m-0"><a href="#" class="social-link"><ion-icon name="logo-twitter" size="small"></ion-icon></a></li>
+                <li class="list-inline-item m-0"><a href="#" class="social-link"><ion-icon name="logo-instagram" size="small"></ion-icon></a></li>
+                <li class="list-inline-item m-0"><a href="#" class="social-link"><ion-icon name="logo-github" size="small"></ion-icon></a></li>
+                <li class="list-inline-item m-0"><a href="#" class="social-link"><ion-icon name="logo-linkedin" size="small"></ion-icon></a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-      <!-- Card-->
-      <div class="card shadow-sm border-0 rounded">
-        <div class="card-body p-0"><img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8bWFuJTIwZmFjZXxlbnwwfDJ8MHx8&auto=format&fit=crop&w=500" alt="" class="w-100 card-img-top">
-          <div class="p-4">
-            <h5 class="mb-0">Faiz Fachrudin</h5>
-            <p class="small text-muted">Web Developer</p>
-            <ul class="social mb-0 list-inline mt-3">
-              <li class="list-inline-item m-0"><a href="#" class="social-link"><ion-icon name="logo-twitter" size="small"></ion-icon></a></li>
-              <li class="list-inline-item m-0"><a href="#" class="social-link"><ion-icon name="logo-instagram" size="small"></ion-icon></a></li>
-              <li class="list-inline-item m-0"><a href="#" class="social-link"><ion-icon name="logo-github" size="small"></ion-icon></a></li>
-              <li class="list-inline-item m-0"><a href="#" class="social-link"><ion-icon name="logo-linkedin" size="small"></ion-icon></a></li>
-            </ul>
+      <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+        <!-- Card-->
+        <div class="card shadow-sm border-0 rounded">
+          <div class="card-body p-0"><img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8bWFuJTIwZmFjZXxlbnwwfDJ8MHx8&auto=format&fit=crop&w=500" alt="" class="w-100 card-img-top">
+            <div class="p-4">
+              <h5 class="mb-0">Faiz Fachrudin</h5>
+              <p class="small text-muted">Web Developer</p>
+              <ul class="social mb-0 list-inline mt-3">
+                <li class="list-inline-item m-0"><a href="#" class="social-link"><ion-icon name="logo-twitter" size="small"></ion-icon></a></li>
+                <li class="list-inline-item m-0"><a href="#" class="social-link"><ion-icon name="logo-instagram" size="small"></ion-icon></a></li>
+                <li class="list-inline-item m-0"><a href="#" class="social-link"><ion-icon name="logo-github" size="small"></ion-icon></a></li>
+                <li class="list-inline-item m-0"><a href="#" class="social-link"><ion-icon name="logo-linkedin" size="small"></ion-icon></a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-      <!-- Card-->
-      <div class="card shadow-sm border-0 rounded">
-        <div class="card-body p-0"><img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWFuJTIwZmFjZXxlbnwwfDJ8MHx8&auto=format&fit=crop&w=500" alt="" class="w-100 card-img-top">
-          <div class="p-4">
-            <h5 class="mb-0">Rio Ramadhan Bahtiar</h5>
-            <p class="small text-muted">Web Developer</p>
-            <ul class="social mb-0 list-inline mt-3">
-              <li class="list-inline-item m-0"><a href="#" class="social-link"><ion-icon name="logo-twitter" size="small"></ion-icon></a></li>
-              <li class="list-inline-item m-0"><a href="#" class="social-link"><ion-icon name="logo-instagram" size="small"></ion-icon></a></li>
-              <li class="list-inline-item m-0"><a href="#" class="social-link"><ion-icon name="logo-github" size="small"></ion-icon></a></li>
-              <li class="list-inline-item m-0"><a href="#" class="social-link"><ion-icon name="logo-linkedin" size="small"></ion-icon></a></li>
-            </ul>
+      <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+        <!-- Card-->
+        <div class="card shadow-sm border-0 rounded">
+          <div class="card-body p-0"><img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWFuJTIwZmFjZXxlbnwwfDJ8MHx8&auto=format&fit=crop&w=500" alt="" class="w-100 card-img-top">
+            <div class="p-4">
+              <h5 class="mb-0">Rio Ramadhan Bahtiar</h5>
+              <p class="small text-muted">Web Developer</p>
+              <ul class="social mb-0 list-inline mt-3">
+                <li class="list-inline-item m-0"><a href="#" class="social-link"><ion-icon name="logo-twitter" size="small"></ion-icon></a></li>
+                <li class="list-inline-item m-0"><a href="#" class="social-link"><ion-icon name="logo-instagram" size="small"></ion-icon></a></li>
+                <li class="list-inline-item m-0"><a href="#" class="social-link"><ion-icon name="logo-github" size="small"></ion-icon></a></li>
+                <li class="list-inline-item m-0"><a href="#" class="social-link"><ion-icon name="logo-linkedin" size="small"></ion-icon></a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-      <!-- Card-->
-      <div class="card shadow-sm border-0 rounded">
-        <div class="card-body p-0"><img src="https://images.unsplash.com/photo-1595152452543-e5fc28ebc2b8?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bWFuJTIwZmFjZXxlbnwwfDJ8MHx8&auto=format&fit=crop&w=500" alt="" class="w-100 card-img-top">
-          <div class="p-4">
-            <h5 class="mb-0">Rizky Ramadhani</h5>
-            <p class="small text-muted">Web Developer</p>
-            <ul class="social mb-0 list-inline mt-3">
-              <li class="list-inline-item m-0"><a href="#" class="social-link"><ion-icon name="logo-twitter" size="small"></ion-icon></a></li>
-              <li class="list-inline-item m-0"><a href="#" class="social-link"><ion-icon name="logo-instagram" size="small"></ion-icon></a></li>
-              <li class="list-inline-item m-0"><a href="#" class="social-link"><ion-icon name="logo-github" size="small"></ion-icon></a></li>
-              <li class="list-inline-item m-0"><a href="#" class="social-link"><ion-icon name="logo-linkedin" size="small"></ion-icon></a></li>
-            </ul>
+      <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+        <!-- Card-->
+        <div class="card shadow-sm border-0 rounded">
+          <div class="card-body p-0"><img src="https://images.unsplash.com/photo-1595152452543-e5fc28ebc2b8?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bWFuJTIwZmFjZXxlbnwwfDJ8MHx8&auto=format&fit=crop&w=500" alt="" class="w-100 card-img-top">
+            <div class="p-4">
+              <h5 class="mb-0">Rizky Ramadhani</h5>
+              <p class="small text-muted">Web Developer</p>
+              <ul class="social mb-0 list-inline mt-3">
+                <li class="list-inline-item m-0"><a href="#" class="social-link"><ion-icon name="logo-twitter" size="small"></ion-icon></a></li>
+                <li class="list-inline-item m-0"><a href="#" class="social-link"><ion-icon name="logo-instagram" size="small"></ion-icon></a></li>
+                <li class="list-inline-item m-0"><a href="#" class="social-link"><ion-icon name="logo-github" size="small"></ion-icon></a></li>
+                <li class="list-inline-item m-0"><a href="#" class="social-link"><ion-icon name="logo-linkedin" size="small"></ion-icon></a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -183,4 +185,36 @@ const aboutPageTemplate = () => `
   </div>
 `
 
-export { heroTemplate, sectionFirst, sectionDailyMotivation, sectionThird, aboutPageTemplate }
+const timerPageTemplate = () => `
+  <div class="pomodoro-container">
+    <div class="length-container">
+        <div id="focusLength-container" class="toggle-button-container">
+            <h1>Focus Length</h1>
+            <time id="focus-length" class="toggle-button-container__sub-container"></time>
+            <div class="toggler-button">
+                <button class="toggle-timer" type="button" id="decrease-focus">-</button> 
+                <button class="toggle-timer" type="button" id="increase-focus">+</button> 
+            </div>
+        </div>
+        <div id="breakLength-container" class="toggle-button-container">
+            <h1>Break Length</h1>
+            <time id="break-length" class="toggle-button-container__sub-container"></time>
+            <div class="toggler-button">
+                <button class="toggle-timer" type="button" id="decrease-break">-</button>
+                <button class="toggle-timer" type="button" id="increase-break">+</button>
+            </div>
+        </div>
+    </div>
+    <div id="countdown-container">
+        <h1 id="type">Focus Session</h1>
+        <time id="countdown"></time>
+    </div>
+    <div id="button-container">
+        <button type="button" id="start-session">Start</button>
+        <button type="button" id="stop-session">Stop</button>
+        <button type="button" id="reset-session">Reset</button>
+    </div>
+  </div>
+`
+
+export { heroTemplate, sectionFirst, sectionDailyMotivation, sectionThird, aboutPageTemplate, timerPageTemplate }

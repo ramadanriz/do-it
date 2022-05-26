@@ -1,6 +1,6 @@
+/* global styling */
 *{
     box-sizing: border-box;
-    margin: 0 !important;
     font-family: 'Poppins', sans-serif !important;
 }
 
@@ -15,6 +15,11 @@ a{
     text-decoration: none !important;
 }
 
+ion-icon {
+    font-size: 25px;
+}
+
+/* navigation */
 body header{
     position: sticky;
     top: 0;
@@ -84,24 +89,17 @@ app-bar .app-bar__navigation ul li a:hover{
     color: #ff0a54;
 }
 
+/* main content */
 main {
     flex: 1;
 }
 
-/* .featurette-heading {
-    font-weight: 300;
-    line-height: 1;
-    letter-spacing: -.05rem;
-} */
-
+/* footer */
 footer{
     bottom: 0;
 }
 
-ion-icon {
-    font-size: 25px;
-}
-
+/* quote section on homepage */
 .quotes{
     display: flex;
     align-items: center;
@@ -175,6 +173,12 @@ ion-icon {
     pointer-events: none;
 }
 
+/* section third on homepage */
+.section-third span{
+    font-size: 12px;
+}
+
+/* about page */
 .social-link {
     width: 30px;
     height: 30px;
@@ -195,8 +199,147 @@ ion-icon {
     color: #555;
 }
 
-.section-third span{
-    font-size: 12px;
+/* timerpage */
+.pomodoro-container {
+  height: 90vh;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+  
+.pomodoro-container button {
+  display: inline-block;
+  height: 38px;
+  padding: 0 10px;
+  color: #03071e;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 38px;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border-radius: 10px;
+  background: #d8cbf7;
+  border: none;
+  cursor: pointer;
+  margin: 0 5px;
+}
+  
+.pomodoro-container button:hover {
+  background: #5d4ad2;
+  color: white;
+}
+  
+.pomodoro-container button[disabled] {
+  cursor: not-allowed;
+  background: #03071e;
+  color: white;
+}
+
+.pomodoro-container h1 {
+  position: relative;
+  margin-bottom: 1em;
+  display: inline-block;
+  padding: 0 10px;
+  font-size: 1.2rem;
+}
+
+.pomodoro-container .length-container{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.pomodoro-container .length-container .toggle-button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pomodoro-container .length-container .toggle-button-container #focus-length,
+.pomodoro-container .length-container .toggle-button-container #break-length {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  margin-bottom: 10px;
+  display: inline-block;
+  background: #fff;
+  color: #03071e;
+  border: 2px solid #5d4ad2;
+  border-radius: 50%;
+}
+
+.pomodoro-container .length-container .toggle-button-container .toggle-timer{
+  width: 50px;
+}
+
+.pomodoro-container #button-container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.pomodoro-container #countdown-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pomodoro-container #countdown-container #countdown {
+  font-size: 4em;
+  cursor: pointer;
+  text-align: center;
+}
+
+.break {
+  background: #5d4ad2;
+  border-color: #d8cbf7 !important;
+}
+
+.break button {
+  border-color: #98C3A1;
+}
+
+.break button:hover {
+  background: #98C3A1;
+}
+
+.break button[disabled] {
+  cursor: not-allowed;
+  background: #a8b3aa;
+}
+
+@media (min-width: 600px) {
+  .pomodoro-container #countdown-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 4px solid #5d4ad2;
+    height: 250px;
+    width: 250px;
+  }
+}
+
+@media (min-width: 700px) {
+  .border:before {
+    content: "";
+    height: 3px;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    position: absolute;
+    width: 200%;
+    top: 50%;
+    left: -50%;
+    z-index: -1;
+  }
 }
 
 @media screen and (min-width: 750px) {
@@ -215,6 +358,12 @@ ion-icon {
         background: transparent;
     }
 
+    app-bar .app-bar__navigation ul{
+        height: 100%;
+        display: flex !important;
+        align-items: center !important;
+    }
+
     app-bar .app-bar__navigation ul li {
         display: inline-block;
     }
@@ -224,6 +373,16 @@ ion-icon {
         width: 120px;
         text-align: center;
         margin: 0 !important;
+    }
+
+    .btn-group {
+        grid-area: btns;
+        justify-content: center;
+    }
+
+    .clock {
+        grid-area: clock;
+        height: 100%;
     }
 }
    
