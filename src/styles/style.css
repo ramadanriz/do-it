@@ -315,6 +315,47 @@ footer{
   background: #a8b3aa;
 }
 
+/* todopage */
+.bg-satu{
+    background: rgb(243,243,123);
+    background: linear-gradient(45deg, rgba(243,243,123,1) 0%, rgba(216,203,247,1) 73%, rgba(190,220,228,1) 100%);
+}
+
+.bg-dua{
+    background: rgb(243,243,123);
+    background: linear-gradient(45deg, rgba(243,243,123,1) 0%, rgba(216,203,247,1) 41%, rgba(190,220,228,1) 93%);
+}
+
+.bg-tiga{
+    background: rgb(243,243,123);
+    background: linear-gradient(45deg, rgba(243,243,123,1) 0%, rgba(216,203,247,1) 33%, rgba(190,220,228,1) 61%);
+}
+
+.logo{
+    font-size: 2.5rem;
+}
+
+button{
+    border: none;
+    background: none;
+}
+
+.fixed-bottom{
+    left: auto !important;
+    right: 10px !important;
+    bottom: 5px !important;
+}
+
+#addGoalsButton{
+    color: #5d4ad2 !important;
+    border: none !important;
+    background: none !important;
+}
+
+#addGoalsButton ion-icon {
+    font-size: 64px;
+}
+
 @media (min-width: 600px) {
   .pomodoro-container #countdown-container {
     display: flex;

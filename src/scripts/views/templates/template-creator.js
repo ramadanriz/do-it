@@ -217,4 +217,158 @@ const timerPageTemplate = () => `
   </div>
 `
 
-export { heroTemplate, sectionFirst, sectionDailyMotivation, sectionThird, aboutPageTemplate, timerPageTemplate }
+const todoPageTemplate = () => `
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4">
+        <div class="d-flex align-items-center">
+            <h2 class="fs-2 m-0">Todo Apps</h2>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row g-3 my-2">
+            <div class="col-md">
+                <div class="p-3 bg-satu shadow-sm d-flex justify-content-around align-items-center rounded">
+                    <div>
+                        <h3 class="fs-2">20</h3>
+                        <p class="fs-5">Total Goals</p>
+                    </div>
+                    <ion-icon name="today" class="logo p-3"></ion-icon>
+                </div>
+            </div>
+
+            <div class="col-md">
+                <div class="p-3 bg-dua shadow-sm d-flex justify-content-around align-items-center rounded">
+                    <div>
+                        <h3 class="fs-2">15</h3>
+                        <p class="fs-5 text-break">Goals in Progress</p>
+                    </div>
+                    <ion-icon name="newspaper" class="logo p-3"></ion-icon>
+                </div>
+            </div>
+
+            <div class="col-md">
+                <div class="p-3 bg-tiga shadow-sm d-flex justify-content-around align-items-center rounded">
+                    <div>
+                        <h3 class="fs-2">5</h3>
+                        <p class="fs-5">Goals Completed</p>
+                    </div>
+                    <ion-icon name="checkmark-done-circle" class="logo p-3"></ion-icon>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid py-5">
+        <div class="row g-3 d-flex justify-content-between">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body p-5">
+                        <h6 class="mb-3">Tambahkan kegiatanmu hari ini</h6>
+                        <form class="d-flex justify-content-center align-items-center mb-4">
+                            <div class="form-outline flex-fill">
+                                <input type="text" id="form3" class="form-control" />
+                            </div>
+                            <button type="submit" class="btn btn-primary ms-2">Tambah</button>
+                        </form>        
+                        <ul class="list-group mb-0">
+                            <li class="list-group-item d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2">
+                                <div class="d-flex align-items-center">
+                                    <input class="form-check-input me-2" type="checkbox" value="" aria-label="..." />Makan
+                                </div>
+                                <a href="#!" data-mdb-toggle="tooltip" title="Remove item"><ion-icon name="close-outline"></ion-icon></a>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2">
+                                <div class="d-flex align-items-center">
+                                    <input class="form-check-input me-2" type="checkbox" value="" aria-label="..." />Minum
+                                </div>
+                                <a href="#!" data-mdb-toggle="tooltip" title="Remove item"><ion-icon name="close-outline"></ion-icon></a>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2">
+                                <div class="d-flex align-items-center">
+                                    <input class="form-check-input me-2" type="checkbox" value="" aria-label="..." />Tidur
+                                </div>
+                                <a href="#!" data-mdb-toggle="tooltip" title="Remove item"><ion-icon name="close-outline"></ion-icon></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>        
+            </div>
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-body p-3">
+                        <h3 class="mb-3">Goals yang akan dicapai</h3>
+                        <div class="row g-3">
+                            <div class="col-sm-6">                                        
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Menyelesaikan program kampus merdeka</h5>
+                                        <ol class="list-group list-group-flush">
+                                            <li class="list-group-item d-flex justify-content-between align-items-center">Daftar <button type="button"><ion-icon name="add-circle-outline"></ion-icon></button></li>
+                                            <li class="list-group-item d-flex justify-content-between align-items-center">Mengikuti progam <button type="button"><ion-icon name="add-circle-outline"></ion-icon></button></li>
+                                            <li class="list-group-item d-flex justify-content-between align-items-center">Lulus <button type="button"><ion-icon name="add-circle-outline"></ion-icon></button></li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Juara piala dunia bersama timnas</h5>
+                                        <ol class="list-group list-group-flush">
+                                            <li class="list-group-item d-flex justify-content-between align-items-center">Daftar <button type="button"><ion-icon name="add-circle-outline"></ion-icon></button></li>
+                                            <li class="list-group-item d-flex justify-content-between align-items-center">Mengikuti progam <button type="button"><ion-icon name="add-circle-outline"></ion-icon></button></li>
+                                            <li class="list-group-item d-flex justify-content-between align-items-center">Lulus <button type="button"><ion-icon name="add-circle-outline"></ion-icon></button></li>
+                                        </ol>                                      
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Juara piala dunia bersama timnas</h5>
+                                        <ol class="list-group list-group-flush">
+                                            <li class="list-group-item d-flex justify-content-between align-items-center">Daftar <button type="button"><ion-icon name="add-circle-outline"></ion-icon></button></li>
+                                            <li class="list-group-item d-flex justify-content-between align-items-center">Mengikuti progam <button type="button"><ion-icon name="add-circle-outline"></ion-icon></button></li>
+                                            <li class="list-group-item d-flex justify-content-between align-items-center">Lulus <button type="button"><ion-icon name="add-circle-outline"></ion-icon></button></li>
+                                        </ol>                                      
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Button trigger modal -->
+    <div class="fixed-bottom">
+    <button type="button" data-bs-toggle="modal" data-bs-target="#addGoals" id="addGoalsButton"><ion-icon name="add-circle"></ion-icon></button>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="addGoals" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="addGoalsLabel" aria-hidden="true">
+    <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="addGoalsLabel">Tambah Goals</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="mb-3">
+                  <label for="goalsName" class="form-label">Nama Goals</label>
+                  <input type="text" class="form-control" id="goalsName" aria-describedby="goalsNameHelp">
+                  <div id="goalsNameHelp" class="form-text">Tambahkan nama goals anda.</div>
+                </div>
+                <button type="submit" class="btn btn-primary">Simpan</button>
+              </form>
+        </div>
+    </div>
+    </div>
+  </div>
+`
+
+export { heroTemplate, sectionFirst, sectionDailyMotivation, sectionThird, aboutPageTemplate, timerPageTemplate, todoPageTemplate }

@@ -1,7 +1,9 @@
+import { todoPageTemplate } from '../templates/template-creator'
+
 const TodoPage = {
   async render () {
     return `
-        <h2>Todo Page</h2>
+        ${todoPageTemplate()}
       `
   },
 
