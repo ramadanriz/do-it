@@ -8,57 +8,8 @@
     <title>Do.it</title>
 </head>
 <body>
-    <!-- <header class="bg-altpurple"><app-bar></app-bar></header> -->
-    <main id="mainContent">
-        <div class="todo-container w-50">
-            <div class="d-flex justify-content-between">
-                <h3 class="d-flex align-items-center mb-0">Tugas hari ini</h3>
-
-                <button type="button" class="todo-btn add-todo-btn d-flex align-items-center justify-content-center px-3 py-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    <ion-icon class="me-2" name="add-circle"></ion-icon> Buat tugas
-                </button>
-            </div>
-
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-body p-4">
-                            <form autocomplete="off">
-                                <div class="input-todo mb-4">
-                                    <input type="text" class="form-control" placeholder="Masukkan nama tugas" required>
-                                    <!-- <div class="form-text">catatan: masukkan nama tugas secara jelas dan spesifik</div> -->
-                                </div>
-                                <div class="d-flex justify-content-end">
-                                    <button type="submit" class="todo-btn submit-todo-btn px-3 py-2">Submit</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="todo-list-container mt-5">
-                <div class="todo-card p-3 d-flex">
-                    <div class="todo-card-left-section d-flex align-items-center w-75">
-                        <input class="task-checkbox" id="task-checkbox" type="checkbox">
-                        <label for="task-checkbox">
-                            <span>&#10004;</span>
-                            <p class="mb-0">Membeli bahan makanan buat sahur</p>
-                        </label>
-                    </div>
-                    <div class="todo-card-right-section d-flex justify-content-end align-items-center w-25">
-                        <button class="todo-card-edit-btn me-2 d-flex align-items-center">
-                            <ion-icon name="create-outline"></ion-icon>
-                        </button>
-                        <button class="todo-card-delete-btn d-flex align-items-center">
-                            <ion-icon name="trash-outline" aria-label="delete"></ion-icon>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
-
+    <header class="bg-altpurple"><app-bar></app-bar></header>
+    <main id="mainContent"></main>
     <footer class="text-center text-lg-start text-white bg-altpurple"><app-footer></app-footer></footer>
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

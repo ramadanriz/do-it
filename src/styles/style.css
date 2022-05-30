@@ -133,6 +133,7 @@ main {
 .todo-card-left-section label {
     cursor: pointer;
     display: flex;
+    align-items: center;
 }
 
 .todo-card-left-section .task-checkbox {
@@ -143,7 +144,7 @@ main {
 
 .todo-card-left-section label span {
     /* content: ''; */
-    width: 1.5em;
+    min-width: 1.5em;
     height: 1.5em;
     border: 2px solid #f3f37b;
     border-radius: 100%;
@@ -165,7 +166,7 @@ main {
 }
 
 .todo-card-edit-btn {
-    color: #ffffff;
+    color: grey;
     padding: 5px;
     border-radius: 10px;
     background-color: #d8cbf7;
@@ -174,7 +175,7 @@ main {
 }
 
 .todo-card-delete-btn {
-    color: rgb(255, 255, 255);
+    color: grey;
     padding: 5px;
     border-radius: 10px;
     background-color: #bedce4;
