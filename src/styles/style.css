@@ -86,7 +86,7 @@ app-bar .app-bar__navigation ul li a {
 }
 
 app-bar .app-bar__navigation ul li a:hover{
-    color: #ff0a54;
+    text-decoration: underline !important;
 }
 
 /* main content */
