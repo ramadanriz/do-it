@@ -1,4 +1,5 @@
-import { todoPageTemplate } from '../templates/template-creator'
+import { todoList, todoPageTemplate } from '../templates/template-creator'
+import crudTodo from '../../utils/crud-todo'
 
 const TodoPage = {
   async render () {
@@ -8,7 +9,7 @@ const TodoPage = {
   },
 
   async afterRender () {
-
+    crudTodo();
   }
 }
 
