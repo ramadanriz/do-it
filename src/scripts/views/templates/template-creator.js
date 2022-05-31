@@ -107,80 +107,20 @@ const sectionThird = () => `
 `
 
 const aboutPageTemplate = () => `
+<div class="container-fluid px-4 py-5">
+  <div class="row flex-lg-row">
+    <div class="col-lg-6">
+      <img src="logo/do-it-logo.png" class="d-block mx-lg-auto img-fluid img-thumbnail p-4 shadow p-3 mb-5 bg-body rounded" alt="do.it logo" loading="lazy">
+    </div>
+    <div class="col-lg-6">
+      <h2 class="fw-bold lh-sm text-altblack">Tentang Do.it</h2>
+      <p class="lead">Do.it merupakan aplikasi productivity berbasis website yang mengimplementasikan responsive web design dan progressive web apps sehingga dapat diakses melalui perangkat desktop maupun mobile. Kami mencoba menggabungkan beberapa fitur dari berbagai aplikasi productivity sejenis, seperti fitur membuat goals, focus timer, daily report, dan daily motivation.</p>
+    </div>
+  </div>
+</div>
   <div class="container-fluid mx-auto">
     <h2 class="fw-bold mb-2 text-center text-altblack py-5">Tim Kami</h2>
-    <div class="row pb-5 mb-4">
-      <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-        
-        <div class="card shadow-sm border-0 rounded">
-          <div class="card-body p-0"><img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bWFuJTIwZmFjZXxlbnwwfDJ8MHx8&auto=format&fit=crop&w=500" alt="" class="w-100 card-img-top">
-            <div class="p-4">
-              <h5 class="mb-0">Dwiky Darmawansyah</h5>
-              <p class="small text-muted">Web Developer</p>
-              <ul class="social mb-0 list-inline mt-3">
-                <li class="list-inline-item m-0"><a href="#" class="social-link"><ion-icon name="logo-twitter" size="small"></ion-icon></a></li>
-                <li class="list-inline-item m-0"><a href="#" class="social-link"><ion-icon name="logo-instagram" size="small"></ion-icon></a></li>
-                <li class="list-inline-item m-0"><a href="#" class="social-link"><ion-icon name="logo-github" size="small"></ion-icon></a></li>
-                <li class="list-inline-item m-0"><a href="#" class="social-link"><ion-icon name="logo-linkedin" size="small"></ion-icon></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-        <!-- Card-->
-        <div class="card shadow-sm border-0 rounded">
-          <div class="card-body p-0"><img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8bWFuJTIwZmFjZXxlbnwwfDJ8MHx8&auto=format&fit=crop&w=500" alt="" class="w-100 card-img-top">
-            <div class="p-4">
-              <h5 class="mb-0">Faiz Fachrudin</h5>
-              <p class="small text-muted">Web Developer</p>
-              <ul class="social mb-0 list-inline mt-3">
-                <li class="list-inline-item m-0"><a href="#" class="social-link"><ion-icon name="logo-twitter" size="small"></ion-icon></a></li>
-                <li class="list-inline-item m-0"><a href="#" class="social-link"><ion-icon name="logo-instagram" size="small"></ion-icon></a></li>
-                <li class="list-inline-item m-0"><a href="#" class="social-link"><ion-icon name="logo-github" size="small"></ion-icon></a></li>
-                <li class="list-inline-item m-0"><a href="#" class="social-link"><ion-icon name="logo-linkedin" size="small"></ion-icon></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-        <!-- Card-->
-        <div class="card shadow-sm border-0 rounded">
-          <div class="card-body p-0"><img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWFuJTIwZmFjZXxlbnwwfDJ8MHx8&auto=format&fit=crop&w=500" alt="" class="w-100 card-img-top">
-            <div class="p-4">
-              <h5 class="mb-0">Rio Ramadhan Bahtiar</h5>
-              <p class="small text-muted">Web Developer</p>
-              <ul class="social mb-0 list-inline mt-3">
-                <li class="list-inline-item m-0"><a href="#" class="social-link"><ion-icon name="logo-twitter" size="small"></ion-icon></a></li>
-                <li class="list-inline-item m-0"><a href="#" class="social-link"><ion-icon name="logo-instagram" size="small"></ion-icon></a></li>
-                <li class="list-inline-item m-0"><a href="#" class="social-link"><ion-icon name="logo-github" size="small"></ion-icon></a></li>
-                <li class="list-inline-item m-0"><a href="#" class="social-link"><ion-icon name="logo-linkedin" size="small"></ion-icon></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-        <!-- Card-->
-        <div class="card shadow-sm border-0 rounded">
-          <div class="card-body p-0"><img src="https://images.unsplash.com/photo-1595152452543-e5fc28ebc2b8?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bWFuJTIwZmFjZXxlbnwwfDJ8MHx8&auto=format&fit=crop&w=500" alt="" class="w-100 card-img-top">
-            <div class="p-4">
-              <h5 class="mb-0">Rizky Ramadhani</h5>
-              <p class="small text-muted">Web Developer</p>
-              <ul class="social mb-0 list-inline mt-3">
-                <li class="list-inline-item m-0"><a href="#" class="social-link"><ion-icon name="logo-twitter" size="small"></ion-icon></a></li>
-                <li class="list-inline-item m-0"><a href="#" class="social-link"><ion-icon name="logo-instagram" size="small"></ion-icon></a></li>
-                <li class="list-inline-item m-0"><a href="#" class="social-link"><ion-icon name="logo-github" size="small"></ion-icon></a></li>
-                <li class="list-inline-item m-0"><a href="#" class="social-link"><ion-icon name="logo-linkedin" size="small"></ion-icon></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="row pb-5 mb-4" id="team-list">
     </div>
   </div>
 `
