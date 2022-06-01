@@ -2,42 +2,97 @@ function crudTodo() {
     const todos = [];
     const TODOS_LOCAL_STORAGE = "TODOS_LOCAL_STORAGE";
 
-    const addTodoForm = document.getElementById("add-todo-form");
+    const generateTodoElement = (todoObject) => {
+        const todoCard = document.createElement("div");
+        todoCard.classList.add("todo-card", "p-3", "d-flex", "my-4");
 
-    addTodoForm.addEventListener("submit", (e) => {
-        e.preventDefault();
+        todoCard.innerHTML = `
+            <div class="todo-card-left-section d-flex align-items-center w-75">
+                <input class="task-checkbox" id="task-${todoObject.id}" type="checkbox">
+                <label for="task-${todoObject.id}">
+                    <span>&#10004;</span>
+                    <p class="mb-0">${todoObject.task}</p>
+                </label>
+            </div>
+        `
 
-        const todoId = +new Date();
-        const todoTitle = document.getElementById("todo-title-input").value;
-        
-        const generateTodoObject = () => {
-            return {
-                id: todoId,
-                task: todoTitle
+        const editTodoIcon = document.createElement("ion-icon");
+        editTodoIcon.setAttribute("name", "create-outline");
+
+        const deleteTodoIcon = document.createElement("ion-icon");
+        deleteTodoIcon.setAttribute("name", "trash-outline");
+
+        const editTodoBtn = document.createElement("button");
+        editTodoBtn.setAttribute("class", "todo-card-edit-btn me-2 d-flex align-items-center");
+        editTodoBtn.append(editTodoIcon);
+        editTodoBtn.addEventListener("click", function () {
+            editTodo(todoObject.id);
+        });
+
+        const deleteTodoBtn = document.createElement("button");
+        deleteTodoBtn.setAttribute("class", "todo-card-delete-btn d-flex align-items-center");
+        deleteTodoBtn.append(deleteTodoIcon);
+        deleteTodoBtn.addEventListener("click", function () {
+            removeTodo(todoObject.id);
+        });
+
+        const todoCardRightSection = document.createElement("div");
+        todoCardRightSection.setAttribute("class", "todo-card-right-section d-flex justify-content-end align-items-center w-25");
+        todoCardRightSection.append(editTodoBtn, deleteTodoBtn);
+
+        todoCard.append(todoCardRightSection);
+
+        return todoCard;
+    }
+
+    var DOMReady = function(callback) {
+        document.readyState === "interactive" || document.readyState === "complete" ? callback() : document.addEventListener("DOMContentLoaded", callback);
+    };
+
+    DOMReady(function() {
+        const addTodoForm = document.getElementById("add-todo-form");
+
+        addTodoForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            const todoId = +new Date();
+            const todoTitle = document.getElementById("todo-title-input").value;
+            
+            const generateTodoObject = () => {
+                return {
+                    id: todoId,
+                    task: todoTitle
+                }
             }
+
+            const todoObject = generateTodoObject();
+
+            todos.push(todoObject);
+            saveData();
+
+            //inisialisasi element container untuk todo
+            //dan mengosongkan isi element container sebelum looping data terbaru
+            const todoListContainer = document.querySelector(".todo-list-container");
+            todoListContainer.innerHTML = "";
+            
+            //looping semua data todo
+            for (const todoItem of todos) {
+                const newTodo = generateTodoElement(todoItem);
+                todoListContainer.append(newTodo);
+            }
+
+
+            document.getElementById("todo-title-input").value = null;
+
+            console.log(todos);
+        })
+
+        if (typeof(Storage) !== undefined) {
+            loadDataFromStorage();
+        } else {
+            alert("Browser kamu tidak mendukung local storage");
         }
-
-        const todoObject = generateTodoObject();
-
-        todos.push(todoObject);
-        saveData();
-
-        //inisialisasi element container untuk todo
-        //dan mengosongkan isi element container sebelum looping data terbaru
-        const todoListContainer = document.querySelector(".todo-list-container");
-        todoListContainer.innerHTML = "";
-        
-        //looping semua data todo
-        for (const todoItem of todos) {
-            const newTodo = generateTodoElement(todoItem);
-            todoListContainer.append(newTodo);
-        }
-
-
-        document.getElementById("todo-title-input").value = null;
-
-        console.log(todos);
-    })
+    });
 
     // const generateTodoElement = (todoObject) => {
     //     const checkBoxLabel = document.createElement("span");
@@ -84,46 +139,6 @@ function crudTodo() {
 
     //     return todoCard;
     // }
-
-    const generateTodoElement = (todoObject) => {
-        const todoCard = document.createElement("div");
-        todoCard.classList.add("todo-card", "p-3", "d-flex", "my-4");
-
-        todoCard.innerHTML = `
-            <div class="todo-card-left-section d-flex align-items-center w-75">
-                <input class="task-checkbox" id="task-${todoObject.id}" type="checkbox">
-                <label for="task-${todoObject.id}">
-                    <span>&#10004;</span>
-                    <p class="mb-0">${todoObject.task}</p>
-                </label>
-            </div>
-        `
-
-        const editTodoIcon = document.createElement("ion-icon");
-        editTodoIcon.setAttribute("name", "create-outline");
-
-        const deleteTodoIcon = document.createElement("ion-icon");
-        deleteTodoIcon.setAttribute("name", "trash-outline");
-
-        const editTodoBtn = document.createElement("button");
-        editTodoBtn.setAttribute("class", "todo-card-edit-btn me-2 d-flex align-items-center");
-        editTodoBtn.append(editTodoIcon);
-
-        const deleteTodoBtn = document.createElement("button");
-        deleteTodoBtn.setAttribute("class", "todo-card-delete-btn d-flex align-items-center");
-        deleteTodoBtn.append(deleteTodoIcon);
-        deleteTodoBtn.addEventListener("click", function () {
-            removeTodo(todoObject.id);
-        });
-
-        const todoCardRightSection = document.createElement("div");
-        todoCardRightSection.setAttribute("class", "todo-card-right-section d-flex justify-content-end align-items-center w-25");
-        todoCardRightSection.append(editTodoBtn, deleteTodoBtn);
-
-        todoCard.append(todoCardRightSection);
-
-        return todoCard;
-    }
 
     function findTodoIndex(todoId) {
         for(const index in todos){
