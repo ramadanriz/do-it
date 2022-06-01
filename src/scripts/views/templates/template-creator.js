@@ -168,6 +168,80 @@ const timerPageTemplate = () => `
   </div>
 `
 
+const todoList = () => `
+  <div class="todo-container w-50">
+    <div class="add-todo-form-container">
+        <h3 class="d-flex align-items-center mb-3">Tugas hari ini</h3>
+        <form class="row" id="add-todo-form" autocomplete="off">
+            <div class="input-todo col-10 px-0">
+                <input type="text" class="form-control" id="todo-title-input" placeholder="Masukkan nama tugas" required>
+            </div>
+            <div class="col-2">
+                <button type="submit" id="submit-todo-btn" class="todo-btn submit-todo-btn d-flex align-items-center justify-content-center">
+                    <ion-icon class="me-1" name="add-circle"></ion-icon> Tugas
+                </button>
+            </div>
+        </form>
+    </div>
+    <div class="todo-list-container mt-5">
+        <div class="todo-card p-3 d-flex my-4">
+            <div class="todo-card-left-section d-flex align-items-center w-75">
+                <input class="task-checkbox" id="task-checkbox" type="checkbox">
+                <label for="task-checkbox">
+                    <span>&#10004;</span>
+                    <p class="mb-0">Membeli bahan makanan buat sahur dan berkelana kesini kemari tanpa ada rasa ampun djhsjdhsjfhdjkshfkj
+                        dshfjkd shfjkhdsjkfhjkd hfjkdshfjk dhsjkfhd
+                        jkshfjkdshfjkd shjkfhdsjkfhjkdsh fjkdsh
+                        fjkdhsjkfhdsj khfj kdshfjkdsh jkfhdskjhfjkdsh</p>
+                </label>
+            </div>
+            <div class="todo-card-right-section d-flex justify-content-end align-items-center w-25">
+                <button class="todo-card-edit-btn me-2 d-flex align-items-center">
+                    <ion-icon name="create-outline"></ion-icon>
+                </button>
+                <button class="todo-card-delete-btn d-flex align-items-center">
+                    <ion-icon name="trash-outline" aria-label="delete"></ion-icon>
+                </button>
+            </div>
+        </div>
+        <div class="todo-card p-3 d-flex my-4">
+            <div class="todo-card-left-section d-flex align-items-center w-75">
+                <input class="task-checkbox" id="task-checkbox2" type="checkbox">
+                <label for="task-checkbox2">
+                    <span>&#10004;</span>
+                    <p class="mb-0">Membeli bahan makanan buat sahur</p>
+                </label>
+            </div>
+            <div class="todo-card-right-section d-flex justify-content-end align-items-center w-25">
+                <button class="todo-card-edit-btn me-2 d-flex align-items-center">
+                    <ion-icon name="create-outline"></ion-icon>
+                </button>
+                <button class="todo-card-delete-btn d-flex align-items-center">
+                    <ion-icon name="trash-outline" aria-label="delete"></ion-icon>
+                </button>
+            </div>
+        </div>
+        <div class="todo-card p-3 d-flex my-4">
+            <div class="todo-card-left-section d-flex align-items-center w-75">
+                <input class="task-checkbox" id="task-checkbox3" type="checkbox">
+                <label for="task-checkbox3">
+                    <span>&#10004;</span>
+                    <p class="mb-0">Membeli bahan makanan buat sahur</p>
+                </label>
+            </div>
+            <div class="todo-card-right-section d-flex justify-content-end align-items-center w-25">
+                <button class="todo-card-edit-btn me-2 d-flex align-items-center">
+                    <ion-icon name="create-outline"></ion-icon>
+                </button>
+                <button class="todo-card-delete-btn d-flex align-items-center">
+                    <ion-icon name="trash-outline" aria-label="delete"></ion-icon>
+                </button>
+            </div>
+        </div>
+    </div>
+  </div>
+`
+
 const todoPageTemplate = () => `
   <div class="container-fluid">
     <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4">
@@ -211,41 +285,28 @@ const todoPageTemplate = () => `
     </div>
 
     <div class="container-fluid py-5">
-        <div class="row g-3 d-flex justify-content-between">
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body p-5">
-                        <h6 class="mb-3">Tambahkan kegiatanmu hari ini</h6>
-                        <form class="d-flex justify-content-center align-items-center mb-4">
-                            <div class="form-outline flex-fill">
-                                <input type="text" id="form3" class="form-control" />
-                            </div>
-                            <button type="submit" class="btn btn-primary ms-2">Tambah</button>
-                        </form>        
-                        <ul class="list-group mb-0">
-                            <li class="list-group-item d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2">
-                                <div class="d-flex align-items-center">
-                                    <input class="form-check-input me-2" type="checkbox" value="" aria-label="..." />Makan
-                                </div>
-                                <a href="#!" data-mdb-toggle="tooltip" title="Remove item"><ion-icon name="close-outline"></ion-icon></a>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2">
-                                <div class="d-flex align-items-center">
-                                    <input class="form-check-input me-2" type="checkbox" value="" aria-label="..." />Minum
-                                </div>
-                                <a href="#!" data-mdb-toggle="tooltip" title="Remove item"><ion-icon name="close-outline"></ion-icon></a>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2">
-                                <div class="d-flex align-items-center">
-                                    <input class="form-check-input me-2" type="checkbox" value="" aria-label="..." />Tidur
-                                </div>
-                                <a href="#!" data-mdb-toggle="tooltip" title="Remove item"><ion-icon name="close-outline"></ion-icon></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>        
+        <div class="row g-3">
+            <div class="col-5">
+              <div class="todo-container">
+                <div class="add-todo-form-container">
+                    <h3 class="d-flex align-items-center mb-3">Tugas hari ini</h3>
+                    <form class="row mx-0" id="add-todo-form" autocomplete="off">
+                        <div class="input-todo col-9 px-0">
+                            <input type="text" class="form-control" id="todo-title-input" placeholder="Masukkan nama tugas" required>
+                        </div>
+                        <div class="col-3 pe-0">
+                            <button type="submit" id="submit-todo-btn" class="todo-btn submit-todo-btn d-flex align-items-center justify-content-center">
+                                <ion-icon class="me-1" name="add-circle"></ion-icon> Tugas
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="todo-list-container mt-5">
+                    
+                </div>
+              </div>    
             </div>
-            <div class="col-md-8">
+            <div class="col-7">
                 <div class="card">
                     <div class="card-body p-3">
                         <h3 class="mb-3">Goals yang akan dicapai</h3>
@@ -322,4 +383,13 @@ const todoPageTemplate = () => `
   </div>
 `
 
-export { heroTemplate, sectionFirst, sectionDailyMotivation, sectionThird, aboutPageTemplate, timerPageTemplate, todoPageTemplate }
+export { 
+  heroTemplate, 
+  sectionFirst, 
+  sectionDailyMotivation, 
+  sectionThird, 
+  aboutPageTemplate, 
+  timerPageTemplate, 
+  todoPageTemplate,
+  todoList
+}
