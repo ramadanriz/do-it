@@ -351,57 +351,7 @@ const todoPageTemplate = () => `
                     </form>
                 </div>
                 <div class="todo-list-container mt-5">
-                    <div class="todo-card p-3 d-flex my-4">
-                        <div class="todo-card-left-section d-flex align-items-center w-75">
-                            <input class="task-checkbox" id="task-checkbox" type="checkbox">
-                            <label for="task-checkbox">
-                                <span>&#10004;</span>
-                                <p class="mb-0">Membeli bahan makanan buat sahur dan berkelana kesini kemari tanpa ada rasa ampun djhsjdhsjfhdjkshfkj</p>
-                            </label>
-                        </div>
-                        <div class="todo-card-right-section d-flex justify-content-end align-items-center w-25">
-                            <button class="todo-card-edit-btn me-2 d-flex align-items-center">
-                                <ion-icon name="create-outline"></ion-icon>
-                            </button>
-                            <button class="todo-card-delete-btn d-flex align-items-center">
-                                <ion-icon name="trash-outline" aria-label="delete"></ion-icon>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="todo-card p-3 d-flex my-4">
-                        <div class="todo-card-left-section d-flex align-items-center w-75">
-                            <input class="task-checkbox" id="task-checkbox2" type="checkbox">
-                            <label for="task-checkbox2">
-                                <span>&#10004;</span>
-                                <p class="mb-0">Membeli bahan makanan buat sahur</p>
-                            </label>
-                        </div>
-                        <div class="todo-card-right-section d-flex justify-content-end align-items-center w-25">
-                            <button class="todo-card-edit-btn me-2 d-flex align-items-center">
-                                <ion-icon name="create-outline"></ion-icon>
-                            </button>
-                            <button class="todo-card-delete-btn d-flex align-items-center">
-                                <ion-icon name="trash-outline" aria-label="delete"></ion-icon>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="todo-card p-3 d-flex my-4">
-                        <div class="todo-card-left-section d-flex align-items-center w-75">
-                            <input class="task-checkbox" id="task-checkbox3" type="checkbox">
-                            <label for="task-checkbox3">
-                                <span>&#10004;</span>
-                                <p class="mb-0">Membeli bahan makanan buat sahur</p>
-                            </label>
-                        </div>
-                        <div class="todo-card-right-section d-flex justify-content-end align-items-center w-25">
-                            <button class="todo-card-edit-btn me-2 d-flex align-items-center">
-                                <ion-icon name="create-outline"></ion-icon>
-                            </button>
-                            <button class="todo-card-delete-btn d-flex align-items-center">
-                                <ion-icon name="trash-outline" aria-label="delete"></ion-icon>
-                            </button>
-                        </div>
-                    </div>
+                    
                 </div>
               </div>    
             </div>

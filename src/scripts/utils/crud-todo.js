@@ -1,5 +1,6 @@
 function crudTodo() {
     const todos = [];
+    const TODOS_LOCAL_STORAGE = "TODOS_LOCAL_STORAGE";
 
     const addTodoForm = document.getElementById("add-todo-form");
 
@@ -19,6 +20,7 @@ function crudTodo() {
         const todoObject = generateTodoObject();
 
         todos.push(todoObject);
+        saveData();
 
         //inisialisasi element container untuk todo
         //dan mengosongkan isi element container sebelum looping data terbaru
@@ -141,6 +143,54 @@ function crudTodo() {
         } 
 
         todos.splice(todoTarget, 1);
+
+        //inisialisasi element container untuk todo
+        //dan mengosongkan isi element container sebelum looping data terbaru
+        const todoListContainer = document.querySelector(".todo-list-container");
+        todoListContainer.innerHTML = "";
+        
+        //looping semua data todo
+        for (const todoItem of todos) {
+            const newTodo = generateTodoElement(todoItem);
+            todoListContainer.append(newTodo);
+        }
+
+        saveData();
+    }
+
+    // implementasi web storage
+    function saveData() {
+        if (typeof(Storage) !== undefined) {
+            const parsed = JSON.stringify(todos);
+            localStorage.setItem(TODOS_LOCAL_STORAGE, parsed);
+        } else {
+            alert("Browser kamu tidak mendukung local storage");
+        }
+
+        // if(isStorageExist()){
+        //     const parsed = JSON.stringify(todos);
+        //     localStorage.setItem(TODOS_LOCAL_STORAGE, parsed);
+        // }
+    }
+
+    // function isStorageExist() {
+    //     if(typeof(Storage) === undefined){
+    //         alert("Browser kamu tidak mendukung local storage");
+    //         return false
+    //     }
+    //     return true;
+    // }
+
+    function loadDataFromStorage() {
+        const serializedData = localStorage.getItem(TODOS_LOCAL_STORAGE);
+        
+        let data = JSON.parse(serializedData);
+        
+        if(data !== null){
+            for(const todo of data){
+                todos.push(todo);
+            }
+        }
 
         //inisialisasi element container untuk todo
         //dan mengosongkan isi element container sebelum looping data terbaru
