@@ -127,10 +127,18 @@ footer{
     justify-content: center;
 }
 
+.wrapper .content .quote-area svg:first-child{
+    margin-top: -25px !important;
+}
+
+.wrapper .content .quote-area svg:last-child{
+    margin-bottom: -10px !important;
+}
+
 .wrapper .content .quote-area .quote{
     font-size: 22px;
     text-align: center;
-    word-break: break-all;
+    word-break: break-word;
 }
 
 .wrapper .content .author{
@@ -139,6 +147,10 @@ footer{
     margin-top: 20px !important;
     font-size: 18px;
     font-style: italic;
+}
+
+.wrapper .content button {
+    border-radius: 25px;
 }
 
 .wrapper .content .author span:first-child{
