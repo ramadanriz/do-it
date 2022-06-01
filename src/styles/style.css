@@ -99,11 +99,12 @@ footer{
     bottom: 0;
 }
 
-/* quote section on homepage */
+/* quote section on todopage */
 .quotes{
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 70vh;
 }
 
 .wrapper{

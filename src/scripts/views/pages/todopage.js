@@ -16,15 +16,16 @@ const TodoPage = {
     quoteText.innerText = dailyMotivation.content
     authorName.innerText = dailyMotivation.author
 
-    const generateButton = document.querySelector('#generateQuote')
-    generateButton.addEventListener('click', async () => {
-      const nextquoteText = document.querySelector('.quote')
-      const nextauthorName = document.querySelector('.name')
-      const nextMotivation = await QuotesDbSource.homePage()
-      nextquoteText.innerText = nextMotivation.content
-      nextauthorName.innerText = nextMotivation.author
+    const generateButton = document.querySelectorAll('.generateQuote')
+    generateButton.forEach(button => {
+      button.addEventListener('click', async () => {
+        const nextquoteText = document.querySelector('.quote')
+        const nextauthorName = document.querySelector('.name')
+        const nextMotivation = await QuotesDbSource.homePage()
+        nextquoteText.innerText = nextMotivation.content
+        nextauthorName.innerText = nextMotivation.author
+      })
     })
-
   }
 }
 

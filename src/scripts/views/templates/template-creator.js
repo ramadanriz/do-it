@@ -38,12 +38,12 @@ const sectionFirst = () => `
 `
 
 const sectionDailyMotivation = () => `
-  <section class="quotes my-5 bg-altgray">
+  <section class="quotes mb-5 bg-altgray">
       <div class="wrapper">
       <h1>Quote of the Day</h1>
       <div class="content">
-        <div class="text-center">
-          <ion-icon name="caret-up-outline"></ion-icon>
+        <div class="col text-center">
+          <button type="button" class="generateQuote"><ion-icon name="caret-up-outline" size="large"></ion-icon></button>
         </div>
         <div class="quote-area">
           <div class="text-center">
@@ -52,15 +52,12 @@ const sectionDailyMotivation = () => `
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="24" height="24"><path d="M96 96C42.98 96 0 138.1 0 192s42.98 96 96 96c11.28 0 21.95-2.305 32-5.879V288c0 35.3-28.7 64-64 64c-17.67 0-32 14.33-32 32s14.33 32 32 32c70.58 0 128-57.42 128-128V192C192 138.1 149 96 96 96zM448 192c0-53.02-42.98-96-96-96s-96 42.98-96 96s42.98 96 96 96c11.28 0 21.95-2.305 32-5.879V288c0 35.3-28.7 64-64 64c-17.67 0-32 14.33-32 32s14.33 32 32 32c70.58 0 128-57.42 128-128V192z"/></svg>
           </div>
         </div>
-        <div class="text-center mt-2">
-          <ion-icon name="caret-down-outline"></ion-icon>
+        <div class="col text-center mt-2">
+          <button type="button" class="generateQuote"><ion-icon name="caret-down-outline" size="large"></ion-icon></button>
         </div>
         <div class="author">
           <span>__</span>
           <span class="name"></span>
-        </div>
-        <div class= "col text-center mt-5">
-          <button type="button" id="generateQuote" class="text-center btn btn-dark">Next Quote</button>
         </div>
         
       </div>
@@ -77,7 +74,7 @@ const sectionThird = () => `
           <span>Sumber: There is a S.M.A.R.T Way to Write Management’s Goals and Objective (George T. Doran, 1981)</span>
         </div>
       </div>
-      <div class="row justify-content-between align-items-center">
+      <div class="row justify-content-between align-items-center flex-row-reverse">
         <div class="col-lg-5">
           <img src="woman-checking.png" class="img-fluid" alt="woman checking giant check list">
         </div>
