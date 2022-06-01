@@ -95,15 +95,31 @@ function crudTodo() {
                     <p class="mb-0">${todoObject.task}</p>
                 </label>
             </div>
-            <div class="todo-card-right-section d-flex justify-content-end align-items-center w-25">
-                <button class="todo-card-edit-btn me-2 d-flex align-items-center">
-                    <ion-icon name="create-outline"></ion-icon>
-                </button>
-                <button class="todo-card-delete-btn d-flex align-items-center">
-                    <ion-icon name="trash-outline" aria-label="delete"></ion-icon>
-                </button>
-            </div>
         `
+
+        const editTodoIcon = document.createElement("ion-icon");
+        editTodoIcon.setAttribute("name", "create-outline");
+
+        const deleteTodoIcon = document.createElement("ion-icon");
+        deleteTodoIcon.setAttribute("name", "trash-outline");
+
+        const editTodoBtn = document.createElement("button");
+        editTodoBtn.setAttribute("class", "todo-card-edit-btn me-2 d-flex align-items-center");
+        editTodoBtn.append(editTodoIcon);
+
+        const deleteTodoBtn = document.createElement("button");
+        deleteTodoBtn.setAttribute("class", "todo-card-delete-btn d-flex align-items-center");
+        deleteTodoBtn.append(deleteTodoIcon);
+        deleteTodoBtn.addEventListener("click", function () {
+            removeTodo(todoObject.id);
+        });
+
+        const todoCardRightSection = document.createElement("div");
+        todoCardRightSection.setAttribute("class", "todo-card-right-section d-flex justify-content-end align-items-center w-25");
+        todoCardRightSection.append(editTodoBtn, deleteTodoBtn);
+
+        todoCard.append(todoCardRightSection);
+
         return todoCard;
     }
 
