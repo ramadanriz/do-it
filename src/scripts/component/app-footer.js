@@ -47,7 +47,7 @@ class AppFooter extends HTMLElement {
         </section>
         
         <div class="text-center p-3 bg-altpurple text-altblack">
-            Copyright © 2022 Do.it.
+            Copyright © 2022 do.it &#10004;.
         </div>
     `
   }

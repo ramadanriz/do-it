@@ -1,3 +1,4 @@
+import crudTodo from '../../utils/crud-todo'
 import QuotesDbSource from '../../data/quotesdb-source'
 import { sectionDailyMotivation, todoPageTemplate } from '../templates/template-creator'
 
@@ -26,6 +27,8 @@ const TodoPage = {
         nextauthorName.innerText = nextMotivation.author
       })
     })
+    
+    crudTodo();
   }
 }
 
