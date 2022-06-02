@@ -11,6 +11,5 @@
         "ecmaVersion": "latest",
         "sourceType": "module"
     },
-    "rules": {
-    }
+    "rules": {}
 }

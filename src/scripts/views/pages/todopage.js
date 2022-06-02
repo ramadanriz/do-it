@@ -27,8 +27,8 @@ const TodoPage = {
         nextauthorName.innerText = nextMotivation.author
       })
     })
-    
-    crudTodo();
+
+    crudTodo()
   }
 }
 

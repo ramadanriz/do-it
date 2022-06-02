@@ -380,13 +380,13 @@ const todoPageTemplate = () => `
   </div>
 `
 
-export { 
-  heroTemplate, 
-  sectionFirst, 
-  sectionDailyMotivation, 
-  sectionThird, 
-  aboutPageTemplate, 
-  timerPageTemplate, 
+export {
+  heroTemplate,
+  sectionFirst,
+  sectionDailyMotivation,
+  sectionThird,
+  aboutPageTemplate,
+  timerPageTemplate,
   todoPageTemplate,
   todoList
 }
