@@ -101,90 +101,48 @@ footer{
 
 /* quote section on todopage */
 .quotes{
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* height: 70vh; */
+    width: 100%;
+}
+
+.quote-container {
+    position: relative;
     display: flex;
-    align-items: center;
     justify-content: center;
-    height: 70vh;
 }
 
-.wrapper{
-    width: 90%;
-    border-radius: 15px;
-    padding: 30px 30px 25px;
+.quote-section {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+
+    width: 70%;
 }
 
-.wrapper h1{
-    font-size: 35px;
+.next-back-icon {
+    font-size: 50px;
+}
+
+.quote-section .quote{
+    font-size: 27px;
     font-weight: 600;
-    text-align: center;
-}
-
-.wrapper .content{
-    margin: 35px 0 !important;
-}
-
-.wrapper .content .quote-area{
-    display: flex;
-    justify-content: center;
-}
-
-.wrapper .content .quote-area svg:first-child{
-    margin-top: -25px !important;
-}
-
-.wrapper .content .quote-area svg:last-child{
-    margin-bottom: -10px !important;
-}
-
-.wrapper .content .quote-area .quote{
-    font-size: 22px;
     text-align: center;
     word-break: break-word;
 }
 
-.wrapper .content .author{
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 20px !important;
+.content .author{
+    text-align: center;
+    margin-top: 20px;
     font-size: 18px;
-    font-style: italic;
 }
 
-.wrapper .content button {
-    border-radius: 25px;
-}
-
-.wrapper .content .author span:first-child{
-    margin: -7px 5px 0 0 !important;
-    font-family: monospace !important;
-}
-
-.wrapper .buttons{
-    border-top: 1px solid #d8cbf7;
-}
-
-.wrapper .buttons .features{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px !important;
-}
-
-.wrapper .buttons .features button{
-    border: none;
-    outline: none;
-    color: white;
-    cursor: pointer;
-    font-size: 16px;
-    padding: 13px 22px;
-    border-radius: 30px;
-    background: #5372f0;
-}
-
-.wrapper .buttons .features button.loading{
-    opacity: .7;
-    pointer-events: none;
-}
+/* .bingkai-section {
+    width: 70%;
+} */
 
 /* section third on homepage */
 .section-third span{
@@ -418,6 +376,24 @@ footer{
     background-color: #bedce4;
     border: none;
     max-height: 35px;
+}
+
+.task-label {
+    width: 100%;
+}
+
+.input-new-task{
+    width: 100%;
+    padding: 5px 10px;
+    border: 2px solid #d8cbf7;
+    border-radius: 10px;
+}
+
+.input-new-task:focus {
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #d8cbf7;
+    border-radius: 0px;
 }
 
 /* todopage */

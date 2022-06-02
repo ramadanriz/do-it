@@ -13,8 +13,13 @@ function crudTodo() {
         //         </label>
         //     </div>
         // `
-        const checkBoxLabel = document.createElement("span");
-        checkBoxLabel.innerText ="&#10004;";
+
+        // const checkBoxLabel = document.createElement("span");
+        // checkBoxLabel.innerText ="&#10004;";
+        const inputNewTaskElement = document.createElement("input");
+        inputNewTaskElement.setAttribute("id", "new-task");
+        inputNewTaskElement.classList.add("input-new-task", "mb-0");
+        inputNewTaskElement.setAttribute("value", `${todoObject.task}`);
         
         const todoTitleElement = document.createElement("p");
         todoTitleElement.classList.add("mb-0");
@@ -22,6 +27,7 @@ function crudTodo() {
         
         const labelElement = document.createElement("label");
         labelElement.setAttribute("for", `task-${todoObject.id}`);
+        labelElement.classList.add("task-label")
         labelElement.innerHTML = `<span>&#10004;</span>`
         labelElement.append(todoTitleElement);
         
@@ -56,7 +62,8 @@ function crudTodo() {
                 return;
             }
 
-            todoTitleElement.innerHTML = `<input id="new-task" class="mb-0" value="${todoObject.task}">`
+            labelElement.replaceChild(inputNewTaskElement, todoTitleElement);
+            // todoTitleElement.innerHTML = `<input id="new-task" class="input-new-task mb-0" value="${todoObject.task}">`
             todoCardRightSection.replaceChild(saveTodoBtn, editTodoBtn);
         });
 

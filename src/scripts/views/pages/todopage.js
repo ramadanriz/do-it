@@ -5,9 +5,9 @@ import { sectionDailyMotivation, todoPageTemplate } from '../templates/template-
 const TodoPage = {
   async render () {
     return `
-        ${sectionDailyMotivation()}
-        ${todoPageTemplate()}
-      `
+      ${sectionDailyMotivation()}
+      ${todoPageTemplate()}
+    `
   },
 
   async afterRender () {
