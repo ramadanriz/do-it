@@ -1,6 +1,6 @@
-import crudTodo from '../../utils/crud-todo'
 import QuotesDbSource from '../../data/quotesdb-source'
 import { sectionDailyMotivation, todoPageTemplate } from '../templates/template-creator'
+import { main } from '../../utils/todo'
 
 const TodoPage = {
   async render () {
@@ -28,7 +28,7 @@ const TodoPage = {
       })
     })
 
-    crudTodo()
+    main()
   }
 }
 

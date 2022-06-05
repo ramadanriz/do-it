@@ -165,228 +165,93 @@ const timerPageTemplate = () => `
   </div>
 `
 
-const todoList = () => `
-  <div class="todo-container w-50">
-    <div class="add-todo-form-container">
-        <h3 class="d-flex align-items-center mb-3">Tugas hari ini</h3>
-        <form class="row" id="add-todo-form" autocomplete="off">
-            <div class="input-todo col-10 px-0">
-                <input type="text" class="form-control" id="todo-title-input" placeholder="Masukkan nama tugas" required>
-            </div>
-            <div class="col-2">
-                <button type="submit" id="submit-todo-btn" class="todo-btn submit-todo-btn d-flex align-items-center justify-content-center">
-                    <ion-icon class="me-1" name="add-circle"></ion-icon> Tugas
-                </button>
-            </div>
-        </form>
-    </div>
-    <div class="todo-list-container mt-5">
-        <div class="todo-card p-3 d-flex my-4">
-            <div class="todo-card-left-section d-flex align-items-center w-75">
-                <input class="task-checkbox" id="task-checkbox" type="checkbox">
-                <label for="task-checkbox">
-                    <span>&#10004;</span>
-                    <p class="mb-0">Membeli bahan makanan buat sahur dan berkelana kesini kemari tanpa ada rasa ampun djhsjdhsjfhdjkshfkj
-                        dshfjkd shfjkhdsjkfhjkd hfjkdshfjk dhsjkfhd
-                        jkshfjkdshfjkd shjkfhdsjkfhjkdsh fjkdsh
-                        fjkdhsjkfhdsj khfj kdshfjkdsh jkfhdskjhfjkdsh</p>
-                </label>
-            </div>
-            <div class="todo-card-right-section d-flex justify-content-end align-items-center w-25">
-                <button class="todo-card-edit-btn me-2 d-flex align-items-center">
-                    <ion-icon name="create-outline"></ion-icon>
-                </button>
-                <button class="todo-card-delete-btn d-flex align-items-center">
-                    <ion-icon name="trash-outline" aria-label="delete"></ion-icon>
-                </button>
-            </div>
-        </div>
-        <div class="todo-card p-3 d-flex my-4">
-            <div class="todo-card-left-section d-flex align-items-center w-75">
-                <input class="task-checkbox" id="task-checkbox2" type="checkbox">
-                <label for="task-checkbox2">
-                    <span>&#10004;</span>
-                    <p class="mb-0">Membeli bahan makanan buat sahur</p>
-                </label>
-            </div>
-            <div class="todo-card-right-section d-flex justify-content-end align-items-center w-25">
-                <button class="todo-card-edit-btn me-2 d-flex align-items-center">
-                    <ion-icon name="create-outline"></ion-icon>
-                </button>
-                <button class="todo-card-delete-btn d-flex align-items-center">
-                    <ion-icon name="trash-outline" aria-label="delete"></ion-icon>
-                </button>
-            </div>
-        </div>
-        <div class="todo-card p-3 d-flex my-4">
-            <div class="todo-card-left-section d-flex align-items-center w-75">
-                <input class="task-checkbox" id="task-checkbox3" type="checkbox">
-                <label for="task-checkbox3">
-                    <span>&#10004;</span>
-                    <p class="mb-0">Membeli bahan makanan buat sahur</p>
-                </label>
-            </div>
-            <div class="todo-card-right-section d-flex justify-content-end align-items-center w-25">
-                <button class="todo-card-edit-btn me-2 d-flex align-items-center">
-                    <ion-icon name="create-outline"></ion-icon>
-                </button>
-                <button class="todo-card-delete-btn d-flex align-items-center">
-                    <ion-icon name="trash-outline" aria-label="delete"></ion-icon>
-                </button>
-            </div>
-        </div>
-    </div>
-  </div>
-`
-
 const todoPageTemplate = () => `
-  <div class="container-fluid">
-    <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4">
-        <div class="d-flex align-items-center">
-            <h2 class="fs-2 m-0">Todo Apps</h2>
+<div class="container-fluid">
+<nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+    <div class="d-flex align-items-center">
+        <h2 class="fs-2 m-0">Todo Apps</h2>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row g-3 my-2">
+        <div class="col-md">
+            <div class="p-3 bg-satu shadow-sm d-flex justify-content-around align-items-center rounded">
+                <div>
+                    <h3 class="fs-2" id="total-goals"></h3>
+                    <p class="fs-5">Total Goals</p>
+                </div>
+                <ion-icon name="today" class="logo p-3"></ion-icon>
+            </div>
         </div>
-    </nav>
 
-    <div class="container-fluid">
-        <div class="row g-3 my-2">
-            <div class="col-md">
-                <div class="p-3 bg-satu shadow-sm d-flex justify-content-around align-items-center rounded">
-                    <div>
-                        <h3 class="fs-2">20</h3>
-                        <p class="fs-5">Total Goals</p>
-                    </div>
-                    <ion-icon name="today" class="logo p-3"></ion-icon>
+        <div class="col-md">
+            <div class="p-3 bg-dua shadow-sm d-flex justify-content-around align-items-center rounded">
+                <div>
+                    <h3 class="fs-2" id="total-todo"></h3>
+                    <p class="fs-5 text-break">Total Todo</p>
                 </div>
-            </div>
-
-            <div class="col-md">
-                <div class="p-3 bg-dua shadow-sm d-flex justify-content-around align-items-center rounded">
-                    <div>
-                        <h3 class="fs-2">15</h3>
-                        <p class="fs-5 text-break">Goals in Progress</p>
-                    </div>
-                    <ion-icon name="newspaper" class="logo p-3"></ion-icon>
-                </div>
-            </div>
-
-            <div class="col-md">
-                <div class="p-3 bg-tiga shadow-sm d-flex justify-content-around align-items-center rounded">
-                    <div>
-                        <h3 class="fs-2">5</h3>
-                        <p class="fs-5">Goals Completed</p>
-                    </div>
-                    <ion-icon name="checkmark-done-circle" class="logo p-3"></ion-icon>
-                </div>
+                <ion-icon name="newspaper" class="logo p-3"></ion-icon>
             </div>
         </div>
     </div>
+</div>
 
-    <div class="container-fluid py-5">
-        <div class="row g-3">
-            <div class="col-5">
-              <div class="todo-container">
-                <div class="add-todo-form-container">
-                    <h3 class="d-flex align-items-center mb-3">Tugas hari ini</h3>
-                    <form class="row mx-0" id="add-todo-form" autocomplete="off">
-                        <div class="input-todo col-9 px-0">
-                            <input type="text" class="form-control" id="todo-title-input" placeholder="Masukkan nama tugas" required>
+<div class="container-fluid py-5">
+    <div class="row justify-content-around g-3">
+        <div class="col-lg-2 p-3">
+            <h5 class="mb-3">Daftar Goals</h5>
+            <form class="mb-4" id="addNewGolasForm">
+                <div class="form-outline flex-fill mb-2">
+                    <input type="text" class="form-control" placeholder="Tambahkan goals anda" id="addNewGoalsInput" autocomplete="off" required>
+                </div>
+                <button class="btn btn-primary">Tambah</button>
+            </form>
+            <ul class="list-group list-group-light sidebar-list" id="goalsList"></ul>      
+        </div>
+
+        <div class="col-lg-10 p-3 border rounded" id="todo-container">
+            <div class="row justify-content-between">
+                <div class="col-md-5 mb-3">
+                    <h5 class="header-title" id="currentShowTodoList"></h5>
+                </div>
+                <div class="col-md-7">
+                    <form class="row g-2" id="addNewTodoForm">
+                        <div class="col-md-4">
+                            <select class="form-select" id="addNewTodoSelect" required>
+                                <option value="">Pilih Goals</option>
+                            </select>
                         </div>
-                        <div class="col-3 pe-0">
-                            <button type="submit" id="submit-todo-btn" class="todo-btn submit-todo-btn d-flex align-items-center justify-content-center">
-                                <ion-icon class="me-1" name="add-circle"></ion-icon> Tugas
-                            </button>
+                        <div class="col-md-5">
+                            <input type="text" class="form-control" placeholder="Tambahkan kegiatan anda" id="addNewTodoInput" autocomplete="off" required>
+                        </div>
+                        <div class="col-md-2">
+                            <button class="btn btn-primary">Tambah</button>
+                        </div>
+                    </form>
+                    <form class="row g-1" id="editTodoForm">
+                        <div class="col-md-3">
+                            <select class="form-select" id="editTodoSelect">
+                                <option value="">Pilih Goals</option>
+                            </select>
+                        </div>
+                        <div class="col-md-5">
+                            <input type="text" class="form-control" placeholder="Tambahkan kegiatan anda" id="editTodoInput" autocomplete="off" required>
+                        </div>
+                        <div class="col-md-4">
+                            <button class="btn btn-primary">Simpan Perubahan</button>
                         </div>
                     </form>
                 </div>
-                <div class="todo-list-container mt-5">
-                    
-                </div>
-              </div>    
             </div>
-            <div class="col-7">
-                <div class="card">
-                    <div class="card-body p-3">
-                        <h3 class="mb-3">Goals yang akan dicapai</h3>
-                        <div class="row g-3">
-                            <div class="col-sm-6">                                        
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Menyelesaikan program kampus merdeka</h5>
-                                        <ol class="list-group list-group-flush">
-                                            <li class="list-group-item d-flex justify-content-between align-items-center">Daftar <button type="button"><ion-icon name="add-circle-outline"></ion-icon></button></li>
-                                            <li class="list-group-item d-flex justify-content-between align-items-center">Mengikuti progam <button type="button"><ion-icon name="add-circle-outline"></ion-icon></button></li>
-                                            <li class="list-group-item d-flex justify-content-between align-items-center">Lulus <button type="button"><ion-icon name="add-circle-outline"></ion-icon></button></li>
-                                        </ol>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Juara piala dunia bersama timnas</h5>
-                                        <ol class="list-group list-group-flush">
-                                            <li class="list-group-item d-flex justify-content-between align-items-center">Daftar <button type="button"><ion-icon name="add-circle-outline"></ion-icon></button></li>
-                                            <li class="list-group-item d-flex justify-content-between align-items-center">Mengikuti progam <button type="button"><ion-icon name="add-circle-outline"></ion-icon></button></li>
-                                            <li class="list-group-item d-flex justify-content-between align-items-center">Lulus <button type="button"><ion-icon name="add-circle-outline"></ion-icon></button></li>
-                                        </ol>                                      
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Juara piala dunia bersama timnas</h5>
-                                        <ol class="list-group list-group-flush">
-                                            <li class="list-group-item d-flex justify-content-between align-items-center">Daftar <button type="button"><ion-icon name="add-circle-outline"></ion-icon></button></li>
-                                            <li class="list-group-item d-flex justify-content-between align-items-center">Mengikuti progam <button type="button"><ion-icon name="add-circle-outline"></ion-icon></button></li>
-                                            <li class="list-group-item d-flex justify-content-between align-items-center">Lulus <button type="button"><ion-icon name="add-circle-outline"></ion-icon></button></li>
-                                        </ol>                                      
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+            <div class="row row-cols-1 row-cols-md-3 g-4 mt-1" id="todoList">
+                
             </div>
         </div>
     </div>
-    </div>
-
-    <!-- Button trigger modal -->
-    <div class="fixed-bottom">
-    <button type="button" data-bs-toggle="modal" data-bs-target="#addGoals" id="addGoalsButton"><ion-icon name="add-circle"></ion-icon></button>
-    </div>
-
-    <!-- Modal -->
-    <div class="modal fade" id="addGoals" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="addGoalsLabel" aria-hidden="true">
-    <div class="modal-dialog">
-    <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title" id="addGoalsLabel">Tambah Goals</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-            <form>
-                <div class="mb-3">
-                  <label for="goalsName" class="form-label">Nama Goals</label>
-                  <input type="text" class="form-control" id="goalsName" aria-describedby="goalsNameHelp">
-                  <div id="goalsNameHelp" class="form-text">Tambahkan nama goals anda.</div>
-                </div>
-                <button type="submit" class="btn btn-primary">Simpan</button>
-              </form>
-        </div>
-    </div>
-    </div>
-  </div>
+</div>
+</div>
 `
 
-export {
-  heroTemplate,
-  sectionFirst,
-  sectionDailyMotivation,
-  sectionThird,
-  aboutPageTemplate,
-  timerPageTemplate,
-  todoPageTemplate,
-  todoList
-}
+export { heroTemplate, sectionFirst, sectionDailyMotivation, sectionThird, aboutPageTemplate, timerPageTemplate, todoPageTemplate }
