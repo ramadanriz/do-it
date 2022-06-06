@@ -175,7 +175,19 @@ function main () {
     }
   })
 
-  window.addEventListener('load', renderAllFunction)
+  // window.addEventListener('load', renderAllFunction)
+
+  const DOMReady = function (callback) {
+    document.readyState === 'interactive' || document.readyState === 'complete' ? callback() : document.addEventListener('DOMContentLoaded', callback)
+  }
+
+  DOMReady(function () {
+    if (typeof (Storage) !== 'undefined') {
+      renderAllFunction()
+    } else {
+      alert('Browser kamu tidak mendukung local storage')
+    }
+  })
 }
 
 export { main }
