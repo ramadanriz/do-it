@@ -38,26 +38,27 @@ const sectionFirst = () => `
 `
 
 const sectionDailyMotivation = () => `
-  <section class="quotes mb-5 mt-5">
-    <div class="content quote-container">
-        <div class="bingkai-section d-flex align-items-center">
-          <div>
-              <button type="button" class="generateQuote"><ion-icon class="next-back-icon" name="chevron-back-outline"></ion-icon></button>
-          </div>
-          <img src="quote.png" alt="bingkai quote">
-          <div>
-              <button type="button" class="generateQuote"><ion-icon class="next-back-icon" name="chevron-forward-outline"></ion-icon></button>
-          </div>
+  <section class="quotes my-5 bg-altgray">
+    <div class="wrapper">
+      <div class="content">
+        <div class="col text-center">
+          <button type="button" class="generateQuote"><ion-icon name="caret-up-outline" size="large"></ion-icon></button>
         </div>
-        <div class="quote-section">
+        <div class="quote-area">
           <div class="text-center">
-              <span class="quote"></span>
-          </div>
-          <div class="author">
-              <span>-</span>
-              <span class="name"></span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="24" height="24"><path d="M96 224C84.72 224 74.05 226.3 64 229.9V224c0-35.3 28.7-64 64-64c17.67 0 32-14.33 32-32S145.7 96 128 96C57.42 96 0 153.4 0 224v96c0 53.02 42.98 96 96 96s96-42.98 96-96S149 224 96 224zM352 224c-11.28 0-21.95 2.305-32 5.879V224c0-35.3 28.7-64 64-64c17.67 0 32-14.33 32-32s-14.33-32-32-32c-70.58 0-128 57.42-128 128v96c0 53.02 42.98 96 96 96s96-42.98 96-96S405 224 352 224z"/></svg>
+            <span class="quote px-1"></span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="24" height="24"><path d="M96 96C42.98 96 0 138.1 0 192s42.98 96 96 96c11.28 0 21.95-2.305 32-5.879V288c0 35.3-28.7 64-64 64c-17.67 0-32 14.33-32 32s14.33 32 32 32c70.58 0 128-57.42 128-128V192C192 138.1 149 96 96 96zM448 192c0-53.02-42.98-96-96-96s-96 42.98-96 96s42.98 96 96 96c11.28 0 21.95-2.305 32-5.879V288c0 35.3-28.7 64-64 64c-17.67 0-32 14.33-32 32s14.33 32 32 32c70.58 0 128-57.42 128-128V192z"/></svg>
           </div>
         </div>
+        <div class="col text-center mt-2">
+          <button type="button" class="generateQuote"><ion-icon name="caret-down-outline" size="large"></ion-icon></button>
+        </div>
+        <div class="author">
+          <span>__</span>
+          <span class="name"></span>
+        </div>
+      </div>
     </div>
   </section>
 `
@@ -166,92 +167,98 @@ const timerPageTemplate = () => `
 `
 
 const todoPageTemplate = () => `
-<div class="container-fluid">
-<nav class="navbar navbar-expand-lg navbar-light bg-transparent">
-    <div class="d-flex align-items-center">
-        <h2 class="fs-2 m-0">Todo Apps</h2>
-    </div>
-</nav>
-
-<div class="container-fluid">
-    <div class="row g-3 my-2">
-        <div class="col-md">
-            <div class="p-3 bg-satu shadow-sm d-flex justify-content-around align-items-center rounded">
-                <div>
-                    <h3 class="fs-2" id="total-goals"></h3>
-                    <p class="fs-5">Total Goals</p>
+  <div class="container-fluid mb-5">
+    <div class="container-fluid">
+        <div class="row g-3 my-2">
+            <div class="col-md">
+                <div class="p-3 bg-satu shadow-sm d-flex justify-content-around align-items-center rounded">
+                    <div>
+                        <h3 class="fs-2" id="total-goals"></h3>
+                        <p class="fs-5">Total Goals</p>
+                    </div>
+                    <ion-icon name="today" class="logo p-3"></ion-icon>
                 </div>
-                <ion-icon name="today" class="logo p-3"></ion-icon>
             </div>
-        </div>
 
-        <div class="col-md">
-            <div class="p-3 bg-dua shadow-sm d-flex justify-content-around align-items-center rounded">
-                <div>
-                    <h3 class="fs-2" id="total-todo"></h3>
-                    <p class="fs-5 text-break">Total Todo</p>
+            <div class="col-md">
+                <div class="p-3 bg-dua shadow-sm d-flex justify-content-around align-items-center rounded">
+                    <div>
+                        <h3 class="fs-2" id="total-todo"></h3>
+                        <p class="fs-5 text-break">Total Todo</p>
+                    </div>
+                    <ion-icon name="newspaper" class="logo p-3"></ion-icon>
                 </div>
-                <ion-icon name="newspaper" class="logo p-3"></ion-icon>
             </div>
         </div>
     </div>
-</div>
 
-<div class="container-fluid py-5">
-    <div class="row justify-content-around g-3">
-        <div class="col-lg-2 p-3">
-            <h5 class="mb-3">Daftar Goals</h5>
-            <form class="mb-4" id="addNewGolasForm">
-                <div class="form-outline flex-fill mb-2">
-                    <input type="text" class="form-control" placeholder="Tambahkan goals anda" id="addNewGoalsInput" autocomplete="off" required>
-                </div>
-                <button class="btn btn-primary">Tambah</button>
-            </form>
-            <ul class="list-group list-group-light sidebar-list" id="goalsList"></ul>      
-        </div>
-
-        <div class="col-lg-10 p-3 border rounded" id="todo-container">
-            <div class="row justify-content-between">
-                <div class="col-md-5 mb-3">
-                    <h5 class="header-title" id="currentShowTodoList"></h5>
-                </div>
-                <div class="col-md-7">
-                    <form class="row g-2" id="addNewTodoForm">
-                        <div class="col-md-4">
-                            <select class="form-select" id="addNewTodoSelect" required>
-                                <option value="">Pilih Goals</option>
-                            </select>
-                        </div>
-                        <div class="col-md-5">
-                            <input type="text" class="form-control" placeholder="Tambahkan kegiatan anda" id="addNewTodoInput" autocomplete="off" required>
-                        </div>
-                        <div class="col-md-2">
-                            <button class="btn btn-primary">Tambah</button>
-                        </div>
-                    </form>
-                    <form class="row g-1" id="editTodoForm">
-                        <div class="col-md-3">
-                            <select class="form-select" id="editTodoSelect">
-                                <option value="">Pilih Goals</option>
-                            </select>
-                        </div>
-                        <div class="col-md-5">
-                            <input type="text" class="form-control" placeholder="Tambahkan kegiatan anda" id="editTodoInput" autocomplete="off" required>
-                        </div>
-                        <div class="col-md-4">
-                            <button class="btn btn-primary">Simpan Perubahan</button>
-                        </div>
-                    </form>
-                </div>
+    <div class="container-fluid py-5">
+      <div class="d-flex justify-content-end">
+        <form class="row g-2 mb-3" id="addNewTodoForm">
+          <div class="col-md-4">
+            <select class="form-select" id="addNewTodoSelect" required>
+              <option value="">Pilih Goals</option>
+            </select>
+          </div>
+          <div class="col-md-5">
+            <input type="text" class="form-control" placeholder="Tambahkan kegiatan anda" id="addNewTodoInput" autocomplete="off" required>
+          </div>
+          <div class="col-md-2">
+            <button class="btn btn-primary">Simpan</button>
+          </div>
+        </form>
+        <form class="row g-1 mb-3" id="editTodoForm">
+          <div class="col-md-3">
+            <select class="form-select" id="editTodoSelect">
+              <option value="">Pilih Goals</option>
+            </select>
+          </div>
+          <div class="col-md-5">
+            <input type="text" class="form-control" placeholder="Tambahkan kegiatan anda" id="editTodoInput" autocomplete="off" required>
+          </div>
+          <div class="col-md-4">
+            <button class="btn btn-primary">Simpan Perubahan</button>
+          </div>
+        </form>
+      </div>
+        <div class="row justify-content-around g-3">
+            <div class="col-lg-3 p-3 border rounded">
+              <h5 class="mb-3">Daftar Goals</h5>
+              <ul class="list-group list-group-light sidebar-list" id="goalsList"></ul>      
             </div>
 
-            <div class="row row-cols-1 row-cols-md-3 g-4 mt-1" id="todoList">
-                
+            <div class="col-lg-8 p-3 border rounded">
+              <h5 class="mb-3">Daftar Kegiatan</h5>
+              <div class="row row-cols-1 row-cols-md-3 g-3" id="todoList">
+                    
+              </div>
             </div>
         </div>
     </div>
-</div>
-</div>
+
+    <div class="fixed-bottom">
+      <button type="button" data-bs-toggle="modal" data-bs-target="#addGoals" id="addGoalsButton"><ion-icon name="add-circle"></ion-icon></button>
+    </div>
+  </div>
+  <div class="modal fade" id="addGoals" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="addGoalsLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addGoalsLabel">Tambah Goals</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="addNewGolasForm">
+                    <div class="mb-3">
+                        <label for="goalsName" class="form-label">Nama Goals</label>
+                        <input type="text" class="form-control" placeholder="Tambahkan goals anda" id="addNewGoalsInput" autocomplete="off" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Simpan</button>
+                </form>
+            </div>
+        </div>
+    </div>
+  </div>
 `
 
 export { heroTemplate, sectionFirst, sectionDailyMotivation, sectionThird, aboutPageTemplate, timerPageTemplate, todoPageTemplate }

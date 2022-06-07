@@ -89,10 +89,6 @@ app-bar .app-bar__navigation ul li a {
     font-size: 1.2rem;
 }
 
-app-bar .app-bar__navigation ul li a:hover{
-    text-decoration: underline !important;
-}
-
 /* main content */
 main {
     flex: 1;
@@ -105,48 +101,87 @@ footer{
 
 /* quote section on todopage */
 .quotes{
-    /* display: flex; */
-    /* align-items: center; */
-    /* justify-content: center; */
-    /* height: 70vh; */
-    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.quote-container {
-    position: relative;
+.wrapper{
+    width: 90%;
+}
+
+.wrapper h1{
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.wrapper .content{
+    margin: 35px 0 !important;
+}
+
+.wrapper .content .quote-area{
     display: flex;
     justify-content: center;
 }
 
-.quote-section {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-
-    width: 70%;
+.wrapper .content .quote-area svg:first-child{
+    margin-top: -25px !important;
 }
 
-.next-back-icon {
-    font-size: 50px;
+.wrapper .content .quote-area svg:last-child{
+    margin-bottom: -10px !important;
 }
 
-.quote-section .quote{
-    font-size: 27px;
-    font-weight: 600;
+.wrapper .content .quote-area .quote{
+    font-size: 22px;
     text-align: center;
     word-break: break-word;
 }
 
-.content .author{
-    text-align: center;
-    margin-top: 20px;
+.wrapper .content .author{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px !important;
     font-size: 18px;
+    font-style: italic;
 }
 
-/* .bingkai-section {
-    width: 70%;
-} */
+.wrapper .content button {
+    border-radius: 25px;
+}
+
+.wrapper .content .author span:first-child{
+    margin: -7px 5px 0 0 !important;
+    font-family: monospace !important;
+}
+
+.wrapper .buttons{
+    border-top: 1px solid #d8cbf7;
+}
+
+.wrapper .buttons .features{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px !important;
+}
+
+.wrapper .buttons .features button{
+    border: none;
+    outline: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 13px 22px;
+    border-radius: 30px;
+    background: #5372f0;
+}
+
+.wrapper .buttons .features button.loading{
+    opacity: .7;
+    pointer-events: none;
+}
 
 /* section third on homepage */
 .section-third span{
@@ -310,14 +345,30 @@ footer{
     background: rgb(243,243,123);
     background: linear-gradient(45deg, rgba(243,243,123,1) 0%, rgba(216,203,247,1) 33%, rgba(190,220,228,1) 61%);
 }
-  
-#todo-container{
-    height: 50vh;
-    overflow-y: auto;
+
+button{
+    border: none;
+    background: none;
 }
   
-#todo-container::-webkit-scrollbar {
-    display: none;
+.fixed-bottom{
+    left: auto !important;
+    right: 10px !important;
+    bottom: 5px !important;
+}
+  
+#addGoalsButton{
+    color: #5d4ad2 !important;
+    border: none !important;
+    background: none !important;
+}
+  
+#addGoalsButton ion-icon {
+    font-size: 64px;
+}
+
+#trash:hover{
+    color: red;
 }
   
 #editTodoForm{
@@ -375,6 +426,20 @@ footer{
 }
 
 @media (min-width: 700px) {
+    app-bar .app-bar__navigation ul li a::after{
+        content: '';
+        width: 0;
+        height: 2px;
+        background: #ff0a54;
+        display: block;
+        margin: auto;
+        transition: .5s;
+    }
+
+    app-bar .app-bar__navigation ul li a:hover::after{
+        width: 50%;
+    }
+
     .border:before {
         content: "";
         height: 3px;

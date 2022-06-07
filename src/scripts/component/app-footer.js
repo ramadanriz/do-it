@@ -5,19 +5,7 @@ class AppFooter extends HTMLElement {
 
   render () {
     this.innerHTML = `
-        <section class="d-flex justify-content-between p-4 bg-altviolet">
-            <div class="me-5">
-                <span>Mari terhubung dengan kami di:</span>
-            </div>
-            <div>
-                <a href="" class="text-white me-4"><ion-icon name="logo-facebook"></ion-icon></a>
-                <a href="" class="text-white me-4"><ion-icon name="logo-twitter"></ion-icon></a>
-                <a href="" class="text-white me-4"><ion-icon name="logo-instagram"></ion-icon></a>
-                <a href="" class="text-white me-4"><ion-icon name="logo-github"></ion-icon></a>
-            </div>
-        </section>
-
-        <section>
+        <section class="border-top border-5 border-altviolet">
             <div class="container-fluid text-center text-md-start mt-5 text-altblack">
                 <div class="row mt-3">
                     <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">

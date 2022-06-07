@@ -1,10 +1,10 @@
+/* eslint-disable no-undef */
 function main () {
   const totalGoals = document.getElementById('total-goals')
   const totalTodo = document.getElementById('total-todo')
   const addNewGoalsForm = document.getElementById('addNewGolasForm')
   const addNewGoalsInput = document.getElementById('addNewGoalsInput')
   const goalsList = document.getElementById('goalsList')
-  const currentShowTodoList = document.getElementById('currentShowTodoList')
   const addNewTodoForm = document.getElementById('addNewTodoForm')
   const addNewTodoSelect = document.getElementById('addNewTodoSelect')
   const addNewTodoInput = document.getElementById('addNewTodoInput')
@@ -24,19 +24,12 @@ function main () {
     totalGoals.innerText = `${goals.length}`
     totalTodo.innerText = `${todos.length}`
 
-    if (!selectedGoals || selectedGoals === 'null') {
-      currentShowTodoList.innerHTML = 'Daftar Semua Kegiatan'
-    } else {
-      const currentGoal = goals.find((goal) => goal._id === selectedGoals)
-      currentShowTodoList.innerHTML = `Daftar Kegiatan ${currentGoal.goal} <span>(Hapus Goals)</span>`
-    }
-
-    clearChildElements(goalsList)
-    clearChildElements(addNewTodoSelect)
-    clearChildElements(editTodoSelect)
-    clearChildElements(todoList)
+    clearElements(goalsList)
+    clearElements(addNewTodoSelect)
+    clearElements(editTodoSelect)
+    clearElements(todoList)
     renderAllGoals()
-    renderFormOptions()
+    formOptions()
     renderAllTodo()
   }
 
@@ -46,7 +39,7 @@ function main () {
     localStorage.setItem(SELECTED_GOALS_KEY, selectedGoals)
   }
 
-  function renderFormOptions () {
+  function formOptions () {
     addNewTodoSelect.innerHTML += '<option value="">Pilih Goals</option>'
     editTodoSelect.innerHTML += '<option value="">Pilih Goals</option>'
     goals.forEach(({ _id, goal }) => {
@@ -55,34 +48,30 @@ function main () {
     })
   }
 
-  function clearChildElements (element) {
+  function clearElements (element) {
     while (element.firstChild) {
       element.removeChild(element.firstChild)
     }
   }
 
   function renderAllGoals () {
-    goalsList.innerHTML += `
-      <li class="list-group-item px-3 border-0 ${selectedGoals === 'null' || selectedGoals === null ? 'active fw-bold' : ''}" data-goal-id="">Semua Kegiatan</li>
-      `
+    goalsList.innerHTML += ''
     goals.forEach(({ _id, goal }) => {
-      goalsList.innerHTML += ` <li class="list-group-item px-3 border-0 ${_id === selectedGoals ? 'active fw-bold' : ''}" data-goal-id=${_id}>${goal}</li>`
+      goalsList.innerHTML += ` <li class="list-group-item px-3 d-flex justify-content-between align-items-center border-0 ${_id === selectedGoals ? 'active fw-bold' : ''}" data-goal-id=${_id}>${goal} <ion-icon name="trash" id="trash"></ion-icon></li>`
     })
   }
 
   function renderAllTodo () {
     let todoRender = todos
-    if (selectedGoals && selectedGoals !== 'null') {
+    if (selectedGoals || selectedGoals !== 'null') {
       todoRender = todos.filter((todo) => todo.goalId === selectedGoals)
     }
 
     todoRender.forEach(({ _id, goalId, todo }) => {
-      const { goal } = goals.find(({ _id }) => _id === goalId)
       todoList.innerHTML += `
           <div class="col-md">
               <div class="card shadow-sm">
                   <div class="card-body">
-                      <h5 class="card-title py-2 rounded text-center align-self-center">${goal}</h5>
                       <p class="card-text">${todo}</p>
                       <div class="todo-action mt-1">
                           <ion-icon name="create" class="edit" data-edit-todo=${_id}></ion-icon>
@@ -94,34 +83,24 @@ function main () {
     })
   }
 
-  // Add New Goals
   addNewGoalsForm.addEventListener('submit', (event) => {
     event.preventDefault()
     const newGoal = addNewGoalsInput.value
-    goals.push({
-      _id: Date.now().toString(),
-      goal: newGoal
-    })
+    goals.push({ _id: Date.now().toString(), goal: newGoal })
     addNewGoalsInput.value = ''
     saveToLocalStorage()
     renderAllFunction()
   })
 
-  // Add New Todo
   addNewTodoForm.addEventListener('submit', (event) => {
     event.preventDefault()
-    todos.push({
-      _id: Date.now().toString(),
-      goalId: addNewTodoSelect.value,
-      todo: addNewTodoInput.value
-    })
+    todos.push({ _id: Date.now().toString(), goalId: addNewTodoSelect.value, todo: addNewTodoInput.value })
     addNewTodoSelect.value = ''
     addNewTodoInput.value = ''
     saveToLocalStorage()
     renderAllFunction()
   })
 
-  // Update Todo With New Values
   editTodoForm.addEventListener('submit', function (event) {
     event.preventDefault()
     todoToEdit.goalId = editTodoSelect.value
@@ -134,7 +113,6 @@ function main () {
     renderAllFunction()
   })
 
-  // Load Edit Todo Form With Values
   todoList.addEventListener('click', (element) => {
     if (element.target.classList.contains('edit')) {
       addNewTodoForm.style.display = 'none'
@@ -145,28 +123,38 @@ function main () {
     }
     if (element.target.classList.contains('delete')) {
       const todoDelete = todos.findIndex((todo) => todo._id === element.target.dataset.deleteTodo)
-      todos.splice(todoDelete, 1)
-      saveToLocalStorage()
-      renderAllFunction()
+      Swal.fire({
+        title: 'Anda ingin menghapus todo ini?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Ya',
+        cancelButtonText: 'Batal',
+        allowOutsideClick: false
+      }).then((result) => {
+        if (result.isConfirmed) {
+          todos.splice(todoDelete, 1)
+          saveToLocalStorage()
+          renderAllFunction()
+          Swal.fire(
+            'Berhasil',
+            'Todo anda telah dihapus',
+            'success'
+          )
+        }
+      })
     }
   })
 
-  // Get Selected Goals
   goalsList.addEventListener('click', (element) => {
     if (element.target.tagName.toLowerCase() === 'li') {
-      if (!element.target.dataset.goalId) {
-        selectedGoals = null
-      } else {
-        selectedGoals = element.target.dataset.goalId
-      }
+      selectedGoals = element.target.dataset.goalId
       saveToLocalStorage()
       renderAllFunction()
     }
-  })
 
-  // Delete Goals
-  currentShowTodoList.addEventListener('click', (element) => {
-    if (element.target.tagName.toLowerCase() === 'span') {
+    if (element.target.tagName.toLowerCase() === 'ion-icon') {
       goals = goals.filter((goal) => goal._id !== selectedGoals)
       todos = todos.filter((todo) => todo.goalId !== selectedGoals)
       selectedGoals = null
@@ -175,14 +163,13 @@ function main () {
     }
   })
 
-  // window.addEventListener('load', renderAllFunction)
-
   const DOMReady = function (callback) {
     document.readyState === 'interactive' || document.readyState === 'complete' ? callback() : document.addEventListener('DOMContentLoaded', callback)
   }
 
   DOMReady(function () {
-    if (typeof (Storage) !== 'undefined') {
+    const checkingStorage = typeof (Storage)
+    if (checkingStorage) {
       renderAllFunction()
     } else {
       alert('Browser kamu tidak mendukung local storage')
