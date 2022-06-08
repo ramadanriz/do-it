@@ -108,21 +108,22 @@ footer{
 
 /* styling untuk todolist */
 .todo-btn {
-    border: 2px solid #d8cbf7;
+    border: 2px solid #77287d;
     border-radius: 10px;
     background-color: #ffffff;
-    color: grey;
+    color: rgb(255, 255, 255);
 }
 
 .submit-todo-btn {
-    background-color: #d8cbf7;
+    background-color: #77287d;
     height: 100%;
     width: 100%;
 }
 
 .submit-todo-btn:hover {
-    background-color: #bca7ee;
-    border: 2px solid #bca7ee;
+    background-color: #ffffff;
+    border: 2px solid #77287d;
+    color: #77287d;
 }
 
 .delete-goals-btn {
@@ -141,7 +142,7 @@ footer{
 .todo-card {
     border-radius: 10px;
     background-color: white;
-    border: 2px solid #d8cbf7;
+    border: 2px solid #77287d;
 }
 
 .todo-card-left-section label {
@@ -160,7 +161,7 @@ footer{
     /* content: ''; */
     min-width: 1.5em;
     height: 1.5em;
-    border: 2px solid #d8cbf7;
+    border: 2px solid #77287d;
     border-radius: 100%;
     margin-right: 10px;
     color: transparent;
@@ -168,11 +169,11 @@ footer{
 
 .todo-card-left-section .task-checkbox:checked + label span {
     /* content: '\002714'; */
-    background-color: #d8cbf7;
+    background-color: #77287d;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: grey;
+    color: white;
 }
 
 .todo-card-left-section .task-checkbox:checked + label p {
@@ -183,7 +184,7 @@ footer{
     color: grey;
     padding: 5px;
     border-radius: 10px;
-    background-color: #f3f37b;
+    background-color: #fee748;
     border: none;
     max-height: 35px;
 }
@@ -192,7 +193,7 @@ footer{
     color: grey;
     padding: 5px;
     border-radius: 10px;
-    background-color: #bedce4;
+    background-color: #a7c0ff;
     border: none;
     max-height: 35px;
 }
@@ -215,6 +216,50 @@ footer{
     border-radius: 0px;
 }
 
+/* quote section on todopage */
+.quotes{
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* height: 70vh; */
+    width: 100%;
+    margin: 90px 0px;
+}
+
+.quote-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.quote-section {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+
+    width: 70%;
+}
+
+.next-back-icon {
+    font-size: 50px;
+    color: #77287d;
+}
+
+.quote-section .quote{
+    font-size: 27px;
+    font-weight: 600;
+    text-align: center;
+    word-break: break-word;
+    color: #77287d;
+}
+
+.content .author{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
 /* styling for add goals feature */
 .form-select {
     border: 1px solid #d8cbf7;
@@ -227,7 +272,7 @@ footer{
 }
 
 .list-group > .active {
-    background-color: #d8cbf7 !important;
+    background-color: #77287d !important;
     border-radius: 5px;
 }
 
@@ -457,7 +502,7 @@ button{
 }
   
 #addGoalsButton{
-    color: #5d4ad2 !important;
+    color: #77287d !important;
     border: none !important;
     background: none !important;
 }
@@ -529,7 +574,7 @@ button{
         content: '';
         width: 0;
         height: 2px;
-        background: #ff0a54;
+        background: #77287d;
         display: block;
         margin: auto;
         transition: .5s;

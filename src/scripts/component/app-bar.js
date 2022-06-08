@@ -9,7 +9,7 @@ class AppBar extends HTMLElement {
             <button id="hamburgerButton"><ion-icon name="menu"></ion-icon></button>
         </div>
         <div class="app-bar__brand">
-            <img src="logo/do-it-logo.png" alt="do.it logo">
+            <img src="logo/do-it-logoo.png" alt="do.it logo">
         </div>
         <nav id="navigationDrawer" class="app-bar__navigation">
             <ul>

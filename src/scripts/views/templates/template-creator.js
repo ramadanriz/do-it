@@ -19,46 +19,45 @@ const heroTemplate = () => `
 
 const sectionFirst = () => `
   <section class="section-first my-5">
-    <div class="container mx-auto">
-      <div class="row">
-        <div class="col py-3">
-          <h3 class="text-center text-altblack fw-bold">Mengapa Harus Punya 'Goals' Dalam Hidup?</h3>
+      <div class="container mx-auto">
+        <div class="row">
+          <div class="col py-3">
+            <h3 class="text-center text-altblack fw-bold">Mengapa Harus Punya 'Goals' Dalam Hidup?</h3>
+          </div>
+        </div>
+        <div class="row justify-content-between align-items-center">
+          <div class="col-lg-5">
+            <img src="confused-character.png" class="img-fluid" alt="Confused business character making important decision">
+          </div>
+          <div class="col-lg-7">
+            <p class="lh-lg">"Goals" adalah sesuatu yang ingin kita capai atau peroleh. Tanpanya hidup akan berputar tanpa arah dan tujuan hidup tak akan jelas. Tanpa "Goals" hidup kita layaknya sebuah perjalanan tanpa sebuah peta dan alamat. Kita terus berputar mencari sesuatu yang tak jelas dan terjebak dalam rute yang sama tanpa kejelasan. "Goals" adalah sebuah tujuan yang kita tetapkan. Dengan adanya "Goals" kita tahu ke arah mana harus melangkah. "Goals" akan berfungsi sebagai kompas untuk menuju ke tempat yang kita inginkan.</p>
+          </div>
         </div>
       </div>
-      <div class="row justify-content-between align-items-center">
-        <div class="col-lg-5">
-          <img src="confused-character.png" class="img-fluid" alt="Confused business character making important decision">
-        </div>
-        <div class="col-lg-7">
-          <p class="lh-lg">"Goals" adalah sesuatu yang ingin kita capai atau peroleh. Tanpanya hidup akan berputar tanpa arah dan tujuan hidup tak akan jelas. Tanpa "Goals" hidup kita layaknya sebuah perjalanan tanpa sebuah peta dan alamat. Kita terus berputar mencari sesuatu yang tak jelas dan terjebak dalam rute yang sama tanpa kejelasan. "Goals" adalah sebuah tujuan yang kita tetapkan. Dengan adanya "Goals" kita tahu ke arah mana harus melangkah. "Goals" akan berfungsi sebagai kompas untuk menuju ke tempat yang kita inginkan.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <section>
 `
 
 const sectionDailyMotivation = () => `
-  <section class="quotes my-5 bg-altgray">
-    <div class="wrapper">
-      <div class="content">
-        <div class="col text-center">
-          <button type="button" class="generateQuote"><ion-icon name="caret-up-outline" size="large"></ion-icon></button>
-        </div>
-        <div class="quote-area">
-          <div class="text-center">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="24" height="24"><path d="M96 224C84.72 224 74.05 226.3 64 229.9V224c0-35.3 28.7-64 64-64c17.67 0 32-14.33 32-32S145.7 96 128 96C57.42 96 0 153.4 0 224v96c0 53.02 42.98 96 96 96s96-42.98 96-96S149 224 96 224zM352 224c-11.28 0-21.95 2.305-32 5.879V224c0-35.3 28.7-64 64-64c17.67 0 32-14.33 32-32s-14.33-32-32-32c-70.58 0-128 57.42-128 128v96c0 53.02 42.98 96 96 96s96-42.98 96-96S405 224 352 224z"/></svg>
-            <span class="quote px-1"></span>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="24" height="24"><path d="M96 96C42.98 96 0 138.1 0 192s42.98 96 96 96c11.28 0 21.95-2.305 32-5.879V288c0 35.3-28.7 64-64 64c-17.67 0-32 14.33-32 32s14.33 32 32 32c70.58 0 128-57.42 128-128V192C192 138.1 149 96 96 96zM448 192c0-53.02-42.98-96-96-96s-96 42.98-96 96s42.98 96 96 96c11.28 0 21.95-2.305 32-5.879V288c0 35.3-28.7 64-64 64c-17.67 0-32 14.33-32 32s14.33 32 32 32c70.58 0 128-57.42 128-128V192z"/></svg>
+  <section class="quotes">
+    <div class="content quote-container">
+        <div class="bingkai-section d-flex align-items-center">
+          <div>
+              <button type="button" class="generateQuote"><ion-icon class="next-back-icon" name="chevron-back-outline"></ion-icon></button>
+          </div>
+          <img src="quote.png" alt="bingkai quote">
+          <div>
+              <button type="button" class="generateQuote"><ion-icon class="next-back-icon" name="chevron-forward-outline"></ion-icon></button>
           </div>
         </div>
-        <div class="col text-center mt-2">
-          <button type="button" class="generateQuote"><ion-icon name="caret-down-outline" size="large"></ion-icon></button>
+        <div class="quote-section">
+          <div class="text-center">
+              <span class="quote"></span>
+          </div>
+          <div class="author">
+              <span>-</span>
+              <span class="name"></span>
+          </div>
         </div>
-        <div class="author">
-          <span>__</span>
-          <span class="name"></span>
-        </div>
-      </div>
     </div>
   </section>
 `
@@ -112,7 +111,7 @@ const sectionThird = () => `
         </div>
       </div>
     </div>
-  </section>
+  <section>
 `
 
 const aboutPageTemplate = () => `
@@ -136,17 +135,32 @@ const aboutPageTemplate = () => `
 
 const timerPageTemplate = () => `
   <div class="pomodoro-container">
-    <h1 >Focus Timer</h1>
+    <div class="length-container">
+        <div id="focusLength-container" class="toggle-button-container">
+            <h1>Focus Length</h1>
+            <time id="focus-length" class="toggle-button-container__sub-container"></time>
+            <div class="toggler-button">
+                <button class="toggle-timer" type="button" id="decrease-focus">-</button> 
+                <button class="toggle-timer" type="button" id="increase-focus">+</button> 
+            </div>
+        </div>
+        <div id="breakLength-container" class="toggle-button-container">
+            <h1>Break Length</h1>
+            <time id="break-length" class="toggle-button-container__sub-container"></time>
+            <div class="toggler-button">
+                <button class="toggle-timer" type="button" id="decrease-break">-</button>
+                <button class="toggle-timer" type="button" id="increase-break">+</button>
+            </div>
+        </div>
+    </div>
     <div id="countdown-container">
-      <div id="time">
-        <span id="minutes">25</span>
-        <span id="colon">:</span>
-        <span id="seconds">00</span>
-      </div>
+        <h1 id="type">Focus Session</h1>
+        <time id="countdown"></time>
     </div>
     <div id="button-container">
         <button type="button" id="start-session">Start</button>
         <button type="button" id="stop-session">Stop</button>
+        <button type="button" id="reset-session">Reset</button>
     </div>
   </div>
 `
@@ -154,7 +168,8 @@ const timerPageTemplate = () => `
 const todoPageTemplate = () => `
   <div class="m-5">
     <div class="mx-5">
-        <div class="row g-3">
+        <h2>Daily Report</h2>
+        <div class="row g-3 my-3">
             <div class="col-md">
                 <div class="p-3 bg-satu shadow-sm d-flex justify-content-around align-items-center rounded">
                     <div>
