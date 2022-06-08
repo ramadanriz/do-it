@@ -58,32 +58,25 @@ function main () {
     goalsList.innerHTML += ''
     goals.forEach(({ _id, goal }) => {
       goalsList.innerHTML += ` 
-        <!-- <div class="card" style="width: 18rem;" ${_id === selectedGoals ? 'active fw-bold' : ''}" data-goal-id=${_id}>
-          <div class="card-header">
-            ${goal} <ion-icon name="trash" id="trash"></ion-icon>
-          </div>
-          <div class="row row-cols-1 mx-5 list-group list-group-flush" id="todoList">
-                
-          </div>
-        </div> -->
-
-        <!-- <div class="accordion accordion-flush" id="accordionFlushExample">
-          <div class="accordion-item" ${_id === selectedGoals ? 'active fw-bold' : ''}" data-goal-id=${_id}>
-            <h2 class="accordion-header" id="flush-heading-${_id}">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-${_id}" aria-expanded="false" aria-controls="flush-${_id}">
-                ${goal} <ion-icon name="trash" id="trash"></ion-icon>
-              </button>
-            </h2>
-            <div id="flush-${_id}" class="accordion-collapse collapse" aria-labelledby="flush-heading-${_id}" data-bs-parent="#accordionFlushExample">
-              
-            </div>
-          </div>
-        </div> -->
+        <li class="list-group-item py-3 px-2 d-flex align-items-center border-0 ${_id === selectedGoals ? 'active fw-bold' : ''}" data-goal-id=${_id}>
+        <div class="delete-goals-btn d-flex align-items-center">  
+          <ion-icon name="trash-outline" id="trash"></ion-icon>   
+        </div> 
+          ${goal}
+        </li>
 
 
-        <li class="list-group-item px-3 d-flex justify-content-between align-items-center border-0 ${_id === selectedGoals ? 'active fw-bold' : ''}" data-goal-id=${_id}>
-          ${goal} <ion-icon name="trash" id="trash"></ion-icon>
-        </li>`
+        <!-- <li class="list-group-item p-2 d-flex align-items-center border-0>
+          <div class="w-75">
+            
+          </div>  
+          <div class="w-25 d-flex justify-content-end">
+            <ion-icon name="trash-outline" id="trash"></ion-icon>
+          </div>
+
+          <ion-icon class="delete-goals-btn" name="trash-outline" id="trash"></ion-icon>
+        
+        </li> -->`
     })
   }
 
@@ -222,4 +215,4 @@ function main () {
   })
 }
 
-export { main }
+export default main

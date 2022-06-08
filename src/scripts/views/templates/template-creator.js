@@ -167,9 +167,9 @@ const timerPageTemplate = () => `
 `
 
 const todoPageTemplate = () => `
-  <div class="container-fluid mb-5">
-    <div class="container-fluid">
-        <div class="row g-3 my-2">
+  <div class="m-5">
+    <div class="mx-5">
+        <div class="row g-3">
             <div class="col-md">
                 <div class="p-3 bg-satu shadow-sm d-flex justify-content-around align-items-center rounded">
                     <div>
@@ -192,66 +192,67 @@ const todoPageTemplate = () => `
         </div>
     </div>
 
-    <div class="container-fluid py-5">
-      <div class="d-flex justify-content-end">
-        <form class="row g-2 mb-3" id="addNewTodoForm">
-          <div class="col-md-4">
-            <select class="form-select" id="addNewTodoSelect" required>
-              <option value="">Pilih Goals</option>
-            </select>
-          </div>
-          <div class="col-md-5">
-            <input type="text" class="form-control" placeholder="Tambahkan kegiatan anda" id="addNewTodoInput" autocomplete="off" required>
-          </div>
-          <div class="col-md-2">
-            <button class="btn btn-primary">Simpan</button>
-          </div>
-        </form>
-        <form class="row g-1 mb-3" id="editTodoForm">
-          <div class="col-md-3">
-            <select class="form-select" id="editTodoSelect">
-              <option value="">Pilih Goals</option>
-            </select>
-          </div>
-          <div class="col-md-5">
-            <input type="text" class="form-control" placeholder="Tambahkan kegiatan anda" id="editTodoInput" autocomplete="off" required>
-          </div>
-          <div class="col-md-4">
-            <button class="btn btn-primary">Simpan Perubahan</button>
-          </div>
-        </form>
-      </div>
-
-      <div class="row justify-content-around g-3 mx-5">
-        <!-- <div class="todo-container col-lg-4">
-          <div class="add-todo-form-container">
-              <h3 class="d-flex align-items-center mb-3">Tugas hari ini</h3>
-              <form class="row" id="add-todo-form" autocomplete="off">
-                  <div class="input-todo col-10 px-0">
-                      <input type="text" class="form-control" id="todo-title-input" placeholder="Masukkan nama tugas" required>
-                  </div>
-                  <div class="col-2">
-                      <button type="submit" id="submit-todo-btn" class="todo-btn submit-todo-btn d-flex align-items-center justify-content-center">
-                          <ion-icon class="me-1" name="add-circle"></ion-icon> Tugas
-                      </button>
-                  </div>
-              </form>
-          </div>
-          <div class="todo-list-container mt-5">
-              
-          </div>
-        </div> -->
-
-        <div class="col-lg-3 p-3 border rounded">
-          <h5 class="mb-3">Daftar Goals</h5>
-          <ul class="list-group list-group-light sidebar-list" id="goalsList"></ul>
+    <div class="row mt-5 mx-5">
+      <div class="col-8 p-5 border rounded">
+        <div class="">
+          <form class="row mb-4" id="addNewTodoForm">
+            <div class="col-md-3 px-0">
+              <select class="form-select" id="addNewTodoSelect" required>
+                <option value="">Pilih Goals</option>
+              </select>
+            </div>
+            <div class="input-todo col-md-7">
+              <input type="text" class="form-control" placeholder="Tambahkan kegiatan anda" id="addNewTodoInput" autocomplete="off" required>
+            </div>
+            <div class="col-md-2 px-0">
+              <button class="todo-btn submit-todo-btn w-100">Simpan</button>
+            </div>
+          </form>
+          <form class="row mb-4" id="editTodoForm">
+            <div class="col-md-3 px-0">
+              <select class="form-select" id="editTodoSelect">
+                <option value="">Pilih Goals</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <input type="text" class="form-control" placeholder="Tambahkan kegiatan anda" id="editTodoInput" autocomplete="off" required>
+            </div>
+            <div class="col-md-3 px-0">
+              <button class="todo-btn submit-todo-btn">Simpan Perubahan</button>
+            </div>
+          </form>
         </div>
 
-        <div class="col-lg-8 p-3 border rounded">
-          <h5 class="mb-3 mx-5">Daftar Kegiatan</h5>
-          <div class="row row-cols-1 mx-5" id="todoList">
-                
+        <div class="row">
+          <div class="col-lg-4 p-3 border rounded">
+            <h5 class="mb-3">Daftar Goals</h5>
+            <ul class="list-group list-group-light sidebar-list" id="goalsList"></ul>
           </div>
+
+          <div class="col-lg-8 p-3">
+            <h5 class="mb-3 mx-3">Daftar Kegiatan</h5>
+            <div class="row row-cols-1 mx-3" id="todoList"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-4 ps-5 pe-0">
+        <div class="todo-container">
+          <div class="add-todo-form-container">
+            <h3 class="d-flex align-items-center mb-3">Tugas hari ini</h3>
+            <form class="d-flex" id="add-todo-form" autocomplete="off">
+                <div class="input-todo w-75 px-0 me-2">
+                    <input type="text" class="form-control" id="todo-title-input" placeholder="Masukkan nama tugas" required>
+                </div>
+                <div class="w-25">
+                    <button type="submit" id="submit-todo-btn" class="todo-btn submit-todo-btn d-flex align-items-center justify-content-center">
+                        <ion-icon class="me-1" name="add-circle"></ion-icon> Tugas
+                    </button>
+                </div>
+            </form>
+          </div>
+
+          <div class="todo-list-container mt-5"></div>
         </div>
       </div>
     </div>

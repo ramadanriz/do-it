@@ -1,5 +1,6 @@
 import { todoPageTemplate } from '../templates/template-creator'
-import { main } from '../../utils/todo'
+import main from '../../utils/todo'
+import crudTodo from '../../utils/crud-todo'
 
 const TodoPage = {
   async render () {
@@ -10,6 +11,7 @@ const TodoPage = {
 
   async afterRender () {
     main()
+    crudTodo()
   }
 }
 

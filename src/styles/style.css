@@ -108,26 +108,30 @@ footer{
 
 /* styling untuk todolist */
 .todo-btn {
-    border: 2px solid #f3f37b;
+    border: 2px solid #d8cbf7;
     border-radius: 10px;
     background-color: #ffffff;
     color: grey;
 }
 
 .submit-todo-btn {
-    background-color: #f3f37b;
+    background-color: #d8cbf7;
     height: 100%;
     width: 100%;
 }
 
 .submit-todo-btn:hover {
-    background-color: #efef00;
-    border: 2px solid #efef00;
+    background-color: #bca7ee;
+    border: 2px solid #bca7ee;
+}
+
+.delete-goals-btn {
+    margin-right: 12px;
 }
 
 .input-todo > input:focus {
-    border: 1px solid #f3f37b;
-    box-shadow: 0 0 10px #f3f37b;
+    border: 1px solid #d8cbf7;
+    box-shadow: 0 0 10px #d8cbf7;
 }
 
 .input-todo > input:focus::placeholder {
@@ -137,7 +141,7 @@ footer{
 .todo-card {
     border-radius: 10px;
     background-color: white;
-    border: 2px solid #f3f37b;
+    border: 2px solid #d8cbf7;
 }
 
 .todo-card-left-section label {
@@ -156,7 +160,7 @@ footer{
     /* content: ''; */
     min-width: 1.5em;
     height: 1.5em;
-    border: 2px solid #f3f37b;
+    border: 2px solid #d8cbf7;
     border-radius: 100%;
     margin-right: 10px;
     color: transparent;
@@ -164,7 +168,7 @@ footer{
 
 .todo-card-left-section .task-checkbox:checked + label span {
     /* content: '\002714'; */
-    background-color: #f3f37b;
+    background-color: #d8cbf7;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -179,7 +183,7 @@ footer{
     color: grey;
     padding: 5px;
     border-radius: 10px;
-    background-color: #d8cbf7;
+    background-color: #f3f37b;
     border: none;
     max-height: 35px;
 }
@@ -209,6 +213,22 @@ footer{
     border: none;
     border-bottom: 2px solid #d8cbf7;
     border-radius: 0px;
+}
+
+/* styling for add goals feature */
+.form-select {
+    border: 1px solid #d8cbf7;
+    box-shadow: 0 0 10px 0px #fff inset !important;
+}
+
+.form-select:focus {
+    border: 1px solid #d8cbf7 !important;
+    box-shadow: 0 0 10px #d8cbf7 !important;
+}
+
+.list-group > .active {
+    background-color: #d8cbf7 !important;
+    border-radius: 5px;
 }
 
 .wrapper{
