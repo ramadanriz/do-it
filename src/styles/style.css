@@ -256,41 +256,15 @@ footer{
   color: white;
 }
 
-.pomodoro-container h1 {
-  position: relative;
-  margin-bottom: 1em;
-  display: inline-block;
-  padding: 0 10px;
-  font-size: 1.2rem;
+.pomodoro-container button[disabled] {
+    cursor: not-allowed;
+    background: #03071e;
+    color: white;
 }
-
-.pomodoro-container .length-container{
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-}
-
-.pomodoro-container .length-container .toggle-button-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.pomodoro-container .length-container .toggle-button-container #focus-length,
-.pomodoro-container .length-container .toggle-button-container #break-length {
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  margin-bottom: 10px;
-  display: inline-block;
-  background: #fff;
-  color: #03071e;
-  border: 2px solid #5d4ad2;
-  border-radius: 50%;
-}
-
-.pomodoro-container .length-container .toggle-button-container .toggle-timer{
-  width: 50px;
+  
+#time span{
+    font-size: 3rem;
+    font-weight: 500;
 }
 
 .pomodoro-container #button-container {

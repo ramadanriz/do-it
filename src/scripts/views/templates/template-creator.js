@@ -19,22 +19,22 @@ const heroTemplate = () => `
 
 const sectionFirst = () => `
   <section class="section-first my-5">
-      <div class="container mx-auto">
-        <div class="row">
-          <div class="col py-3">
-            <h3 class="text-center text-altblack fw-bold">Mengapa Harus Punya 'Goals' Dalam Hidup?</h3>
-          </div>
-        </div>
-        <div class="row justify-content-between align-items-center">
-          <div class="col-lg-5">
-            <img src="confused-character.png" class="img-fluid" alt="Confused business character making important decision">
-          </div>
-          <div class="col-lg-7">
-            <p class="lh-lg">"Goals" adalah sesuatu yang ingin kita capai atau peroleh. Tanpanya hidup akan berputar tanpa arah dan tujuan hidup tak akan jelas. Tanpa "Goals" hidup kita layaknya sebuah perjalanan tanpa sebuah peta dan alamat. Kita terus berputar mencari sesuatu yang tak jelas dan terjebak dalam rute yang sama tanpa kejelasan. "Goals" adalah sebuah tujuan yang kita tetapkan. Dengan adanya "Goals" kita tahu ke arah mana harus melangkah. "Goals" akan berfungsi sebagai kompas untuk menuju ke tempat yang kita inginkan.</p>
-          </div>
+    <div class="container mx-auto">
+      <div class="row">
+        <div class="col py-3">
+          <h3 class="text-center text-altblack fw-bold">Mengapa Harus Punya 'Goals' Dalam Hidup?</h3>
         </div>
       </div>
-  <section>
+      <div class="row justify-content-between align-items-center">
+        <div class="col-lg-5">
+          <img src="confused-character.png" class="img-fluid" alt="Confused business character making important decision">
+        </div>
+        <div class="col-lg-7">
+          <p class="lh-lg">"Goals" adalah sesuatu yang ingin kita capai atau peroleh. Tanpanya hidup akan berputar tanpa arah dan tujuan hidup tak akan jelas. Tanpa "Goals" hidup kita layaknya sebuah perjalanan tanpa sebuah peta dan alamat. Kita terus berputar mencari sesuatu yang tak jelas dan terjebak dalam rute yang sama tanpa kejelasan. "Goals" adalah sebuah tujuan yang kita tetapkan. Dengan adanya "Goals" kita tahu ke arah mana harus melangkah. "Goals" akan berfungsi sebagai kompas untuk menuju ke tempat yang kita inginkan.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 `
 
 const sectionDailyMotivation = () => `
@@ -112,7 +112,7 @@ const sectionThird = () => `
         </div>
       </div>
     </div>
-  <section>
+  </section>
 `
 
 const aboutPageTemplate = () => `
@@ -136,32 +136,17 @@ const aboutPageTemplate = () => `
 
 const timerPageTemplate = () => `
   <div class="pomodoro-container">
-    <div class="length-container">
-        <div id="focusLength-container" class="toggle-button-container">
-            <h1>Focus Length</h1>
-            <time id="focus-length" class="toggle-button-container__sub-container"></time>
-            <div class="toggler-button">
-                <button class="toggle-timer" type="button" id="decrease-focus">-</button> 
-                <button class="toggle-timer" type="button" id="increase-focus">+</button> 
-            </div>
-        </div>
-        <div id="breakLength-container" class="toggle-button-container">
-            <h1>Break Length</h1>
-            <time id="break-length" class="toggle-button-container__sub-container"></time>
-            <div class="toggler-button">
-                <button class="toggle-timer" type="button" id="decrease-break">-</button>
-                <button class="toggle-timer" type="button" id="increase-break">+</button>
-            </div>
-        </div>
-    </div>
+    <h1 >Focus Timer</h1>
     <div id="countdown-container">
-        <h1 id="type">Focus Session</h1>
-        <time id="countdown"></time>
+      <div id="time">
+        <span id="minutes">25</span>
+        <span id="colon">:</span>
+        <span id="seconds">00</span>
+      </div>
     </div>
     <div id="button-container">
         <button type="button" id="start-session">Start</button>
         <button type="button" id="stop-session">Stop</button>
-        <button type="button" id="reset-session">Reset</button>
     </div>
   </div>
 `
