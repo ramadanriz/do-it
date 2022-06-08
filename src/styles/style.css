@@ -106,6 +106,111 @@ footer{
     justify-content: center;
 }
 
+/* styling untuk todolist */
+.todo-btn {
+    border: 2px solid #f3f37b;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: grey;
+}
+
+.submit-todo-btn {
+    background-color: #f3f37b;
+    height: 100%;
+    width: 100%;
+}
+
+.submit-todo-btn:hover {
+    background-color: #efef00;
+    border: 2px solid #efef00;
+}
+
+.input-todo > input:focus {
+    border: 1px solid #f3f37b;
+    box-shadow: 0 0 10px #f3f37b;
+}
+
+.input-todo > input:focus::placeholder {
+    color: #dddfe2;
+}
+
+.todo-card {
+    border-radius: 10px;
+    background-color: white;
+    border: 2px solid #f3f37b;
+}
+
+.todo-card-left-section label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.todo-card-left-section .task-checkbox {
+    cursor: pointer;
+    opacity: 0;
+    position: absolute;
+}
+
+.todo-card-left-section label span {
+    /* content: ''; */
+    min-width: 1.5em;
+    height: 1.5em;
+    border: 2px solid #f3f37b;
+    border-radius: 100%;
+    margin-right: 10px;
+    color: transparent;
+}
+
+.todo-card-left-section .task-checkbox:checked + label span {
+    /* content: '\002714'; */
+    background-color: #f3f37b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: grey;
+}
+
+.todo-card-left-section .task-checkbox:checked + label p {
+    text-decoration: line-through;
+}
+
+.todo-card-edit-btn {
+    color: grey;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #d8cbf7;
+    border: none;
+    max-height: 35px;
+}
+
+.todo-card-delete-btn {
+    color: grey;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #bedce4;
+    border: none;
+    max-height: 35px;
+}
+
+.task-label {
+    width: 100%;
+}
+
+.input-new-task{
+    width: 100%;
+    padding: 5px 10px;
+    border: 2px solid #d8cbf7;
+    border-radius: 10px;
+}
+
+.input-new-task:focus {
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #d8cbf7;
+    border-radius: 0px;
+}
+
 .wrapper{
     width: 90%;
 }

@@ -57,7 +57,33 @@ function main () {
   function renderAllGoals () {
     goalsList.innerHTML += ''
     goals.forEach(({ _id, goal }) => {
-      goalsList.innerHTML += ` <li class="list-group-item px-3 d-flex justify-content-between align-items-center border-0 ${_id === selectedGoals ? 'active fw-bold' : ''}" data-goal-id=${_id}>${goal} <ion-icon name="trash" id="trash"></ion-icon></li>`
+      goalsList.innerHTML += ` 
+        <!-- <div class="card" style="width: 18rem;" ${_id === selectedGoals ? 'active fw-bold' : ''}" data-goal-id=${_id}>
+          <div class="card-header">
+            ${goal} <ion-icon name="trash" id="trash"></ion-icon>
+          </div>
+          <div class="row row-cols-1 mx-5 list-group list-group-flush" id="todoList">
+                
+          </div>
+        </div> -->
+
+        <!-- <div class="accordion accordion-flush" id="accordionFlushExample">
+          <div class="accordion-item" ${_id === selectedGoals ? 'active fw-bold' : ''}" data-goal-id=${_id}>
+            <h2 class="accordion-header" id="flush-heading-${_id}">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-${_id}" aria-expanded="false" aria-controls="flush-${_id}">
+                ${goal} <ion-icon name="trash" id="trash"></ion-icon>
+              </button>
+            </h2>
+            <div id="flush-${_id}" class="accordion-collapse collapse" aria-labelledby="flush-heading-${_id}" data-bs-parent="#accordionFlushExample">
+              
+            </div>
+          </div>
+        </div> -->
+
+
+        <li class="list-group-item px-3 d-flex justify-content-between align-items-center border-0 ${_id === selectedGoals ? 'active fw-bold' : ''}" data-goal-id=${_id}>
+          ${goal} <ion-icon name="trash" id="trash"></ion-icon>
+        </li>`
     })
   }
 
@@ -69,7 +95,26 @@ function main () {
 
     todoRender.forEach(({ _id, goalId, todo }) => {
       todoList.innerHTML += `
-          <div class="col-md">
+          <div class="todo-card p-3 d-flex my-2">
+            <div class="todo-card-left-section d-flex align-items-center w-75">
+              <input class="task-checkbox" id="task-${_id}" type="checkbox">
+              <label for="task-${_id}">
+                  <span>&#10004;</span>
+                  <p class="mb-0" id="task-title">${todo}</p>
+              </label>
+            </div>
+
+            <div class="todo-card-right-section d-flex justify-content-end align-items-center w-25">
+              <button class="todo-card-edit-btn me-2 d-flex align-items-center">
+                <ion-icon name="create-outline" class="edit" data-edit-todo=${_id}></ion-icon>
+              </button>
+              <button class="todo-card-delete-btn d-flex align-items-center">
+                <ion-icon name="trash-outline" class="delete" data-delete-todo=${_id}></ion-icon>
+              </button>
+            </div>
+          </div>
+          
+          <!-- <div class="col-md">
               <div class="card shadow-sm">
                   <div class="card-body">
                       <p class="card-text">${todo}</p>
@@ -79,7 +124,7 @@ function main () {
                       </div>
                   </div>
               </div>
-          </div>`
+          </div> -->`
     })
   }
 

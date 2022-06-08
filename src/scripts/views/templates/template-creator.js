@@ -221,19 +221,39 @@ const todoPageTemplate = () => `
           </div>
         </form>
       </div>
-        <div class="row justify-content-around g-3">
-            <div class="col-lg-3 p-3 border rounded">
-              <h5 class="mb-3">Daftar Goals</h5>
-              <ul class="list-group list-group-light sidebar-list" id="goalsList"></ul>      
-            </div>
 
-            <div class="col-lg-8 p-3 border rounded">
-              <h5 class="mb-3">Daftar Kegiatan</h5>
-              <div class="row row-cols-1 row-cols-md-3 g-3" id="todoList">
-                    
-              </div>
-            </div>
+      <div class="row justify-content-around g-3 mx-5">
+        <!-- <div class="todo-container col-lg-4">
+          <div class="add-todo-form-container">
+              <h3 class="d-flex align-items-center mb-3">Tugas hari ini</h3>
+              <form class="row" id="add-todo-form" autocomplete="off">
+                  <div class="input-todo col-10 px-0">
+                      <input type="text" class="form-control" id="todo-title-input" placeholder="Masukkan nama tugas" required>
+                  </div>
+                  <div class="col-2">
+                      <button type="submit" id="submit-todo-btn" class="todo-btn submit-todo-btn d-flex align-items-center justify-content-center">
+                          <ion-icon class="me-1" name="add-circle"></ion-icon> Tugas
+                      </button>
+                  </div>
+              </form>
+          </div>
+          <div class="todo-list-container mt-5">
+              
+          </div>
+        </div> -->
+
+        <div class="col-lg-3 p-3 border rounded">
+          <h5 class="mb-3">Daftar Goals</h5>
+          <ul class="list-group list-group-light sidebar-list" id="goalsList"></ul>
         </div>
+
+        <div class="col-lg-8 p-3 border rounded">
+          <h5 class="mb-3 mx-5">Daftar Kegiatan</h5>
+          <div class="row row-cols-1 mx-5" id="todoList">
+                
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="fixed-bottom">
