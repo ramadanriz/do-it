@@ -1,5 +1,5 @@
 import { timerPageTemplate } from '../templates/template-creator'
-import pomodoro from '../../utils/pomodoro'
+import timer from '../../utils/timer'
 
 const TimerPage = {
   async render () {
@@ -9,7 +9,7 @@ const TimerPage = {
   },
 
   async afterRender () {
-    pomodoro.init()
+    timer()
   }
 }
 

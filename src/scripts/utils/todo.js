@@ -20,17 +20,8 @@ function main () {
   let selectedGoals = localStorage.getItem(SELECTED_GOALS_KEY)
   let todoToEdit = null
 
-  function renderAllFunction () {
-    totalGoals.innerText = `${goals.length}`
-    totalTodo.innerText = `${todos.length}`
-
-    clearElements(goalsList)
-    clearElements(addNewTodoSelect)
-    clearElements(editTodoSelect)
-    clearElements(todoList)
-    renderAllGoals()
-    formOptions()
-    renderAllTodo()
+  function generateId () {
+    return Date.now().toString()
   }
 
   function saveToLocalStorage () {
@@ -48,10 +39,17 @@ function main () {
     })
   }
 
-  function clearElements (element) {
-    while (element.firstChild) {
-      element.removeChild(element.firstChild)
-    }
+  function clearElements (elements) {
+    elements.forEach(element => {
+      while (element.firstChild) {
+        element.removeChild(element.firstChild)
+      }
+    })
+  }
+
+  function renderReport () {
+    totalGoals.innerText = `${goals.length}`
+    totalTodo.innerText = `${todos.length}`
   }
 
   function renderAllGoals () {
@@ -86,7 +84,7 @@ function main () {
       todoRender = todos.filter((todo) => todo.goalId === selectedGoals)
     }
 
-    todoRender.forEach(({ _id, goalId, todo }) => {
+    todoRender.forEach(({ _id, todo }) => {
       todoList.innerHTML += `
           <div class="todo-card p-3 d-flex my-2">
             <div class="todo-card-left-section d-flex align-items-center w-75">
@@ -121,10 +119,19 @@ function main () {
     })
   }
 
+  function renderAllFunction () {
+    clearElements([goalsList, addNewTodoSelect, editTodoSelect, todoList])
+    renderAllGoals()
+    formOptions()
+    renderAllTodo()
+    renderReport()
+  }
+
   addNewGoalsForm.addEventListener('submit', (event) => {
     event.preventDefault()
     const newGoal = addNewGoalsInput.value
-    goals.push({ _id: Date.now().toString(), goal: newGoal })
+    const generatedID = generateId()
+    goals.push({ _id: generatedID, goal: newGoal })
     addNewGoalsInput.value = ''
     saveToLocalStorage()
     renderAllFunction()
@@ -132,7 +139,8 @@ function main () {
 
   addNewTodoForm.addEventListener('submit', (event) => {
     event.preventDefault()
-    todos.push({ _id: Date.now().toString(), goalId: addNewTodoSelect.value, todo: addNewTodoInput.value })
+    const generatedID = generateId()
+    todos.push({ _id: generatedID, goalId: addNewTodoSelect.value, todo: addNewTodoInput.value })
     addNewTodoSelect.value = ''
     addNewTodoInput.value = ''
     saveToLocalStorage()
