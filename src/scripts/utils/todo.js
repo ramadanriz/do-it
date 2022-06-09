@@ -56,25 +56,12 @@ function main () {
     goalsList.innerHTML += ''
     goals.forEach(({ _id, goal }) => {
       goalsList.innerHTML += ` 
-        <li class="list-group-item py-3 px-2 d-flex align-items-center border-0 ${_id === selectedGoals ? 'active fw-bold' : ''}" data-goal-id=${_id}>
+        <li class="list-group-item py-3 px-2 d-flex align-items-center border-0 text-altblack ${_id === selectedGoals ? 'active fw-bold' : ''}" data-goal-id=${_id}>
         <div class="delete-goals-btn d-flex align-items-center">  
-          <ion-icon name="trash-outline" id="trash"></ion-icon>   
+          <ion-icon name="trash-outline" id="trash" size="large"></ion-icon>   
         </div> 
           ${goal}
-        </li>
-
-
-        <!-- <li class="list-group-item p-2 d-flex align-items-center border-0>
-          <div class="w-75">
-            
-          </div>  
-          <div class="w-25 d-flex justify-content-end">
-            <ion-icon name="trash-outline" id="trash"></ion-icon>
-          </div>
-
-          <ion-icon class="delete-goals-btn" name="trash-outline" id="trash"></ion-icon>
-        
-        </li> -->`
+        </li>`
     })
   }
 
@@ -97,25 +84,13 @@ function main () {
 
             <div class="todo-card-right-section d-flex justify-content-end align-items-center w-25">
               <button class="todo-card-edit-btn me-2 d-flex align-items-center">
-                <ion-icon name="create-outline" class="edit" data-edit-todo=${_id}></ion-icon>
+                <ion-icon name="create-outline" class="edit" size="large" data-edit-todo=${_id}></ion-icon>
               </button>
               <button class="todo-card-delete-btn d-flex align-items-center">
-                <ion-icon name="trash-outline" class="delete" data-delete-todo=${_id}></ion-icon>
+                <ion-icon name="trash-outline" class="delete" size="large" data-delete-todo=${_id}></ion-icon>
               </button>
             </div>
-          </div>
-          
-          <!-- <div class="col-md">
-              <div class="card shadow-sm">
-                  <div class="card-body">
-                      <p class="card-text">${todo}</p>
-                      <div class="todo-action mt-1">
-                          <ion-icon name="create" class="edit" data-edit-todo=${_id}></ion-icon>
-                          <ion-icon name="trash" class="delete" data-delete-todo=${_id}></ion-icon>
-                      </div>
-                  </div>
-              </div>
-          </div> -->`
+          </div>`
     })
   }
 

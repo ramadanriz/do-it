@@ -3,6 +3,7 @@ function timer () {
   const secondsElement = document.getElementById('seconds')
   const stopCountdownButton = document.getElementById('stop-session')
   const startCountdownButton = document.getElementById('start-session')
+  const timerContainer = document.getElementById('countdown-container')
 
   const minutesElementText = minutesElement.innerText
   const secondsElementText = secondsElement.innerText
@@ -13,6 +14,7 @@ function timer () {
   function startCountdown () {
     const speed = 1000
     progress = setInterval(() => {
+      timerContainer.classList.remove('bg-altviolet', 'text-white')
       let minutes = 0
       let seconds = 0
       const progressEnd = parseInt(minutesElementText) * 60 + parseInt(secondsElementText)
@@ -30,6 +32,7 @@ function timer () {
         progressStart = 0
         playAlarm()
         startCountdownButton.removeAttribute('disabled')
+        timerContainer.classList.add('bg-altviolet', 'text-white')
       }
     }, speed)
   }
@@ -38,8 +41,8 @@ function timer () {
     clearInterval(progress)
     progress = null
     progressStart = 0
-    minutesElement.innerText = '25'
-    secondsElement.innerText = '00'
+    minutesElement.innerText = '00'
+    secondsElement.innerText = '10'
   }
 
   function playAlarm () {

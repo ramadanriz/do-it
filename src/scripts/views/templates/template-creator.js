@@ -139,9 +139,9 @@ const timerPageTemplate = () => `
     <h1 >Focus Timer</h1>
     <div id="countdown-container">
       <div id="time">
-        <span id="minutes">25</span>
+        <span id="minutes">00</span>
         <span id="colon">:</span>
-        <span id="seconds">00</span>
+        <span id="seconds">10</span>
       </div>
     </div>
     <div id="button-container">
@@ -155,13 +155,14 @@ const todoPageTemplate = () => `
   <div class="m-5">
     <div class="mx-5">
         <div class="row g-3">
+
             <div class="col-md">
                 <div class="p-3 bg-satu shadow-sm d-flex justify-content-around align-items-center rounded">
                     <div>
                         <h3 class="fs-2" id="total-goals"></h3>
                         <p class="fs-5">Total Goals</p>
                     </div>
-                    <ion-icon name="today" class="logo p-3"></ion-icon>
+                    <ion-icon name="today" class="logo p-3" size="large"></ion-icon>
                 </div>
             </div>
 
@@ -169,9 +170,9 @@ const todoPageTemplate = () => `
                 <div class="p-3 bg-dua shadow-sm d-flex justify-content-around align-items-center rounded">
                     <div>
                         <h3 class="fs-2" id="total-todo"></h3>
-                        <p class="fs-5 text-break">Total Todo</p>
+                        <p class="fs-5 text-break">Total Kegiatan Goals</p>
                     </div>
-                    <ion-icon name="newspaper" class="logo p-3"></ion-icon>
+                    <ion-icon name="newspaper" class="logo p-3" size="large"></ion-icon>
                 </div>
             </div>
         </div>
@@ -190,7 +191,7 @@ const todoPageTemplate = () => `
               <input type="text" class="form-control" placeholder="Tambahkan kegiatan anda" id="addNewTodoInput" autocomplete="off" required>
             </div>
             <div class="col-md-2 px-0">
-              <button class="todo-btn submit-todo-btn w-100">Simpan</button>
+              <button class="todo-btn submit-todo-btn w-100 text-altblack">Simpan</button>
             </div>
           </form>
           <form class="row mb-4" id="editTodoForm">
@@ -203,7 +204,7 @@ const todoPageTemplate = () => `
               <input type="text" class="form-control" placeholder="Tambahkan kegiatan anda" id="editTodoInput" autocomplete="off" required>
             </div>
             <div class="col-md-3 px-0">
-              <button class="todo-btn submit-todo-btn">Simpan Perubahan</button>
+              <button class="todo-btn submit-todo-btn text-altblack">Simpan Perubahan</button>
             </div>
           </form>
         </div>
@@ -230,8 +231,8 @@ const todoPageTemplate = () => `
                     <input type="text" class="form-control" id="todo-title-input" placeholder="Masukkan nama tugas" required>
                 </div>
                 <div class="w-25">
-                    <button type="submit" id="submit-todo-btn" class="todo-btn submit-todo-btn d-flex align-items-center justify-content-center">
-                        <ion-icon class="me-1" name="add-circle"></ion-icon> Tugas
+                    <button type="submit" id="submit-todo-btn" class="todo-btn submit-todo-btn d-flex align-items-center justify-content-center text-altblack">
+                        <ion-icon class="me-1" name="add-circle" size="large"></ion-icon> Tugas
                     </button>
                 </div>
             </form>

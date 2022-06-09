@@ -19,10 +19,6 @@ a{
     text-decoration: none !important;
 }
 
-ion-icon {
-    font-size: 25px;
-}
-
 /* navigation */
 body header{
     position: sticky;
