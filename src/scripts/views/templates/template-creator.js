@@ -40,24 +40,25 @@ const sectionFirst = () => `
 const sectionDailyMotivation = () => `
   <section class="quotes">
     <div class="content quote-container">
-        <div class="bingkai-section d-flex align-items-center">
-          <div>
-              <button type="button" class="generateQuote"><ion-icon class="next-back-icon" name="chevron-back-outline"></ion-icon></button>
-          </div>
-          <img src="quote.png" alt="bingkai quote">
-          <div>
-              <button type="button" class="generateQuote"><ion-icon class="next-back-icon" name="chevron-forward-outline"></ion-icon></button>
-          </div>
+      <div class="bingkai-section d-flex align-items-center">
+        <div>
+          <button type="button" class="generateQuote"><ion-icon class="next-back-icon" name="chevron-back-outline"></ion-icon></button>
         </div>
-        <div class="quote-section">
-          <div class="text-center">
-              <span class="quote"></span>
-          </div>
-          <div class="author">
-              <span>-</span>
-              <span class="name"></span>
-          </div>
+        <img src="quote.png" alt="bingkai quote">
+        <div>
+          <button type="button" class="generateQuote"><ion-icon class="next-back-icon" name="chevron-forward-outline"></ion-icon></button>
         </div>
+      </div>
+
+      <div class="quote-section">
+        <div class="text-center">
+          <span class="quote"></span>
+        </div>
+        <div class="author">
+          <span>-</span>
+          <span class="name"></span>
+        </div>
+      </div>
     </div>
   </section>
 `
@@ -118,7 +119,7 @@ const aboutPageTemplate = () => `
 <div class="container-fluid px-4 py-5">
   <div class="row flex-lg-row">
     <div class="col-lg-6">
-      <img src="logo/do-it-logo.png" class="d-block mx-lg-auto img-fluid img-thumbnail p-4 shadow p-3 mb-5 bg-body rounded" alt="do.it logo" loading="lazy">
+      <img src="logo/do-it-logoo.png" class="d-block mx-lg-auto img-fluid img-thumbnail p-4 shadow p-3 mb-5 bg-body rounded" alt="do.it logo" loading="lazy">
     </div>
     <div class="col-lg-6">
       <h2 class="fw-bold lh-sm text-altblack">Tentang Do.it</h2>
@@ -167,29 +168,29 @@ const timerPageTemplate = () => `
 
 const todoPageTemplate = () => `
   <div class="todopage-container m-5 mx-lg-2">
-    <div class="mx-5">
-        <h2>Daily Report</h2>
-        <div class="row my-3">
-            <div class="col-md">
-                <div class="p-3 bg-satu shadow-sm d-flex justify-content-around align-items-center rounded">
-                    <div>
-                        <h3 class="fs-2" id="total-goals"></h3>
-                        <p class="fs-5">Total Goals</p>
-                    </div>
-                    <ion-icon name="today" class="logo p-3"></ion-icon>
-                </div>
-            </div>
-
-            <div class="col-md">
-                <div class="p-3 bg-dua shadow-sm d-flex justify-content-around align-items-center rounded">
-                    <div>
-                        <h3 class="fs-2" id="total-todo"></h3>
-                        <p class="fs-5 text-break">Total Todo</p>
-                    </div>
-                    <ion-icon name="newspaper" class="logo p-3"></ion-icon>
-                </div>
-            </div>
+    <div class="mx-0 mx-md-5">
+      <h2>Daily Report</h2>
+      <div class="row my-3">
+        <div class="pb-3 py-md-0 col-md">
+          <div class="p-3 bg-satu shadow-sm d-flex justify-content-around align-items-center rounded">
+              <div>
+                  <h3 class="fs-2" id="total-goals"></h3>
+                  <p class="fs-5">Total Goals</p>
+              </div>
+              <ion-icon name="today" class="logo p-3"></ion-icon>
+          </div>
         </div>
+
+        <div class="col-md">
+          <div class="p-3 bg-dua shadow-sm d-flex justify-content-around align-items-center rounded">
+              <div>
+                  <h3 class="fs-2" id="total-todo"></h3>
+                  <p class="fs-5 text-break">Total Todo</p>
+              </div>
+              <ion-icon name="newspaper" class="logo p-3"></ion-icon>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="row mt-5 mx-sm-2 mx-md-5">

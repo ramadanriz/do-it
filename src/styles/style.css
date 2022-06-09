@@ -222,9 +222,13 @@ footer{
     /* align-items: center; */
     /* justify-content: center; */
     /* height: 70vh; */
-    width: 100%;
+    /* width: 100%; */
     margin: 90px 0px;
 }
+
+/* .quotes img {
+    width: 100% !important;
+} */
 
 .quote-container {
     position: relative;
