@@ -40,7 +40,7 @@ const sectionFirst = () => `
 const sectionDailyMotivation = () => `
   <section class="quotes">
     <div class="content quote-container">
-      <div class="bingkai-section d-flex align-items-center">
+      <div class="bingkai-section d-flex justify-content-center align-items-center">
         <div>
           <button type="button" class="generateQuote"><ion-icon class="next-back-icon" name="chevron-back-outline"></ion-icon></button>
         </div>
