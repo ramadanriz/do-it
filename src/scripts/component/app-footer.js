@@ -9,8 +9,9 @@ class AppFooter extends HTMLElement {
             <div class="container-fluid text-center text-md-start mt-5 text-altblack">
                 <div class="row mt-3">
                     <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                        <img src="logo/do-it-logoo.png" alt="doit logo untuk footer" width="100">
-                        <p class="pt-4">do.it siap memfasilitasi anda agar dapat mengelola semua tugas harian dengan gampang, juga tetap fokus serta konsisten dalam proses mencapai goalsnya.</p>
+                        <h6 class="text-uppercase text-altpurple fw-bold">Do.it</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #77287d; height: 2px"/>
+                        <p>do.it siap memfasilitasi anda agar dapat mengelola semua tugas harian dengan gampang, juga tetap fokus serta konsisten dalam proses mencapai goalsnya.</p>
                     </div>
                     <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
                         <h6 class="text-uppercase text-altpurple fw-bold">Layanan Kami</h6>
