@@ -24,7 +24,7 @@ ion-icon {
 }
 
 /* navigation */
-body header{
+body, header{
     position: sticky;
     top: 0;
     z-index: 99;
@@ -499,6 +499,10 @@ button{
     left: auto !important;
     right: 10px !important;
     bottom: 5px !important;
+
+    /* position: fixed;
+    bottom: 20px;
+    right: 20px; */
 }
   
 #addGoalsButton{

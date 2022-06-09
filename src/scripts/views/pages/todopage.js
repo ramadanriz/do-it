@@ -1,5 +1,5 @@
 import QuotesDbSource from '../../data/quotesdb-source'
-import { sectionDailyMotivation, todoPageTemplate } from '../templates/template-creator'
+import { todoPageTemplate, sectionDailyMotivation } from '../templates/template-creator'
 import main from '../../utils/todo'
 import crudTodo from '../../utils/crud-todo'
 

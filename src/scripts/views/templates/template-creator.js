@@ -166,10 +166,10 @@ const timerPageTemplate = () => `
 `
 
 const todoPageTemplate = () => `
-  <div class="m-5">
+  <div class="todopage-container m-5 mx-lg-2">
     <div class="mx-5">
         <h2>Daily Report</h2>
-        <div class="row g-3 my-3">
+        <div class="row my-3">
             <div class="col-md">
                 <div class="p-3 bg-satu shadow-sm d-flex justify-content-around align-items-center rounded">
                     <div>
@@ -192,20 +192,20 @@ const todoPageTemplate = () => `
         </div>
     </div>
 
-    <div class="row mt-5 mx-5">
-      <div class="col-8 p-5 border rounded">
+    <div class="row mt-5 mx-sm-2 mx-md-5">
+      <div class="col-lg-8 col-md-12 p-4 p-sm-5 p-lg-4 p-xl-5 border rounded">
         <div class="">
           <form class="row mb-4" id="addNewTodoForm">
-            <div class="col-md-3 px-0">
+            <div class="col-md-3 col-sm-12 px-0">
               <select class="form-select" id="addNewTodoSelect" required>
                 <option value="">Pilih Goals</option>
               </select>
             </div>
-            <div class="input-todo col-md-7">
+            <div class="input-todo col-md-7 col-sm-9 py-3 px-0 ps-sm-0 pt-sm-3 py-sm-0 pe-sm-2 pt-md-0 ps-md-3">
               <input type="text" class="form-control" placeholder="Tambahkan kegiatan anda" id="addNewTodoInput" autocomplete="off" required>
             </div>
-            <div class="col-md-2 px-0">
-              <button class="todo-btn submit-todo-btn w-100">Simpan</button>
+            <div class="col-md-2 col-sm-3 pt-sm-3 pt-md-0 px-0">
+              <button class="todo-btn submit-todo-btn w-100 py-2 py-sm-0">Simpan</button>
             </div>
           </form>
           <form class="row mb-4" id="editTodoForm">
@@ -229,14 +229,14 @@ const todoPageTemplate = () => `
             <ul class="list-group list-group-light sidebar-list" id="goalsList"></ul>
           </div>
 
-          <div class="col-lg-8 p-3">
+          <div class="col-lg-8 py-3 px-0 px-sm-0">
             <h5 class="mb-3 mx-3">Daftar Kegiatan</h5>
             <div class="row row-cols-1 mx-3" id="todoList"></div>
           </div>
         </div>
       </div>
 
-      <div class="col-4 ps-5 pe-0">
+      <div class="col-lg-4 col-md-12 ps-0 mt-5 pe-0 ps-lg-3 ps-xl-4 ps-xxl-5 mt-lg-0">
         <div class="todo-container">
           <div class="add-todo-form-container">
             <h3 class="d-flex align-items-center mb-3">Tugas hari ini</h3>
@@ -261,6 +261,7 @@ const todoPageTemplate = () => `
       <button type="button" data-bs-toggle="modal" data-bs-target="#addGoals" id="addGoalsButton"><ion-icon name="add-circle"></ion-icon></button>
     </div>
   </div>
+
   <div class="modal fade" id="addGoals" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="addGoalsLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
