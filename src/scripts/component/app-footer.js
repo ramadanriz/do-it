@@ -5,7 +5,7 @@ class AppFooter extends HTMLElement {
 
   render () {
     this.innerHTML = `
-        <section class="bg-altgrey">
+        <section class="">
             <div class="container-fluid text-center text-md-start mt-5 text-altblack">
                 <div class="row mt-3">
                     <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
@@ -18,12 +18,12 @@ class AppFooter extends HTMLElement {
                         <p><a href="#/todo" class="text-altblack">Todo Apps</a></p>
                         <p><a href="#/timer" class="text-altblack">Focus Timer</a></p>
                     </div>
-                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <div class="col-md-3 col-lg-2 col-xl-3 mx-auto mb-4">
                         <h6 class="text-uppercase text-altpurple fw-bold">Kantor Kami</h6>
                         <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px"/>
                         <div class="d-flex align-items-start">
                             <div class="me-2 pt-1"><ion-icon name="location-outline" size="small"></ion-icon></div>
-                            <div>Jl. Raya Kayen No. 56, Kayangan, Diwek, Jombang</div>
+                            <div>Jl. Batik Kumeli No.50, Sukaluyu, Kec. Cibeunying Kaler, Kota Bandung, Jawa Barat</div>
                         </div>
                     </div>
                     <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-md-0 mb-4">
@@ -31,18 +31,18 @@ class AppFooter extends HTMLElement {
                         <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px"/>
                         <div class="d-flex align-items-start">
                             <div class="me-2 pt-1"><ion-icon name="mail-outline" size="small"></ion-icon></div>
-                            <div>info@example.com</div>
+                            <div>info@doit.com</div>
                         </div>
                         <div class="d-flex align-items-start mt-3">
                             <div class="me-2 pt-1"><ion-icon name="call-outline" size="small"></ion-icon></div>
-                            <div>+62868 2345 6788</div>
+                            <div>+62(887)469-38-09</div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
         
-        <div class="text-center p-3 bg-altgrey text-altblack">
+        <div class="text-center p-3 text-altblack">
             Copyright © 2022 do.it.
         </div>
     `

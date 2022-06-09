@@ -38,7 +38,7 @@ const sectionFirst = () => `
 `
 
 const sectionDailyMotivation = () => `
-  <section class="quotes">
+  <section class="quotes bg-altgray p-5">
     <div class="content quote-container">
       <div class="bingkai-section d-flex justify-content-center align-items-center">
         <div>
@@ -169,7 +169,6 @@ const timerPageTemplate = () => `
 const todoPageTemplate = () => `
   <div class="todopage-container m-5 mx-lg-2">
     <div class="mx-0 mx-md-5">
-      <h2>Daily Report</h2>
       <div class="row my-3">
         <div class="pb-3 py-md-0 col-md">
           <div class="p-3 bg-satu shadow-sm d-flex justify-content-around align-items-center rounded">
@@ -177,7 +176,7 @@ const todoPageTemplate = () => `
                   <h3 class="fs-2" id="total-goals"></h3>
                   <p class="fs-5">Total Goals</p>
               </div>
-              <ion-icon name="today" class="logo p-3"></ion-icon>
+              <ion-icon name="today" class="logo p-3" size="large"></ion-icon>
           </div>
         </div>
 
@@ -185,9 +184,9 @@ const todoPageTemplate = () => `
           <div class="p-3 bg-dua shadow-sm d-flex justify-content-around align-items-center rounded">
               <div>
                   <h3 class="fs-2" id="total-todo"></h3>
-                  <p class="fs-5 text-break">Total Todo</p>
+                  <p class="fs-5 text-break">Total Todo pada Goals</p>
               </div>
-              <ion-icon name="newspaper" class="logo p-3"></ion-icon>
+              <ion-icon name="newspaper" class="logo p-3" size="large"></ion-icon>
           </div>
         </div>
       </div>
