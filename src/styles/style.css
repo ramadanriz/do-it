@@ -1,4 +1,8 @@
 /* global styling */
+html{
+    overflow-x: hidden !important;
+}
+
 *{
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif !important;
@@ -15,12 +19,8 @@ a{
     text-decoration: none !important;
 }
 
-ion-icon {
-    font-size: 25px;
-}
-
 /* navigation */
-body header{
+body, header{
     position: sticky;
     top: 0;
     z-index: 99;
@@ -85,10 +85,6 @@ app-bar .app-bar__navigation ul li a {
     font-size: 1.2rem;
 }
 
-app-bar .app-bar__navigation ul li a:hover{
-    text-decoration: underline !important;
-}
-
 /* main content */
 main {
     flex: 1;
@@ -101,11 +97,138 @@ footer{
 
 /* quote section on todopage */
 .quotes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* styling untuk todolist */
+.todo-btn {
+    border: 2px solid #77287d;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: rgb(255, 255, 255);
+}
+
+.submit-todo-btn {
+    background-color: #77287d;
+    height: 100%;
+    width: 100%;
+}
+
+.submit-todo-btn:hover {
+    background-color: #ffffff;
+    border: 2px solid #77287d;
+    color: #77287d;
+}
+
+.delete-goals-btn {
+    margin-right: 12px;
+}
+
+.input-todo > input:focus {
+    border: 1px solid #d8cbf7;
+    box-shadow: 0 0 10px #d8cbf7;
+}
+
+.input-todo > input:focus::placeholder {
+    color: #dddfe2;
+}
+
+.todo-card {
+    border-radius: 10px;
+    background-color: white;
+    border: 2px solid #77287d;
+}
+
+.todo-card-left-section label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.todo-card-left-section .task-checkbox {
+    cursor: pointer;
+    opacity: 0;
+    position: absolute;
+}
+
+.todo-card-left-section label span {
+    /* content: ''; */
+    min-width: 1.5em;
+    height: 1.5em;
+    border: 2px solid #77287d;
+    border-radius: 100%;
+    margin-right: 10px;
+    color: transparent;
+}
+
+.todo-card-left-section .task-checkbox:checked + label span {
+    /* content: '\002714'; */
+    background-color: #77287d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.todo-card-left-section .task-checkbox:checked + label p {
+    text-decoration: line-through;
+}
+
+.todo-card-right-section ion-icon{
+    font-size: 25px;
+}
+
+.todo-card-edit-btn {
+    color: grey;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #fee748;
+    border: none;
+    max-height: 35px;
+}
+
+.todo-card-delete-btn {
+    color: grey;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #a7c0ff;
+    border: none;
+    max-height: 35px;
+}
+
+.task-label {
+    width: 100%;
+}
+
+.input-new-task{
+    width: 100%;
+    padding: 5px 10px;
+    border: 2px solid #d8cbf7;
+    border-radius: 10px;
+}
+
+.input-new-task:focus {
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #d8cbf7;
+    border-radius: 0px;
+}
+
+/* quote section on todopage */
+.quotes{
     /* display: flex; */
     /* align-items: center; */
     /* justify-content: center; */
     /* height: 70vh; */
-    width: 100%;
+    /* width: 100%; */
+    margin: 60px 0px;
+}
+
+.quotes img {
+    width: 75%;
+    height: 300px;
 }
 
 .quote-container {
@@ -120,29 +243,120 @@ footer{
     top: 50%;
     transform: translate(-50%,-50%);
 
-    width: 70%;
+    width: 55%;
 }
 
 .next-back-icon {
-    font-size: 50px;
+    font-size: 35px;
+    color: #77287d;
 }
 
 .quote-section .quote{
-    font-size: 27px;
+    font-size: 18px;
     font-weight: 600;
     text-align: center;
     word-break: break-word;
+    color: #77287d;
 }
 
 .content .author{
     text-align: center;
-    margin-top: 20px;
-    font-size: 18px;
+    margin-top: 5px;
+    font-size: 13px;
 }
 
-/* .bingkai-section {
-    width: 70%;
-} */
+/* styling for add goals feature */
+.form-select {
+    border: 1px solid #d8cbf7;
+    box-shadow: 0 0 10px 0px #fff inset !important;
+}
+
+.form-select:focus {
+    border: 1px solid #d8cbf7 !important;
+    box-shadow: 0 0 10px #d8cbf7 !important;
+}
+
+.list-group > .active {
+    background-color: #77287d !important;
+    border-radius: 5px;
+}
+
+.wrapper{
+    width: 90%;
+}
+
+.wrapper h1{
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.wrapper .content{
+    margin: 35px 0 !important;
+}
+
+.wrapper .content .quote-area{
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper .content .quote-area svg:first-child{
+    margin-top: -25px !important;
+}
+
+.wrapper .content .quote-area svg:last-child{
+    margin-bottom: -10px !important;
+}
+
+.wrapper .content .quote-area .quote{
+    font-size: 22px;
+    text-align: center;
+    word-break: break-word;
+}
+
+.wrapper .content .author{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px !important;
+    font-size: 18px;
+    font-style: italic;
+}
+
+.wrapper .content button {
+    border-radius: 25px;
+}
+
+.wrapper .content .author span:first-child{
+    margin: -7px 5px 0 0 !important;
+    font-family: monospace !important;
+}
+
+.wrapper .buttons{
+    border-top: 1px solid #d8cbf7;
+}
+
+.wrapper .buttons .features{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px !important;
+}
+
+.wrapper .buttons .features button{
+    border: none;
+    outline: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 13px 22px;
+    border-radius: 30px;
+    background: #5372f0;
+}
+
+.wrapper .buttons .features button.loading{
+    opacity: .7;
+    pointer-events: none;
+}
 
 /* section third on homepage */
 .section-third span{
@@ -217,41 +431,15 @@ footer{
   color: white;
 }
 
-.pomodoro-container h1 {
-  position: relative;
-  margin-bottom: 1em;
-  display: inline-block;
-  padding: 0 10px;
-  font-size: 1.2rem;
+.pomodoro-container button[disabled] {
+    cursor: not-allowed;
+    background: #03071e;
+    color: white;
 }
-
-.pomodoro-container .length-container{
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-}
-
-.pomodoro-container .length-container .toggle-button-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.pomodoro-container .length-container .toggle-button-container #focus-length,
-.pomodoro-container .length-container .toggle-button-container #break-length {
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  margin-bottom: 10px;
-  display: inline-block;
-  background: #fff;
-  color: #03071e;
-  border: 2px solid #5d4ad2;
-  border-radius: 50%;
-}
-
-.pomodoro-container .length-container .toggle-button-container .toggle-timer{
-  width: 50px;
+  
+#time span{
+    font-size: 3rem;
+    font-weight: 500;
 }
 
 .pomodoro-container #button-container {
@@ -291,152 +479,79 @@ footer{
   background: #a8b3aa;
 }
 
-/* styling untuk todolist */
-.todo-btn {
-    border: 2px solid #f3f37b;
-    border-radius: 10px;
-    background-color: #ffffff;
-    color: grey;
-}
-
-.submit-todo-btn {
-    background-color: #f3f37b;
-    height: 100%;
-    width: 100%;
-}
-
-.submit-todo-btn:hover {
-    background-color: #efef00;
-    border: 2px solid #efef00;
-}
-
-.input-todo > input:focus {
-    border: 1px solid #f3f37b;
-    box-shadow: 0 0 10px #f3f37b;
-}
-
-.input-todo > input:focus::placeholder {
-    color: #dddfe2;
-}
-
-.todo-card {
-    border-radius: 10px;
-    background-color: white;
-    border: 2px solid #f3f37b;
-}
-
-.todo-card-left-section label {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-}
-
-.todo-card-left-section .task-checkbox {
-    cursor: pointer;
-    opacity: 0;
-    position: absolute;
-}
-
-.todo-card-left-section label span {
-    /* content: ''; */
-    min-width: 1.5em;
-    height: 1.5em;
-    border: 2px solid #f3f37b;
-    border-radius: 100%;
-    margin-right: 10px;
-    color: transparent;
-}
-
-.todo-card-left-section .task-checkbox:checked + label span {
-    /* content: '\002714'; */
-    background-color: #f3f37b;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: grey;
-}
-
-.todo-card-left-section .task-checkbox:checked + label p {
-    text-decoration: line-through;
-}
-
-.todo-card-edit-btn {
-    color: grey;
-    padding: 5px;
-    border-radius: 10px;
-    background-color: #d8cbf7;
-    border: none;
-    max-height: 35px;
-}
-
-.todo-card-delete-btn {
-    color: grey;
-    padding: 5px;
-    border-radius: 10px;
-    background-color: #bedce4;
-    border: none;
-    max-height: 35px;
-}
-
-.task-label {
-    width: 100%;
-}
-
-.input-new-task{
-    width: 100%;
-    padding: 5px 10px;
-    border: 2px solid #d8cbf7;
-    border-radius: 10px;
-}
-
-.input-new-task:focus {
-    outline: none;
-    border: none;
-    border-bottom: 2px solid #d8cbf7;
-    border-radius: 0px;
-}
-
 /* todopage */
 .bg-satu{
     background: rgb(243,243,123);
     background: linear-gradient(45deg, rgba(243,243,123,1) 0%, rgba(216,203,247,1) 73%, rgba(190,220,228,1) 100%);
 }
-
+  
 .bg-dua{
     background: rgb(243,243,123);
     background: linear-gradient(45deg, rgba(243,243,123,1) 0%, rgba(216,203,247,1) 41%, rgba(190,220,228,1) 93%);
 }
-
+  
 .bg-tiga{
     background: rgb(243,243,123);
     background: linear-gradient(45deg, rgba(243,243,123,1) 0%, rgba(216,203,247,1) 33%, rgba(190,220,228,1) 61%);
-}
-
-.logo{
-    font-size: 2.5rem;
 }
 
 button{
     border: none;
     background: none;
 }
-
+  
 .fixed-bottom{
     left: auto !important;
     right: 10px !important;
     bottom: 5px !important;
-}
 
+    /* position: fixed;
+    bottom: 20px;
+    right: 20px; */
+}
+  
 #addGoalsButton{
-    color: #5d4ad2 !important;
+    color: #77287d !important;
     border: none !important;
     background: none !important;
 }
-
+  
 #addGoalsButton ion-icon {
     font-size: 64px;
 }
 
+#trash:hover{
+    color: red;
+}
+  
+#editTodoForm{
+    display: none;
+}
+  
+.card{
+    border-radius: 10px;
+    transition: .5s;
+}
+  
+.card:hover{
+    transform: scale(1.03);
+}
+  
+.todo-action ion-icon{
+    cursor: pointer;
+    font-size: 25px;
+}
+  
+.sidebar-list li{
+    cursor: pointer;
+}
+  
+#currentShowTodoList span{
+    cursor: pointer;
+    color: red;
+}
+
+/* styling untuk responsive */
 @media (min-width: 375px) {
     .photo-container{
         height: 360px;
@@ -448,6 +563,40 @@ button{
     .photo-container{
         height: 400px;
         overflow: hidden;
+    }
+}
+
+@media (min-width: 576px) {
+    .quotes img {
+        width: 80%;
+        height: 270px;
+    }
+
+    .content .author{
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 768px) {
+    .quotes img {
+        width: 85%;
+        height: 200px;
+    }
+}
+
+@media (min-width: 992px) {
+    .quotes img {
+        width: 90%;
+        height: 100%;
+    }
+
+    .quote-section .quote {
+        font-size: 20px;
+    }
+
+    .content .author {
+        margin-top: 10px;
+        font-size: 18px;
     }
 }
 
@@ -465,6 +614,20 @@ button{
 }
 
 @media (min-width: 700px) {
+    app-bar .app-bar__navigation ul li a::after{
+        content: '';
+        width: 0;
+        height: 2px;
+        background: #77287d;
+        display: block;
+        margin: auto;
+        transition: .5s;
+    }
+
+    app-bar .app-bar__navigation ul li a:hover::after{
+        width: 50%;
+    }
+
     .border:before {
         content: "";
         height: 3px;
@@ -486,7 +649,7 @@ button{
 @media screen and (min-width: 750px) {
     app-bar {
         grid-template-columns: 1fr auto;
-        padding: 8px 50px !important;
+        padding: 0 50px !important;
     }
    
     app-bar .app-bar__menu {
@@ -542,6 +705,51 @@ button{
     .photo-container{
         height: 320px;
         overflow: hidden;
+    }
+
+    .quotes img {
+        width: 90%;
+        height: 100%;
+    }
+
+    .quotes{
+        margin: 80px 0px;
+    }
+
+    .next-back-icon {
+        font-size: 40px;
+    }
+
+    .quote-section .quote{
+        font-size: 25px;
+    }
+
+    .content .author{
+        margin-top: 15px;
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .quotes{
+        margin: 90px 0px;
+    }
+
+    .quotes img {
+        width: 100%;
+    }
+
+    .next-back-icon {
+        font-size: 50px;
+    }
+
+    .quote-section .quote{
+        font-size: 27px;
+    }
+
+    .content .author{
+        margin-top: 20px;
+        font-size: 18px;
     }
 }
    
