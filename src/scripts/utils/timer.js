@@ -4,6 +4,7 @@ function timer () {
   const stopCountdownButton = document.getElementById('stop-session')
   const startCountdownButton = document.getElementById('start-session')
   const timerContainer = document.getElementById('countdown-container')
+  const audio = new Audio('/audio/alarm.mp3')
 
   const minutesElementText = minutesElement.innerText
   const secondsElementText = secondsElement.innerText
@@ -43,12 +44,15 @@ function timer () {
     progressStart = 0
     minutesElement.innerText = '00'
     secondsElement.innerText = '10'
+    timerContainer.classList.remove('bg-altviolet', 'text-white')
   }
 
   function playAlarm () {
-    const mp3 = 'http://soundbible.com/grab.php?id=1746&type=mp3'
-    const audio = new Audio(mp3)
     audio.play()
+  }
+
+  function stopAlarm () {
+    audio.pause()
   }
 
   startCountdownButton.addEventListener('click', () => {
@@ -59,6 +63,7 @@ function timer () {
   stopCountdownButton.addEventListener('click', () => {
     startCountdownButton.removeAttribute('disabled')
     stopCountdown()
+    stopAlarm()
   })
 }
 
