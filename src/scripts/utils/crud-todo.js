@@ -31,14 +31,17 @@ function crudTodo () {
     const todoCard = document.createElement('div')
     todoCard.classList.add('todo-card', 'p-3', 'd-flex', 'my-4')
 
-    const editTodoIcon = document.createElement('ion-icon')
-    editTodoIcon.setAttribute('name', 'create-outline')
+    const editTodoIcon = document.createElement('img')
+    editTodoIcon.setAttribute('src', 'icon/create.svg')
+    editTodoIcon.classList.add('icon-todo')
 
-    const saveTodoIcon = document.createElement('ion-icon')
-    saveTodoIcon.setAttribute('name', 'save-outline')
+    const saveTodoIcon = document.createElement('img')
+    saveTodoIcon.setAttribute('src', 'icon/save.svg')
+    saveTodoIcon.classList.add('icon-todo')
 
-    const deleteTodoIcon = document.createElement('ion-icon')
-    deleteTodoIcon.setAttribute('name', 'trash-outline')
+    const deleteTodoIcon = document.createElement('img')
+    deleteTodoIcon.setAttribute('src', 'icon/trash.svg')
+    deleteTodoIcon.classList.add('icon-todo')
 
     const editTodoBtn = document.createElement('button')
     editTodoBtn.setAttribute('class', 'todo-card-edit-btn me-2 d-flex align-items-center')

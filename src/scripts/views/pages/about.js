@@ -26,10 +26,10 @@ const About = {
               <h5 class="mb-0">${name}</h5>
               <p class="small text-muted">Web Developer</p>
               <ul class="social mb-0 list-inline mt-3">
-                <li class="list-inline-item m-0"><a href="${twitter}" class="social-link" target="_blank"><ion-icon name="logo-twitter" size="small"></ion-icon></a></li>
-                <li class="list-inline-item m-0"><a href="${instagram}" class="social-link" target="_blank"><ion-icon name="logo-instagram" size="small"></ion-icon></a></li>
-                <li class="list-inline-item m-0"><a href="${github}" class="social-link" target="_blank"><ion-icon name="logo-github" size="small"></ion-icon></a></li>
-                <li class="list-inline-item m-0"><a href="${linkedin}" class="social-link" target="_blank"><ion-icon name="logo-linkedin" size="small"></ion-icon></a></li>
+                <li class="list-inline-item m-0"><a href="${twitter}" class="social-link" target="_blank"><img src="icon/logo-twitter.svg" class="about-icon"></a></li>
+                <li class="list-inline-item m-0"><a href="${instagram}" class="social-link" target="_blank"><img src="icon/logo-instagram.svg" class="about-icon"></a></li>
+                <li class="list-inline-item m-0"><a href="${github}" class="social-link" target="_blank"><img src="icon/logo-github.svg" class="about-icon"></a></li>
+                <li class="list-inline-item m-0"><a href="${linkedin}" class="social-link" target="_blank"><img src="icon/logo-linkedin.svg" class="about-icon"></a></li>
               </ul>
             </div>
           </div>

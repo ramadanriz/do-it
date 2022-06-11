@@ -6,7 +6,7 @@ class AppBar extends HTMLElement {
   render () {
     this.innerHTML = `
         <div class="app-bar__menu">
-            <button id="hamburgerButton"><ion-icon name="menu"></ion-icon></button>
+            <button id="hamburgerButton"><img src="icon/menu.svg" class="menu-button"></button>
         </div>
         <div class="app-bar__brand">
             <img src="logo/do-it-logoo.png" alt="do.it logo">

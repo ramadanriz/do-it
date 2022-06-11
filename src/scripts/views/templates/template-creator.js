@@ -42,11 +42,11 @@ const sectionDailyMotivation = () => `
     <div class="content quote-container">
       <div class="bingkai-section d-flex justify-content-center align-items-center">
         <div>
-          <button type="button" class="generateQuote"><ion-icon class="next-back-icon" name="chevron-back-outline"></ion-icon></button>
+          <button type="button" class="generateQuote"><img src="icon/chevron-back.svg"></button>
         </div>
-        <img src="quote.png" alt="bingkai quote">
+        <img src="quote.png" alt="bingkai quote" id="bingkai">
         <div>
-          <button type="button" class="generateQuote"><ion-icon class="next-back-icon" name="chevron-forward-outline"></ion-icon></button>
+          <button type="button" class="generateQuote"><img src="icon/chevron-forward.svg"></button>
         </div>
       </div>
 
@@ -161,7 +161,7 @@ const todoPageTemplate = () => `
                   <h3 class="fs-2" id="total-goals"></h3>
                   <p class="fs-5">Total Goals</p>
               </div>
-              <ion-icon name="today" class="logo p-3" size="large"></ion-icon>
+              <img src="icon/today.svg" class="icon-report">
           </div>
         </div>
 
@@ -169,9 +169,9 @@ const todoPageTemplate = () => `
           <div class="p-3 bg-dua shadow-sm d-flex justify-content-around align-items-center rounded">
               <div>
                   <h3 class="fs-2" id="total-todo"></h3>
-                  <p class="fs-5 text-break">Total Todo pada Goals</p>
+                  <p class="fs-5 text-break">Total Goals Todo</p>
               </div>
-              <ion-icon name="newspaper" class="logo p-3" size="large"></ion-icon>
+              <img src="icon/newspaper.svg" class="icon-report">
           </div>
         </div>
       </div>
@@ -230,8 +230,8 @@ const todoPageTemplate = () => `
                     <input type="text" class="form-control" id="todo-title-input" placeholder="Masukkan nama tugas" required>
                 </div>
                 <div class="w-25">
-                    <button type="submit" id="submit-todo-btn" class="todo-btn submit-todo-btn d-flex align-items-center justify-content-center">
-                        <ion-icon class="me-1" name="add-circle"></ion-icon> Tugas
+                    <button type="submit" id="submit-todo-btn" class="todo-btn submit-todo-btn d-flex align-items-center justify-content-evenly">
+                      <img src="icon/add-circle.svg" class="add-daily-todo"> Tugas
                     </button>
                 </div>
             </form>
@@ -243,7 +243,7 @@ const todoPageTemplate = () => `
     </div>
 
     <div class="fixed-bottom">
-      <button type="button" data-bs-toggle="modal" data-bs-target="#addGoals" id="addGoalsButton"><ion-icon name="add-circle"></ion-icon></button>
+      <button type="button" data-bs-toggle="modal" data-bs-target="#addGoals" id="addGoalsButton"><img src="icon/add-circle.svg" class="icon-modal"></button>
     </div>
   </div>
 

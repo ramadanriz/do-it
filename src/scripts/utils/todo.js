@@ -58,7 +58,7 @@ function main () {
       goalsList.innerHTML += ` 
         <li class="list-group-item py-3 px-2 d-flex align-items-center border-0 ${_id === selectedGoals ? 'active fw-bold' : ''}" data-goal-id=${_id}>
         <div class="delete-goals-btn d-flex align-items-center">  
-          <ion-icon name="trash-outline" id="trash" size="large"></ion-icon>   
+          <img src="icon/trash.svg" id="trash" class="icon-goals">   
         </div> 
           ${goal}
         </li>`
@@ -84,10 +84,10 @@ function main () {
 
             <div class="todo-card-right-section d-flex justify-content-end align-items-center w-25">
               <button class="todo-card-edit-btn me-2 d-flex align-items-center">
-                <ion-icon name="create-outline" size="large" class="edit" data-edit-todo=${_id}></ion-icon>
+                <img src="icon/create.svg" class="edit icon-todo" data-edit-todo=${_id}>
               </button>
               <button class="todo-card-delete-btn d-flex align-items-center">
-                <ion-icon name="trash-outline" size="large" class="delete" data-delete-todo=${_id}></ion-icon>
+                <img src="icon/trash.svg" class="delete icon-todo" data-delete-todo=${_id}>
               </button>
             </div>
           </div>`
@@ -175,7 +175,7 @@ function main () {
       renderAllFunction()
     }
 
-    if (element.target.tagName.toLowerCase() === 'ion-icon') {
+    if (element.target.tagName.toLowerCase() === 'img') {
       goals = goals.filter((goal) => goal._id !== selectedGoals)
       todos = todos.filter((todo) => todo.goalId !== selectedGoals)
       selectedGoals = null
