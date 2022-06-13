@@ -139,9 +139,9 @@ const timerPageTemplate = () => `
     <h1 >Focus Timer</h1>
     <div id="countdown-container">
       <div id="time">
-        <span id="minutes">00</span>
+        <span id="minutes">25</span>
         <span id="colon">:</span>
-        <span id="seconds">10</span>
+        <span id="seconds">00</span>
       </div>
     </div>
     <div id="button-container">

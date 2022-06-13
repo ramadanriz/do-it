@@ -42,8 +42,8 @@ function timer () {
     clearInterval(progress)
     progress = null
     progressStart = 0
-    minutesElement.innerText = '00'
-    secondsElement.innerText = '10'
+    minutesElement.innerText = '25'
+    secondsElement.innerText = '00'
     timerContainer.classList.remove('bg-altviolet', 'text-white')
   }
 
