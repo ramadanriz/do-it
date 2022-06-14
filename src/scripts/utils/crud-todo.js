@@ -2,6 +2,7 @@
 function crudTodo () {
   const todos = []
   const TODOS_LOCAL_STORAGE = 'TODOS_LOCAL_STORAGE'
+  const totalDailyTodo = document.getElementById('total-daiy-todo')
 
   const generateTodoElement = (todoObject) => {
     const inputNewTaskElement = document.createElement('input')
@@ -32,15 +33,15 @@ function crudTodo () {
     todoCard.classList.add('todo-card', 'p-3', 'd-flex', 'my-4')
 
     const editTodoIcon = document.createElement('img')
-    editTodoIcon.setAttribute('src', 'icon/create.svg')
+    editTodoIcon.setAttribute('src', 'web-icon/pen-to-square.svg')
     editTodoIcon.classList.add('icon-todo')
 
     const saveTodoIcon = document.createElement('img')
-    saveTodoIcon.setAttribute('src', 'icon/save.svg')
+    saveTodoIcon.setAttribute('src', 'web-icon/floppy-disk.svg')
     saveTodoIcon.classList.add('icon-todo')
 
     const deleteTodoIcon = document.createElement('img')
-    deleteTodoIcon.setAttribute('src', 'icon/trash.svg')
+    deleteTodoIcon.setAttribute('src', 'web-icon/trash-can.svg')
     deleteTodoIcon.classList.add('icon-todo')
 
     const editTodoBtn = document.createElement('button')
@@ -121,7 +122,6 @@ function crudTodo () {
 
       todos.push(todoObject)
       saveData()
-      console.log(todos.length)
       const todoListContainer = document.querySelector('.todo-list-container')
       todoListContainer.innerHTML = ''
       for (const todoItem of todos) {
@@ -134,6 +134,8 @@ function crudTodo () {
 
     if (checkingStorage) {
       loadDataFromStorage()
+      totalDailyTodo.innerText = todos.length
+      console.log(todos.length)
     } else {
       alert('Browser kamu tidak mendukung local storage')
     }

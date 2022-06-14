@@ -29,7 +29,7 @@ const teams = [
     twitter: 'https://twitter.com/rzkrmdn10',
     instagram: 'https://www.instagram.com/rzk_rmdn/',
     github: 'https://github.com/ramadanriz',
-    linkedin: 'https://www.linkedin.com/in/rizky-ramadhani-10/'
+    linkedin: 'https://www.linkedin.com/in/ramadhanriz/'
   }
 ]
 

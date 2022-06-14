@@ -23,7 +23,7 @@ class AppFooter extends HTMLElement {
                         <h6 class="text-uppercase text-altpurple fw-bold">Kantor Kami</h6>
                         <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px"/>
                         <div class="d-flex align-items-start">
-                            <div class="me-2 pt-1 align-self-center"><img src="icon/location.svg" class="footer-icon"></div>
+                            <div class="me-2 pt-1 align-self-center"><img src="web-icon/map-location-dot.svg" class="footer-icon"></div>
                             <div>Jl. Batik Kumeli No.50, Sukaluyu, Kec. Cibeunying Kaler, Kota Bandung, Jawa Barat</div>
                         </div>
                     </div>
@@ -31,11 +31,11 @@ class AppFooter extends HTMLElement {
                         <h6 class="text-uppercase text-altpurple fw-bold">Pusat Bantuan</h6>
                         <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px"/>
                         <div class="d-flex align-items-start">
-                            <div class="me-2 pt-1"><img src="icon/mail.svg" class="footer-icon"></div>
+                            <div class="me-2 pt-1"><img src="web-icon/envelope.svg" class="footer-icon"></div>
                             <div>info@doit.com</div>
                         </div>
                         <div class="d-flex align-items-start mt-3">
-                            <div class="me-2 pt-1"><img src="icon/call.svg" class="footer-icon"></div>
+                            <div class="me-2 pt-1"><img src="web-icon/phone.svg" class="footer-icon"></div>
                             <div>+62(887)469-38-09</div>
                         </div>
                     </div>

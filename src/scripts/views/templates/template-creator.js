@@ -42,11 +42,11 @@ const sectionDailyMotivation = () => `
     <div class="content quote-container">
       <div class="bingkai-section d-flex justify-content-center align-items-center">
         <div>
-          <button type="button" class="generateQuote"><img src="icon/chevron-back.svg"></button>
+          <button type="button" class="generateQuote"><img src="web-icon/angle-left.svg"></button>
         </div>
         <img src="quote.png" alt="bingkai quote" id="bingkai">
         <div>
-          <button type="button" class="generateQuote"><img src="icon/chevron-forward.svg"></button>
+          <button type="button" class="generateQuote"><img src="web-icon/angle-right.svg"></button>
         </div>
       </div>
 
@@ -155,25 +155,37 @@ const todoPageTemplate = () => `
   <div class="todopage-container m-5 mx-lg-2">
     <div class="mx-0 mx-md-5">
       <div class="row my-3">
+
         <div class="pb-3 py-md-0 col-md">
           <div class="p-3 bg-satu shadow-sm d-flex justify-content-around align-items-center rounded">
               <div>
                   <h3 class="fs-2" id="total-goals"></h3>
                   <p class="fs-5">Total Goals</p>
               </div>
-              <img src="icon/today.svg" class="icon-report">
+              <img src="web-icon/bullseye.svg" class="icon-report">
           </div>
         </div>
 
-        <div class="col-md">
+        <div class="pb-3 py-md-0 col-md">
           <div class="p-3 bg-dua shadow-sm d-flex justify-content-around align-items-center rounded">
               <div>
                   <h3 class="fs-2" id="total-todo"></h3>
-                  <p class="fs-5 text-break">Total Goals Todo</p>
+                  <p class="fs-5 text-break">Total Todo Goals</p>
               </div>
-              <img src="icon/newspaper.svg" class="icon-report">
+              <img src="web-icon/list-check.svg" class="icon-report">
           </div>
         </div>
+
+        <div class="pb-3 py-md-0 col-md">
+          <div class="p-3 bg-dua shadow-sm d-flex justify-content-around align-items-center rounded">
+              <div>
+                  <h3 class="fs-2" id="total-daiy-todo"></h3>
+                  <p class="fs-5 text-break">Total Todo Harian</p>
+              </div>
+              <img src="web-icon/list-ol.svg" class="icon-report">
+          </div>
+        </div>
+
       </div>
     </div>
 
@@ -231,7 +243,7 @@ const todoPageTemplate = () => `
                 </div>
                 <div class="w-25">
                     <button type="submit" id="submit-todo-btn" class="todo-btn submit-todo-btn d-flex align-items-center justify-content-evenly">
-                      <img src="icon/add-circle.svg" class="add-daily-todo"> Tugas
+                      <img src="web-icon/circle-plus.svg" class="add-daily-todo"> Tugas
                     </button>
                 </div>
             </form>
@@ -243,7 +255,7 @@ const todoPageTemplate = () => `
     </div>
 
     <div class="fixed-bottom">
-      <button type="button" data-bs-toggle="modal" data-bs-target="#addGoals" id="addGoalsButton"><img src="icon/add-circle.svg" class="icon-modal"></button>
+      <button type="button" data-bs-toggle="modal" data-bs-target="#addGoals" id="addGoalsButton"><img src="web-icon/circle-plus.svg" class="icon-modal"></button>
     </div>
   </div>
 
