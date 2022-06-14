@@ -121,6 +121,7 @@ function crudTodo () {
 
       todos.push(todoObject)
       saveData()
+      console.log(todos.length)
       const todoListContainer = document.querySelector('.todo-list-container')
       todoListContainer.innerHTML = ''
       for (const todoItem of todos) {
