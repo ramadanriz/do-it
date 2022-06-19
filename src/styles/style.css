@@ -56,9 +56,9 @@ app-bar .app-bar__brand {
     align-items: center;
 }
    
-app-bar .app-bar__brand img {
+/* app-bar .app-bar__brand img {
     width: 120px;
-}
+} */
    
 app-bar .app-bar__navigation {
     position: absolute;
@@ -101,6 +101,7 @@ footer{
 
 .footer-icon{
     width: 25px;
+    height: 25px;
     filter: invert(23%) sepia(16%) saturate(6670%) hue-rotate(271deg) brightness(85%) contrast(94%);
 }
 

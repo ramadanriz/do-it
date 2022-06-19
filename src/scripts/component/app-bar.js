@@ -6,10 +6,10 @@ class AppBar extends HTMLElement {
   render () {
     this.innerHTML = `
         <div class="app-bar__menu">
-            <button id="hamburgerButton"><img src="web-icon/bars.svg" class="menu-button"></button>
+            <button id="hamburgerButton" aria-label="tombol menu"><img src="web-icon/bars.svg" class="menu-button" alt="menu button" loading="lazy"></button>
         </div>
         <div class="app-bar__brand">
-            <img src="logo/do-it-logoo.png" alt="do.it logo">
+            <img src="logo/do-it-logo.png" alt="do.it logo" loading="lazy" width="120" height="42.91">
         </div>
         <nav id="navigationDrawer" class="app-bar__navigation">
             <ul>

@@ -1,5 +1,6 @@
 /* eslint-disable no-undef */
 function main () {
+  const Swal = require('sweetalert2')
   const totalGoals = document.getElementById('total-goals')
   const totalTodo = document.getElementById('total-todo')
   const addNewGoalsForm = document.getElementById('addNewGolasForm')
@@ -58,7 +59,7 @@ function main () {
       goalsList.innerHTML += ` 
         <li class="list-group-item py-3 px-2 d-flex align-items-center border-0 ${_id === selectedGoals ? 'active fw-bold' : ''}" data-goal-id=${_id}>
         <div class="delete-goals-btn d-flex align-items-center">  
-          <img src="web-icon/trash-can.svg" id="trash" class="icon-goals">   
+          <img src="web-icon/trash-can.svg" alt="icon hapus goals" id="trash" class="icon-goals">   
         </div> 
           ${goal}
         </li>`
@@ -83,11 +84,11 @@ function main () {
             </div>
 
             <div class="todo-card-right-section d-flex justify-content-end align-items-center w-25">
-              <button class="todo-card-edit-btn me-2 d-flex align-items-center">
-                <img src="web-icon/pen-to-square.svg" class="edit icon-todo" data-edit-todo=${_id}>
+              <button class="todo-card-edit-btn me-2 d-flex align-items-center" aria-label="edit todo">
+                <img src="web-icon/pen-to-square.svg" alt="icon edit todo" class="edit icon-todo" data-edit-todo=${_id}>
               </button>
-              <button class="todo-card-delete-btn d-flex align-items-center">
-                <img src="web-icon/trash-can.svg" class="delete icon-todo" data-delete-todo=${_id}>
+              <button class="todo-card-delete-btn d-flex align-items-center" aria-label="delete todo">
+                <img src="web-icon/trash-can.svg" alt="icon hapus todo" class="delete icon-todo" data-delete-todo=${_id}>
               </button>
             </div>
           </div>`

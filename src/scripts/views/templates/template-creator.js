@@ -3,13 +3,13 @@ const heroTemplate = () => `
     <div class="container-fluid px-4 py-5 bg-altgray">
       <div class="row flex-lg-row-reverse">
         <div class="col-lg-6">
-          <img src="heroes-image.png" class="d-block mx-lg-auto img-fluid" alt="man casual using laptop" width="700" height="500" loading="lazy">
+          <img src="heroes-image.png" class="d-block mx-lg-auto img-fluid" alt="man casual using laptop" width="700" height="500">
         </div>
         <div class="col-lg-6 align-self-center">
           <h1 class="fw-bold lh-sm my-3 text-altblack">Capai Goals dan Kelola Tugas Harian Anda</h1>
           <p class="lead mb-3">Do.it siap memfasilitasi anda agar dapat mengelola semua tugas harian dengan gampang, juga tetap fokus serta konsisten dalam proses mencapai goalsnya.</p>
           <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-            <a class="btn btn-altblue btn-lg px-4 me-md-2" href="#/todo" role="button">Try it now</a>
+            <a class="btn btn-altpurple btn-lg px-4 me-md-2" href="#/todo" role="button">Try it now</a>
           </div>
         </div>
       </div>
@@ -27,7 +27,7 @@ const sectionFirst = () => `
         </div>
         <div class="row justify-content-between align-items-center">
           <div class="col-lg-5">
-            <img src="confused-character.png" class="img-fluid" alt="Confused business character making important decision">
+            <img src="confused-character.png" class="img-fluid" alt="Confused business character making important decision" loading="lazy" width="443" height="451">
           </div>
           <div class="col-lg-7">
             <p class="lh-lg">"Goals" adalah sesuatu yang ingin kita capai atau peroleh. Tanpanya hidup akan berputar tanpa arah dan tujuan hidup tak akan jelas. Tanpa "Goals" hidup kita layaknya sebuah perjalanan tanpa sebuah peta dan alamat. Kita terus berputar mencari sesuatu yang tak jelas dan terjebak dalam rute yang sama tanpa kejelasan. "Goals" adalah sebuah tujuan yang kita tetapkan. Dengan adanya "Goals" kita tahu ke arah mana harus melangkah. "Goals" akan berfungsi sebagai kompas untuk menuju ke tempat yang kita inginkan.</p>
@@ -42,11 +42,11 @@ const sectionDailyMotivation = () => `
     <div class="content quote-container">
       <div class="bingkai-section d-flex justify-content-center align-items-center">
         <div>
-          <button type="button" class="generateQuote"><img src="web-icon/angle-left.svg"></button>
+          <button type="button" class="generateQuote" aria-label="tombol previous quotes"><img src="web-icon/angle-left.svg" alt="tombol previous quotes"></button>
         </div>
         <img src="quote.png" alt="bingkai quote" id="bingkai">
         <div>
-          <button type="button" class="generateQuote"><img src="web-icon/angle-right.svg"></button>
+          <button type="button" class="generateQuote" aria-label="tombol next quotes"><img src="web-icon/angle-right.svg" alt="tombol next quotes"></button>
         </div>
       </div>
 
@@ -74,7 +74,7 @@ const sectionThird = () => `
       </div>
       <div class="row justify-content-between align-items-center flex-row-reverse">
         <div class="col-lg-5">
-          <img src="woman-checking.png" class="img-fluid" alt="woman checking giant check list">
+          <img src="woman-checking.png" class="img-fluid" alt="woman checking giant check list" loading="lazy" width="451" height="323">
         </div>
         <div class="col-lg-7">
           <ol class="list-group list-group-numbered list-group-flush">
@@ -119,7 +119,7 @@ const aboutPageTemplate = () => `
 <div class="container-fluid px-4 py-5">
   <div class="row flex-lg-row">
     <div class="col-lg-6">
-      <img src="logo/do-it-logoo.png" class="d-block mx-lg-auto img-fluid img-thumbnail p-4 shadow p-3 mb-5 bg-body rounded" alt="do.it logo" loading="lazy">
+      <img src="logo/do-it-logo.png" class="d-block mx-lg-auto img-fluid img-thumbnail p-4" alt="do.it logo" loading="lazy">
     </div>
     <div class="col-lg-6">
       <h2 class="fw-bold lh-sm text-altblack">Tentang Do.it</h2>
@@ -145,8 +145,8 @@ const timerPageTemplate = () => `
       </div>
     </div>
     <div id="button-container">
-        <button type="button" id="start-session">Start</button>
-        <button type="button" id="stop-session">Stop</button>
+        <button type="button" id="start-session" aria-label="tombol start timer">Start</button>
+        <button type="button" id="stop-session" aria-label="tombol stop timer">Stop</button>
     </div>
   </div>
 `
@@ -162,7 +162,7 @@ const todoPageTemplate = () => `
                   <h3 class="fs-2" id="total-goals"></h3>
                   <p class="fs-5">Total Goals</p>
               </div>
-              <img src="web-icon/bullseye.svg" class="icon-report">
+              <img src="web-icon/bullseye.svg" class="icon-report" alt="total goals">
           </div>
         </div>
 
@@ -172,7 +172,7 @@ const todoPageTemplate = () => `
                   <h3 class="fs-2" id="total-todo"></h3>
                   <p class="fs-5 text-break">Total Todo Goals</p>
               </div>
-              <img src="web-icon/list-check.svg" class="icon-report">
+              <img src="web-icon/list-check.svg" class="icon-report" alt="total todo goals">
           </div>
         </div>
 
@@ -182,7 +182,7 @@ const todoPageTemplate = () => `
                   <h3 class="fs-2" id="total-daiy-todo"></h3>
                   <p class="fs-5 text-break">Total Todo Harian</p>
               </div>
-              <img src="web-icon/list-ol.svg" class="icon-report">
+              <img src="web-icon/list-ol.svg" class="icon-report" alt="total todo harian">
           </div>
         </div>
 
@@ -202,7 +202,7 @@ const todoPageTemplate = () => `
               <input type="text" class="form-control" placeholder="Tambahkan kegiatan anda" id="addNewTodoInput" autocomplete="off" required>
             </div>
             <div class="col-md-2 col-sm-3 pt-sm-3 pt-md-0 px-0">
-              <button class="todo-btn submit-todo-btn w-100 py-2 py-sm-0">Simpan</button>
+              <button class="todo-btn submit-todo-btn w-100 py-2 py-sm-0" aria-label="tombol simpan todo goals">Simpan</button>
             </div>
           </form>
           <form class="row mb-4" id="editTodoForm">
@@ -215,7 +215,7 @@ const todoPageTemplate = () => `
               <input type="text" class="form-control" placeholder="Tambahkan kegiatan anda" id="editTodoInput" autocomplete="off" required>
             </div>
             <div class="col-md-3 px-0">
-              <button class="todo-btn submit-todo-btn">Simpan Perubahan</button>
+              <button class="todo-btn submit-todo-btn" aria-label="tombol simpan perubahan pada todo goals">Simpan Perubahan</button>
             </div>
           </form>
         </div>
@@ -242,8 +242,8 @@ const todoPageTemplate = () => `
                     <input type="text" class="form-control" id="todo-title-input" placeholder="Masukkan nama tugas" required>
                 </div>
                 <div class="w-25">
-                    <button type="submit" id="submit-todo-btn" class="todo-btn submit-todo-btn d-flex align-items-center justify-content-evenly">
-                      <img src="web-icon/circle-plus.svg" class="add-daily-todo"> Tugas
+                    <button type="submit" id="submit-todo-btn" class="todo-btn submit-todo-btn d-flex align-items-center justify-content-evenly" aria-label="tombol tambah todo goals">
+                      <img src="web-icon/circle-plus.svg" class="add-daily-todo" alt="tombol tambah kegiatan harian"> Tugas
                     </button>
                 </div>
             </form>
@@ -255,7 +255,7 @@ const todoPageTemplate = () => `
     </div>
 
     <div class="fixed-bottom">
-      <button type="button" data-bs-toggle="modal" data-bs-target="#addGoals" id="addGoalsButton"><img src="web-icon/circle-plus.svg" class="icon-modal"></button>
+      <button type="button" data-bs-toggle="modal" data-bs-target="#addGoals" id="addGoalsButton" aria-label="tombol tambah goals"><img src="web-icon/circle-plus.svg" class="icon-modal" alt="tombol tambah goals"></button>
     </div>
   </div>
 
@@ -264,7 +264,7 @@ const todoPageTemplate = () => `
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="addGoalsLabel">Tambah Goals</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="tombol tutup form tambah goals"></button>
             </div>
             <div class="modal-body">
                 <form id="addNewGolasForm">
@@ -272,7 +272,7 @@ const todoPageTemplate = () => `
                         <label for="goalsName" class="form-label">Nama Goals</label>
                         <input type="text" class="form-control" placeholder="Tambahkan goals anda" id="addNewGoalsInput" autocomplete="off" required>
                     </div>
-                    <button type="submit" class="btn btn-primary">Simpan</button>
+                    <button type="submit" class="btn btn-primary" aria-label="tombol simpan goals">Simpan</button>
                 </form>
             </div>
         </div>
