@@ -110,6 +110,7 @@ function crudTodo () {
 
   DOMReady(function () {
     const addTodoForm = document.getElementById('add-todo-form')
+    totalDailyTodo.innerText = todos.length
 
     addTodoForm.addEventListener('submit', (e) => {
       e.preventDefault()
@@ -181,6 +182,7 @@ function crudTodo () {
     }
 
     saveData()
+    totalDailyTodo.innerText = todos.length
   }
 
   function checkingStorage () {
