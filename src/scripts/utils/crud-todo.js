@@ -141,7 +141,6 @@ function crudTodo () {
     if (checkingStorage) {
       loadDataFromStorage()
       totalDailyTodo.innerText = todos.length
-      console.log(todos.length)
     } else {
       alert('Browser kamu tidak mendukung local storage')
     }

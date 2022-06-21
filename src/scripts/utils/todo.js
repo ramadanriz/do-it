@@ -1,4 +1,5 @@
 /* eslint-disable no-undef */
+import QuotesDbSource from '../data/quotesdb-source'
 function main () {
   const Swal = require('sweetalert2')
   const totalGoals = document.getElementById('total-goals')
@@ -103,6 +104,14 @@ function main () {
     renderReport()
   }
 
+  async function showingQuoteNotification () {
+    const dailyMotivation = await QuotesDbSource.homePage()
+    const notification = new Notification('Daily Motivation', {
+      icon: './logo/do-it-logo.png',
+      body: `${dailyMotivation.content} ( ${dailyMotivation.author} )`
+    })
+  }
+
   addNewGoalsForm.addEventListener('submit', (event) => {
     event.preventDefault()
     const newGoal = addNewGoalsInput.value
@@ -184,6 +193,16 @@ function main () {
       renderAllFunction()
     }
   })
+
+  if (Notification.permission === 'granted') {
+    showingQuoteNotification()
+  } else if (Notification.permission !== 'denied') {
+    Notification.requestPermission().then(permission => {
+      if (permission === 'granted') {
+        showingQuoteNotification()
+      }
+    })
+  }
 
   const DOMReady = function (callback) {
     document.readyState === 'interactive' || document.readyState === 'complete' ? callback() : document.addEventListener('DOMContentLoaded', callback)
