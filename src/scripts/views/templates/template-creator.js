@@ -173,7 +173,7 @@ const timerPageTemplate = () => `
 `
 
 const todoPageTemplate = () => `
-  <div class="todopage-container m-5 mx-lg-2">
+  <div class="todopage-container mx-4 mt-md-5 mx-md-0">
     <div class="mx-0 mx-md-5">
       <div class="row my-3">
 
@@ -191,7 +191,7 @@ const todoPageTemplate = () => `
           <div class="p-3 bg-dua shadow-sm d-flex justify-content-around align-items-center rounded">
               <div>
                   <h3 class="fs-2" id="total-todo"></h3>
-                  <p class="fs-5 text-break">Total Todo Goals</p>
+                  <p class="fs-5 text-break">Todo Goals</p>
               </div>
               <img src="web-icon/list-check.svg" class="icon-report" alt="total todo goals">
           </div>
@@ -201,7 +201,7 @@ const todoPageTemplate = () => `
           <div class="p-3 bg-dua shadow-sm d-flex justify-content-around align-items-center rounded">
               <div>
                   <h3 class="fs-2" id="total-daiy-todo"></h3>
-                  <p class="fs-5 text-break">Total Todo Harian</p>
+                  <p class="fs-5 text-break">Todo Harian</p>
               </div>
               <img src="web-icon/list-ol.svg" class="icon-report" alt="total todo harian">
           </div>
@@ -210,8 +210,8 @@ const todoPageTemplate = () => `
       </div>
     </div>
 
-    <div class="row mt-5 mx-sm-2 mx-md-5">
-      <div class="col-lg-8 col-md-12 p-4 p-sm-5 p-lg-4 p-xl-5 border rounded">
+    <div class="row mt-4 mx-sm-2 mx-md-5">
+      <div class="goals-todo-container col-lg-8 col-md-12 p-4 p-sm-5 p-lg-4 p-xl-5 border rounded">
         <div class="">
           <form class="row mb-4" id="addNewTodoForm">
             <div class="col-md-3 col-sm-12 px-0">
@@ -247,7 +247,7 @@ const todoPageTemplate = () => `
             <ul class="list-group list-group-light sidebar-list" id="goalsList"></ul>
           </div>
 
-          <div class="col-lg-8 py-3 px-0 px-sm-0">
+          <div class="col-lg-8 pb-5 pt-4 px-0 px-sm-0">
             <h5 class="mb-3 mx-3">Daftar Kegiatan</h5>
             <div class="row row-cols-1 mx-3" id="todoList"></div>
           </div>
@@ -255,7 +255,7 @@ const todoPageTemplate = () => `
       </div>
 
       <div class="col-lg-4 col-md-12 ps-0 mt-5 pe-0 ps-lg-3 ps-xl-4 ps-xxl-5 mt-lg-0">
-        <div class="todo-container">
+        <div class="todo-container px-4 px-sm-0">
           <div class="add-todo-form-container">
             <h3 class="d-flex align-items-center mb-3">Tugas hari ini</h3>
             <form class="d-flex" id="add-todo-form" autocomplete="off">
