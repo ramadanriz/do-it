@@ -4,8 +4,11 @@ function timer () {
   const stopCountdownButton = document.getElementById('stop-session')
   const startCountdownButton = document.getElementById('start-session')
   const timerContainer = document.getElementById('countdown-container')
+  const settingTimer = document.getElementById('settingTimerModal')
+  const settingTimerInput = document.getElementById('timeSettingInput')
   const audio = new Audio('/audio/alarm.mp3')
-
+  settingTimerInput.value = localStorage.getItem('focusTimer') || 25
+  minutesElement.innerText = localStorage.getItem('focusTimer') || 25
   const minutesElementText = minutesElement.innerText
   const secondsElementText = secondsElement.innerText
 
@@ -24,7 +27,7 @@ function timer () {
       minutes = Math.floor((progressEnd - progressStart) / 60)
       seconds = Math.floor((progressEnd - progressStart) % 60)
 
-      minutesElement.innerText = minutes.toString().length === 2 ? minutes : `0${minutes}`
+      minutesElement.innerText = minutes.toString().length === 2 ? minutes : `${minutes}`
       secondsElement.innerText = seconds.toString().length === 2 ? seconds : `0${seconds}`
 
       if (progressStart === progressEnd) {
@@ -42,7 +45,7 @@ function timer () {
     clearInterval(progress)
     progress = null
     progressStart = 0
-    minutesElement.innerText = '25'
+    minutesElement.innerText = localStorage.getItem('focusTimer') || 25
     secondsElement.innerText = '00'
     timerContainer.classList.remove('bg-altviolet', 'text-white')
   }
@@ -64,6 +67,12 @@ function timer () {
     startCountdownButton.removeAttribute('disabled')
     stopCountdown()
     stopAlarm()
+  })
+
+  settingTimer.addEventListener('submit', (event) => {
+    event.preventDefault()
+    localStorage.setItem('focusTimer', settingTimerInput.value)
+    minutesElement.innerText = localStorage.getItem('focusTimer')
   })
 }
 

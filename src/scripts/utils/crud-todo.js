@@ -136,11 +136,11 @@ function crudTodo () {
       }
 
       document.getElementById('todo-title-input').value = null
+      totalDailyTodo.innerText = todos.length
     })
 
     if (checkingStorage) {
       loadDataFromStorage()
-      totalDailyTodo.innerText = todos.length
     } else {
       alert('Browser kamu tidak mendukung local storage')
     }

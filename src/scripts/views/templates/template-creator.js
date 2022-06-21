@@ -147,6 +147,27 @@ const timerPageTemplate = () => `
     <div id="button-container">
         <button type="button" id="start-session" aria-label="tombol start timer">Start</button>
         <button type="button" id="stop-session" aria-label="tombol stop timer">Stop</button>
+        <button type="button" id="setting-timer" aria-label="tombol setting timer" data-bs-toggle="modal" data-bs-target="#settingButton">Setting</button>
+    </div>
+  </div>
+
+  <div class="modal fade" id="settingButton" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="settingButtonLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="settingButtonLabel">Timer Setting</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="settingTimerModal">
+            <div class="mb-3">
+              <label for="timeSetting" class="form-label">Setting Menit</label>
+              <input type="number" class="form-control" placeholder="Masukkan waktu dalam menit" id="timeSettingInput" autocomplete="off" required>
+            </div>
+            <button type="submit" class="btn btn-primary" aria-label="tombol simpan goals">Simpan</button>
+          </form>
+        </div>
+      </div>
     </div>
   </div>
 `
