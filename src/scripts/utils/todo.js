@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 import QuotesDbSource from '../data/quotesdb-source'
 function main () {
