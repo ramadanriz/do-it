@@ -21,7 +21,7 @@ const teams = [
     twitter: '',
     instagram: 'https://www.instagram.com/rio_ramadhan06/',
     github: 'https://github.com/RioRB',
-    linkedin: ''
+    linkedin: 'https://www.linkedin.com/in/riorb/'
   },
   {
     name: 'Rizky Ramadhani',
