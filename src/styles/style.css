@@ -204,21 +204,27 @@ footer{
 }
 
 .todo-card-edit-btn {
-    color: grey;
     padding: 5px;
     border-radius: 10px;
     background-color: #fee748;
     border: none;
-    max-height: 35px;
+    /* max-height: 35px; */
+    min-height: 35px;
+    min-width: 35px;
 }
 
 .todo-card-delete-btn {
-    color: grey;
     padding: 5px;
     border-radius: 10px;
     background-color: #a7c0ff;
     border: none;
-    max-height: 35px;
+    /* max-height: 35px; */
+    min-height: 35px;
+    min-width: 35px;
+}
+
+.icon-todo {
+    filter: invert(25%) sepia(2%) saturate(258%) hue-rotate(108deg) brightness(93%) contrast(88%);
 }
 
 .task-label {
@@ -381,6 +387,11 @@ footer{
     font-size: 12px;
 }
 
+.hero > div {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
 /* about page */
 .about-icon{
     width: 16px;
@@ -538,7 +549,12 @@ button{
 .icon-goals{
     width: 20px;
     filter: invert(100%) sepia(0%) saturate(1%) hue-rotate(191deg) brightness(101%) contrast(101%);
+    /* filter: invert(20%) sepia(81%) saturate(1007%) hue-rotate(262deg) brightness(97%) contrast(101%) !important; */
 }
+
+/* .list-group > .active > .delete-goals-btn > .icon-goals{
+    filter: invert(89%) sepia(100%) saturate(3%) hue-rotate(271deg) brightness(109%) contrast(97%) !important;
+} */
   
 .fixed-bottom{
     left: auto !important;
@@ -597,13 +613,34 @@ button{
     }
 }
 
-@media(max-width: 425px){
+@media(max-width: 426px){
     .quote-section .quote{
         font-size: 18px;
     }
 
     #bingkai{
         opacity: 0;
+    }
+
+    .quotes {
+        padding: 30px 20px;
+    }
+
+    .bingkai-section img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .bingkai-section {
+        padding: 30px 20px;
+    }
+
+    .quote-section {
+        width: 90%;
+    }
+
+    .quote-section > .author {
+        font-size: 16px;
     }
 }
 
@@ -632,6 +669,17 @@ button{
     }
 }
 
+@media (max-width: 768px) {
+    .woman-checking-img {
+        display: flex;
+        justify-content: center;
+    }
+    .confuse-img {
+        display: flex;
+        justify-content: center;
+    }
+}
+
 @media (min-width: 992px) {
     .quotes img {
         width: 90%;
@@ -645,6 +693,10 @@ button{
     .content .author {
         margin-top: 10px;
         font-size: 18px;
+    }
+
+    .todo-card-left-section > label{
+        margin-right: 15px;
     }
 }
 
@@ -695,14 +747,9 @@ button{
 }
 
 @media screen and (max-width: 750px) {
-    .todopage-container {
-        display: flex;
-        flex-direction: column-reverse;
-    }
-
-    .goals-todo-container {
-        display: flex;
-        flex-direction: column-reverse;
+    .hero > div {
+        padding-top: 40px;
+        padding-bottom: 40px;
     }
 }
 
