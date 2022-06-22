@@ -9,6 +9,9 @@ function crudTodo () {
     inputNewTaskElement.setAttribute('id', 'new-task')
     inputNewTaskElement.classList.add('input-new-task', 'mb-0')
     inputNewTaskElement.setAttribute('value', `${todoObject.task}`)
+    // inputNewTaskElement.addEventListener('focus', function () {
+    //   saveTodoBtn.setAttribute('disabled', '')
+    // })
 
     const todoTitleElement = document.createElement('p')
     todoTitleElement.classList.add('mb-0')
@@ -127,6 +130,7 @@ function crudTodo () {
       const todoObject = generateTodoObject()
 
       todos.push(todoObject)
+      totalDailyTodo.innerText = todos.length
       saveData()
       const todoListContainer = document.querySelector('.todo-list-container')
       todoListContainer.innerHTML = ''
@@ -136,11 +140,11 @@ function crudTodo () {
       }
 
       document.getElementById('todo-title-input').value = null
-      totalDailyTodo.innerText = todos.length
     })
 
     if (checkingStorage) {
       loadDataFromStorage()
+      totalDailyTodo.innerText = todos.length
     } else {
       alert('Browser kamu tidak mendukung local storage')
     }
