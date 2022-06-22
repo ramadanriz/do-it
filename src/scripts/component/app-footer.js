@@ -6,7 +6,7 @@ class AppFooter extends HTMLElement {
   render () {
     this.innerHTML = `
         <section class="">
-            <div class="container-fluid text-center text-md-start mt-5 text-altblack">
+            <div class="container-fluid text-center text-md-start mt-5 text-altblack px-4 px-sm-0">
                 <div class="row mt-3">
                     <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                         <h6 class="text-uppercase text-altpurple fw-bold">Do.it</h6>
@@ -30,11 +30,11 @@ class AppFooter extends HTMLElement {
                     <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-md-0 mb-4">
                         <h6 class="text-uppercase text-altpurple fw-bold">Pusat Bantuan</h6>
                         <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px"/>
-                        <div class="d-flex align-items-start">
+                        <div class="d-flex align-items-center justify-content-center justify-content-sm-start align-items-sm-start">
                             <div class="me-2 pt-1"><img src="web-icon/envelope.svg" alt="email logo" class="footer-icon" loading="lazy"></div>
                             <div>info@doit.com</div>
                         </div>
-                        <div class="d-flex align-items-start mt-3">
+                        <div class="d-flex align-items-center justify-content-center justify-content-sm-start align-items-sm-start mt-3">
                             <div class="me-2 pt-1"><img src="web-icon/phone.svg" alt="telepon logo" class="footer-icon" loading="lazy"></div>
                             <div>+62(887)469-38-09</div>
                         </div>

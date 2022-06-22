@@ -86,10 +86,10 @@ function main () {
             </div>
 
             <div class="todo-card-right-section d-flex justify-content-end align-items-center w-25">
-              <button class="todo-card-edit-btn me-2 d-flex align-items-center" aria-label="edit todo">
+              <button class="todo-card-edit-btn me-2 d-flex align-items-center justify-content-center" aria-label="edit todo">
                 <img src="web-icon/pen-to-square.svg" alt="icon edit todo" class="edit icon-todo" data-edit-todo=${_id}>
               </button>
-              <button class="todo-card-delete-btn d-flex align-items-center" aria-label="delete todo">
+              <button class="todo-card-delete-btn d-flex align-items-center justify-content-center" aria-label="delete todo">
                 <img src="web-icon/trash-can.svg" alt="icon hapus todo" class="delete icon-todo" data-delete-todo=${_id}>
               </button>
             </div>

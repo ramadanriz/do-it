@@ -51,7 +51,7 @@ function crudTodo () {
     deleteTodoIcon.classList.add('icon-todo')
 
     const editTodoBtn = document.createElement('button')
-    editTodoBtn.setAttribute('class', 'todo-card-edit-btn me-2 d-flex align-items-center')
+    editTodoBtn.setAttribute('class', 'todo-card-edit-btn me-2 d-flex align-items-center justify-content-center')
     editTodoBtn.setAttribute('aria-label', 'tombol edit todo harian')
     editTodoBtn.append(editTodoIcon)
     editTodoBtn.addEventListener('click', function () {
@@ -66,7 +66,7 @@ function crudTodo () {
     })
 
     const saveTodoBtn = document.createElement('button')
-    saveTodoBtn.setAttribute('class', 'todo-card-edit-btn me-2 d-flex align-items-center')
+    saveTodoBtn.setAttribute('class', 'todo-card-edit-btn me-2 d-flex align-items-center justify-content-center')
     saveTodoBtn.setAttribute('aria-label', 'tombol simpan perubahan todo harian')
     saveTodoBtn.append(saveTodoIcon)
     saveTodoBtn.addEventListener('click', function () {
@@ -91,7 +91,7 @@ function crudTodo () {
     })
 
     const deleteTodoBtn = document.createElement('button')
-    deleteTodoBtn.setAttribute('class', 'todo-card-delete-btn d-flex align-items-center')
+    deleteTodoBtn.setAttribute('class', 'todo-card-delete-btn d-flex align-items-center justify-content-center')
     deleteTodoBtn.setAttribute('aria-label', 'tombol hapus todo harian')
     deleteTodoBtn.append(deleteTodoIcon)
     deleteTodoBtn.addEventListener('click', function () {

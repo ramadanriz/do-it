@@ -1,13 +1,13 @@
 const heroTemplate = () => `
   <section class="hero">
-    <div class="container-fluid px-4 py-5 bg-altgray">
+    <div class="container-fluid px-5 bg-altgray">
       <div class="row flex-lg-row-reverse">
         <div class="col-lg-6">
           <img src="heroes-image.png" class="d-block mx-lg-auto img-fluid" alt="man casual using laptop" width="700" height="500">
         </div>
         <div class="col-lg-6 align-self-center">
           <h1 class="fw-bold lh-sm my-3 text-altblack">Capai Goals dan Kelola Tugas Harian Anda</h1>
-          <p class="lead mb-3">Do.it siap memfasilitasi anda agar dapat mengelola semua tugas harian dengan gampang, juga tetap fokus serta konsisten dalam proses mencapai goalsnya.</p>
+          <p class="lead mb-3">do.it siap memfasilitasi anda agar dapat mengelola semua tugas harian dengan gampang, juga tetap fokus serta konsisten dalam proses mencapai goals.</p>
           <div class="d-grid gap-2 d-md-flex justify-content-md-start">
             <a class="btn btn-altpurple btn-lg px-4 me-md-2" href="#/todo" role="button">Try it now</a>
           </div>
@@ -19,14 +19,14 @@ const heroTemplate = () => `
 
 const sectionFirst = () => `
   <section class="section-first my-5">
-      <div class="container mx-auto">
+      <div class="container mx-auto px-5 px-sm-0">
         <div class="row">
           <div class="col py-3">
             <h3 class="text-center text-altblack fw-bold">Mengapa Harus Punya 'Goals' Dalam Hidup?</h3>
           </div>
         </div>
         <div class="row justify-content-between align-items-center">
-          <div class="col-lg-5">
+          <div class="col-lg-5 confuse-img">
             <img src="confused-character.png" class="img-fluid" alt="Confused business character making important decision" loading="lazy" width="443" height="451">
           </div>
           <div class="col-lg-7">
@@ -38,16 +38,16 @@ const sectionFirst = () => `
 `
 
 const sectionDailyMotivation = () => `
-  <section class="quotes bg-altgray p-5">
+  <section class="quotes bg-altgray p-sm-5">
     <div class="content quote-container">
       <div class="bingkai-section d-flex justify-content-center align-items-center">
-        <div>
+        <!-- <div>
           <button type="button" class="generateQuote" aria-label="tombol previous quotes"><img src="web-icon/angle-left.svg" alt="tombol previous quotes"></button>
-        </div>
+        </div> -->
         <img src="quote.png" alt="bingkai quote" id="bingkai">
-        <div>
+        <!-- <div>
           <button type="button" class="generateQuote" aria-label="tombol next quotes"><img src="web-icon/angle-right.svg" alt="tombol next quotes"></button>
-        </div>
+        </div> -->
       </div>
 
       <div class="quote-section">
@@ -65,15 +65,15 @@ const sectionDailyMotivation = () => `
 
 const sectionThird = () => `
   <section class="section-third my-5">
-    <div class="container mx-auto">
+    <div class="container mx-auto px-4 px-sm-0">
       <div class="row">
-        <div class="col py-3 text-center">
+        <div class="col py-3 text-center px-4 px-sm-0">
           <h3 class="text-altblack fw-bold">Panduan Dalam Menetapkan Goals</h3>
           <span>Sumber: There is a S.M.A.R.T Way to Write Management’s Goals and Objective (George T. Doran, 1981)</span>
         </div>
       </div>
       <div class="row justify-content-between align-items-center flex-row-reverse">
-        <div class="col-lg-5">
+        <div class="col-lg-5 woman-checking-img">
           <img src="woman-checking.png" class="img-fluid" alt="woman checking giant check list" loading="lazy" width="451" height="323">
         </div>
         <div class="col-lg-7">
@@ -116,20 +116,20 @@ const sectionThird = () => `
 `
 
 const aboutPageTemplate = () => `
-<div class="container-fluid px-4 py-5">
-  <div class="row flex-lg-row">
-    <div class="col-lg-6">
-      <img src="logo/do-it-logo.png" class="d-block mx-lg-auto img-fluid img-thumbnail p-4" alt="do.it logo" loading="lazy">
-    </div>
-    <div class="col-lg-6">
-      <h2 class="fw-bold lh-sm text-altblack">Tentang Do.it</h2>
-      <p class="lead">Do.it merupakan aplikasi productivity berbasis website yang mengimplementasikan responsive web design dan progressive web apps sehingga dapat diakses melalui perangkat desktop maupun mobile. Kami mencoba menggabungkan beberapa fitur dari berbagai aplikasi productivity sejenis, seperti fitur membuat goals, focus timer, daily report, dan daily motivation.</p>
+  <div class="container-fluid p-5">
+    <div class="row flex-lg-row">
+      <div class="col-lg-6">
+        <img src="logo/do-it-logo.png" class="d-block mx-lg-auto img-fluid img-thumbnail p-4" alt="do.it logo" loading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h2 class="fw-bold lh-sm text-altblack mt-3 mt-lg-0">Tentang do.it</h2>
+        <p class="lead ">do.it merupakan aplikasi productivity berbasis website yang mengimplementasikan responsive web design dan progressive web apps sehingga dapat diakses melalui perangkat desktop maupun mobile. Kami mencoba menggabungkan beberapa fitur dari berbagai aplikasi productivity sejenis, seperti fitur membuat goals, daily todo list, focus timer, daily report, dan daily motivation.</p>
+      </div>
     </div>
   </div>
-</div>
   <div class="container-fluid mx-auto">
     <h2 class="fw-bold mb-2 text-center text-altblack py-5">Tim Kami</h2>
-    <div class="row pb-5 mb-4" id="team-list">
+    <div class="row pb-5 mb-4 mx-xl-5 mx-lg-3 mx-3" id="team-list">
     </div>
   </div>
 `
@@ -247,7 +247,7 @@ const todoPageTemplate = () => `
             <ul class="list-group list-group-light sidebar-list" id="goalsList"></ul>
           </div>
 
-          <div class="col-lg-8 pb-5 pt-4 px-0 px-sm-0">
+          <div class="col-lg-8 pb-5 pt-4 pt-md-3 px-0 px-sm-0">
             <h5 class="mb-3 mx-3">Daftar Kegiatan</h5>
             <div class="row row-cols-1 mx-3" id="todoList"></div>
           </div>
