@@ -6,7 +6,7 @@
 
 ![image.png](https://github.com/ramadanriz/do-it/blob/768e23b81bec4ae6f9bd770f9ae5f0478408c68f/screencapture.PNG)
 
-Web app ini dibangun secara progressive dengan menerapkan sifat offline capability dan installable. Berikut teknologi yang digunakan selasa proses pengembangan;
+Web app ini dibangun secara progressive dengan menerapkan sifat offline capability dan installable. Berikut teknologi yang digunakan selama proses pengembangan;
 
 1. ESLint sebagai linter ketika menuliskan kode JavaScript
 2. Menggunakan arsitektur Application Shell dalam pembuatan website
