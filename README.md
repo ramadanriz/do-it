@@ -31,7 +31,7 @@ Web app ini dibangun secara progressive dengan menerapkan sifat offline capabili
 ### Daily Motivation
 
 ![image.png](https://github.com/ramadanriz/do-it/blob/9e7c319420d50afda8385091c873ef834d86aa97/readme%20image/daily_motivation.PNG)
-
+![image.png](https://github.com/ramadanriz/do-it/blob/3011ed1a331c039dda4f0a76054d839b7d086e1f/readme%20image/daily_motivation_2.PNG)
 
 Fitur ini tersedia pada halaman beranda (homepage). Fitur ini dimaksudkan agar pengguna menjadi lebih termotivasi dalam menyelesaikan setiap kegiatannya dan bisa mencapai goalsnya tepat waktu. Selain pada homepage, fitur ini juga tersedia pada halaman todo yang berupa notifikasi. Jadi ketika pengguna membuka halaman todo, makan akan muncul notifikasi yang isinya berupa quotes.
 
@@ -39,7 +39,7 @@ Fitur ini tersedia pada halaman beranda (homepage). Fitur ini dimaksudkan agar p
 
 ### Focus Timer
 
-![image.png](https://github.com/ramadanriz/do-it/blob/9e7c319420d50afda8385091c873ef834d86aa97/readme%20image/timer_1.PNG) ![image.png](https://github.com/ramadanriz/do-it/blob/9e7c319420d50afda8385091c873ef834d86aa97/readme%20image/timer_2.PNG)
+![image.png](https://github.com/ramadanriz/do-it/blob/9e7c319420d50afda8385091c873ef834d86aa97/readme%20image/timer_1.PNG) ![image.png](https://github.com/ramadanriz/do-it/blob/9e7c319420d50afda8385091c873ef834d86aa97/readme%20image/timer_2.PNG) ![image.png](https://github.com/ramadanriz/do-it/blob/9e7c319420d50afda8385091c873ef834d86aa97/readme%20image/timer_3.PNG) ![image.png](https://github.com/ramadanriz/do-it/blob/9e7c319420d50afda8385091c873ef834d86aa97/readme%20image/timer_4.PNG)
 
 Focus timer dibuat berdasarkan teknik pomodoro, dimanan idenya adalah kita melakukan sebuah tugas atau pekerjaan harus fokus secara maksimal dalam jangka waktu yang disediakan. Secara default, waktu yang disediakan adalah 25 menit. Tetapi pengguna bisa melakukan kustomisasi dengan memanfaatkan tombol `setting` yang tersedia.
 
