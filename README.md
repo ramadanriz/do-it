@@ -26,6 +26,16 @@ Web app ini dibangun secara progressive dengan menerapkan sifat offline capabili
 
    `npm run build`
 
+## Fitur
+
+### Daily Motivation
+Fitur ini tersedia pada halaman beranda (homepage). Fitur ini dimaksudkan agar pengguna menjadi lebih termotivasi dalam menyelesaikan setiap kegiatannya dan bisa mencapai goalsnya tepat waktu. Selain pada homepage, fitur ini juga tersedia pada halaman todo yang berupa notifikasi. Jadi ketika pengguna membuka halaman todo, makan akan muncul notifikasi yang isinya berupa quotes.
+
+### Goals & Todo
+
+### Focus Timer
+Focus timer dibuat berdasarkan teknik pomodoro, dimanan idenya adalah kita melakukan sebuah tugas atau pekerjaan harus fokus secara maksimal dalam jangka waktu yang disediakan. Secara default, waktu yang disediakan adalah 25 menit. Tetapi pengguna bisa melakukan kustomisasi dengan memanfaatkan tombol `setting` yang tersedia.
+
 ## Resources
 
 - Visual Studio Code
