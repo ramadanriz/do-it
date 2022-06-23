@@ -39,7 +39,7 @@ Fitur ini tersedia pada halaman beranda (homepage). Fitur ini dimaksudkan agar p
 
 ### Focus Timer
 
-![image.png](https://github.com/ramadanriz/do-it/blob/677ab9c4b3df9767664ea6cb17f4863506a28387/readme%20image/timer_1.png) ![image.png](https://github.com/ramadanriz/do-it/blob/677ab9c4b3df9767664ea6cb17f4863506a28387/readme%20image/timer_2.png) ![image.png](https://github.com/ramadanriz/do-it/blob/677ab9c4b3df9767664ea6cb17f4863506a28387/readme%20image/timer_3.png) ![image.png](https://github.com/ramadanriz/do-it/blob/677ab9c4b3df9767664ea6cb17f4863506a28387/readme%20image/timer_4.png)
+![image.png](https://github.com/ramadanriz/do-it/blob/677ab9c4b3df9767664ea6cb17f4863506a28387/readme%20image/timer_1.png) ![image.png](https://github.com/ramadanriz/do-it/blob/fd00e7a4f4648b34e73c5cf438af08daa5cf482b/readme%20image/timer_2.PNG) ![image.png](https://github.com/ramadanriz/do-it/blob/fd00e7a4f4648b34e73c5cf438af08daa5cf482b/readme%20image/timer_3.PNG) ![image.png](https://github.com/ramadanriz/do-it/blob/fd00e7a4f4648b34e73c5cf438af08daa5cf482b/readme%20image/timer_4.PNG)
 
 Focus timer dibuat berdasarkan teknik pomodoro, dimanan idenya adalah kita melakukan sebuah tugas atau pekerjaan harus fokus secara maksimal dalam jangka waktu yang disediakan. Secara default, waktu yang disediakan adalah 25 menit. Tetapi pengguna bisa melakukan kustomisasi dengan memanfaatkan tombol `setting` yang tersedia.
 
