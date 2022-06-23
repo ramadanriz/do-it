@@ -53,20 +53,20 @@ Focus timer dibuat berdasarkan teknik pomodoro, dimanan idenya adalah kita melak
 
 Jika waktu default yang disediakan dirasa kurang atau terlalu lama, pengguna bisa melakukan kustomisasi dengan memanfaatkan tombol `setting` yang tersedia. Makan akan muncul form untuk mengisi lamanya waktu yang diinginkan.
 
-## Resources
+## Tools & Resources
 
-- Visual Studio Code
-- Postman
-- Javascript
-- Node.js
-- HTML
-- CSS
-- Bootstrap
-- SweetAlert
-- Webpack
-- FontAwesome
-- Google Fonts
-- Freepik
+- [Balsamiq Mockup](https://balsamiq.com/wireframes/) - Membuat mockup
+- [Postman](https://www.postman.com/) - Menguji API quotes
+- [Quotable](https://github.com/lukePeavey/quotable) - Quotes API untuk fitur daily motivation
+- [NPM](https://www.npmjs.com/) - Pengelolaan module/package pada proyek
+- [Webpack](https://webpack.js.org/) - Module bundler
+- [Bootstrap](https://getbootstrap.com/) - CSS framework
+- [SweetAlert](https://sweetalert2.github.io/) - Kustomisasi pop-up dan alert
+- [FontAwesome](https://fontawesome.com/) - Sumber icon gratis
+- [Google Fonts](https://fonts.google.com/) - Font modern dan menarik
+- [Freepik](https://www.freepik.com/) - Sumber gambar gratis
+- [Canva](https://www.canva.com/) - Membuat slide presentasi
+- [Pixabay](https://pixabay.com/) - Sumber audio untuk alarm timer
 
 ## Tim Kami
 
