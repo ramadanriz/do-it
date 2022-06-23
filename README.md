@@ -39,7 +39,7 @@ Fitur ini tersedia pada halaman beranda (homepage). Fitur ini dimaksudkan agar p
 
 ### Focus Timer
 
-![image.png](https://github.com/ramadanriz/do-it/blob/9e7c319420d50afda8385091c873ef834d86aa97/readme%20image/timer_1.PNG | height=551) ![image.png](https://github.com/ramadanriz/do-it/blob/9e7c319420d50afda8385091c873ef834d86aa97/readme%20image/timer_2.PNG | height=551) ![image.png](https://github.com/ramadanriz/do-it/blob/9e7c319420d50afda8385091c873ef834d86aa97/readme%20image/timer_3.PNG | height=551) ![image.png](https://github.com/ramadanriz/do-it/blob/9e7c319420d50afda8385091c873ef834d86aa97/readme%20image/timer_4.PNG | height=551)
+![image.png][[https://github.com/ramadanriz/do-it/blob/9e7c319420d50afda8385091c873ef834d86aa97/readme%20image/timer_1.PNG|height=400px]]
 
 Focus timer dibuat berdasarkan teknik pomodoro, dimanan idenya adalah kita melakukan sebuah tugas atau pekerjaan harus fokus secara maksimal dalam jangka waktu yang disediakan. Secara default, waktu yang disediakan adalah 25 menit. Tetapi pengguna bisa melakukan kustomisasi dengan memanfaatkan tombol `setting` yang tersedia.
 
