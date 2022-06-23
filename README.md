@@ -16,7 +16,7 @@ Web app ini dibangun secara progressive dengan menerapkan sifat offline capabili
 
 ## Scripts
 
-Beberapa *script* `npm` yang digunakan dalam *project* ini adalah;
+*script* `npm` yang digunakan dalam *project* ini adalah sebagai berikut:
 
 1. Starting development server
 
@@ -25,3 +25,18 @@ Beberapa *script* `npm` yang digunakan dalam *project* ini adalah;
 2. Build untuk distribusi production
 
    `npm run build`
+
+## Resources
+
+- Visual Studio Code
+- Postman
+- Javascript
+- Node.js
+- HTML
+- CSS
+- Bootstrap
+- SweetAlert
+- Webpack
+- FontAwesome
+- Google Fonts
+- Freepik
