@@ -30,7 +30,8 @@ Web app ini dibangun secara progressive dengan menerapkan sifat offline capabili
 
 ### Daily Motivation
 
-![image.png](https://github.com/ramadanriz/do-it/blob/17086a08a5d05ee10c8f8e78fc2736ad8cc644e3/readme%20image/daily_motivation%20(1).png) ![image.png](https://github.com/ramadanriz/do-it/blob/17086a08a5d05ee10c8f8e78fc2736ad8cc644e3/readme%20image/daily_motivation_2.png)
+![image.png](https://github.com/ramadanriz/do-it/blob/ad104faa5bae558d27f29757d5323b56660f4a55/readme%20image/daily_motivation.PNG)
+![image.png](https://github.com/ramadanriz/do-it/blob/ad104faa5bae558d27f29757d5323b56660f4a55/readme%20image/daily_motivation_2.PNG)
 
 Fitur ini tersedia pada halaman beranda (homepage). Fitur ini dimaksudkan agar pengguna menjadi lebih termotivasi dalam menyelesaikan setiap kegiatannya dan bisa mencapai goalsnya tepat waktu. Selain pada homepage, fitur ini juga tersedia pada halaman todo yang berupa notifikasi. Jadi ketika pengguna membuka halaman todo, makan akan muncul notifikasi yang isinya berupa quotes.
 
