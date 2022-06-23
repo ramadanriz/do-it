@@ -16,7 +16,7 @@ Web app ini dibangun secara progressive dengan menerapkan sifat offline capabili
 
 ## Scripts
 
-*script* `npm` yang digunakan dalam *project* ini adalah sebagai berikut:
+*Script* `npm` yang digunakan dalam *project* ini adalah sebagai berikut:
 
 1. Starting development server
 
@@ -40,3 +40,11 @@ Web app ini dibangun secara progressive dengan menerapkan sifat offline capabili
 - FontAwesome
 - Google Fonts
 - Freepik
+
+## Tim Kami
+
+### CPSG-35
+1. F2299A280 - Rio Ramadhan Bahtiar
+2. F2393A396 - Faiz Fachrudin 
+3. F2168E127 - Dwiky Darmawansyah
+4. F2209A174 - Rizky Ramadhani
