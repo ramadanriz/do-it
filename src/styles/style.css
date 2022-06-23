@@ -418,7 +418,7 @@ footer{
 }
 
 .photo-container{
-    height: 300px;
+    height: 280px !important;
     overflow: hidden;
 }
 
