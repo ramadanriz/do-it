@@ -36,8 +36,6 @@ function timer () {
         progress = null
         progressStart = 0
         playAlarm()
-        startCountdownButton.removeAttribute('disabled')
-        settingTimerButton.removeAttribute('disabled')
         timerContainer.classList.add('bg-altviolet', 'text-white')
       }
     }, speed)
@@ -49,10 +47,13 @@ function timer () {
     progressStart = 0
     minutesElement.innerText = localStorage.getItem('focusTimer') || 25
     secondsElement.innerText = '00'
+    startCountdownButton.removeAttribute('disabled')
+    settingTimerButton.removeAttribute('disabled')
     timerContainer.classList.remove('bg-altviolet', 'text-white')
   }
 
   function playAlarm () {
+    audio.loop = true
     audio.play()
   }
 
@@ -67,8 +68,6 @@ function timer () {
   })
 
   stopCountdownButton.addEventListener('click', () => {
-    startCountdownButton.removeAttribute('disabled')
-    settingTimerButton.removeAttribute('disabled')
     stopCountdown()
     stopAlarm()
   })
