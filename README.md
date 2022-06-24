@@ -58,6 +58,19 @@ Fitur ini ditujukan untuk mengelola goals dan kegiatan pengguna. Berikut adalah 
    <img src="https://github.com/ramadanriz/do-it/blob/4bcd2718a46dffcae8d365939855231edaa63e30/readme%20image/goals_6%20(1).png">
 </p>
 
+Pada setiap kegiatan, terdapat 3 fungsionalitas yaitu:<br>
+   * Tombol Selesai. Tombol ini bisa digunakan untuk menandai bahwa sebuah kegiatan telah selesai dilaksanakan. Setelah tombol ini ditekan, maka nama kegiatan akan otomatis tercoret.
+   <p align="center">
+      <img src="https://github.com/ramadanriz/do-it/blob/59edbfac58f451f2dd9b161fd200214bf93c62a0/readme%20image/goals_8.PNG">
+   </p>
+   
+   * Tombol Edit. Digunakan untuk mengubah nama kegiatan. Setelah menekan tombol ini, pengguna bisa mengganti nama kegiatan pada form yang sama saat menambahkan kegiatan baru
+   <p align="center">
+      <img src="https://github.com/ramadanriz/do-it/blob/59edbfac58f451f2dd9b161fd200214bf93c62a0/readme%20image/goals_9.PNG">
+      <img src="https://github.com/ramadanriz/do-it/blob/59edbfac58f451f2dd9b161fd200214bf93c62a0/readme%20image/goals_10.PNG">
+   </p>
+   * 
+
 ### Focus Timer
 
 <p align="center">
