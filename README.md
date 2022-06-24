@@ -52,7 +52,7 @@ Fitur ini ditujukan untuk mengelola goals dan kegiatan pengguna. Berikut adalah 
    <img src="https://github.com/ramadanriz/do-it/blob/0b9752a2c80fbf1ad1d8b694ca5f262e3aedcbd9/readme%20image/goals_2.png">
 </p>
 
-2. Setelah memiliki goals yang ingin dicapai, saatnya menambahkan aksi untuk mencapainya. Untuk menambahkan kegiatan pada goals, pilih terlebih dahulu goalsnya kemudian isi form kegiatan yang ada disampingnya. Setelah klik tombol `simpan`, pengguna bisa melihat daftar kegiatan dengan klik `nama goals` pada daftar goals.
+2. Setelah memiliki goals yang ingin dicapai, saatnya menambahkan aksi untuk mencapainya. Untuk menambahkan kegiatan pada goals, pilih terlebih dahulu goalsnya kemudian isi form kegiatan yang ada disampingnya. Setelah klik tombol `simpan`, pengguna bisa melihat daftar kegiatan dengan klik `nama goals` pada daftar goals. Pengguna juga dapat menghapus goals dengan klik logo `tong sampah`.
 <p align="center">
    <img src="https://github.com/ramadanriz/do-it/blob/4bcd2718a46dffcae8d365939855231edaa63e30/readme%20image/goals_5.png">
    <img src="https://github.com/ramadanriz/do-it/blob/4bcd2718a46dffcae8d365939855231edaa63e30/readme%20image/goals_6%20(1).png">
@@ -64,12 +64,20 @@ Pada setiap kegiatan, terdapat 3 fungsionalitas yaitu:<br>
       <img src="https://github.com/ramadanriz/do-it/blob/59edbfac58f451f2dd9b161fd200214bf93c62a0/readme%20image/goals_8.PNG">
    </p>
    
-   * Tombol Edit. Digunakan untuk mengubah nama kegiatan. Setelah menekan tombol ini, pengguna bisa mengganti nama kegiatan pada form yang sama saat menambahkan kegiatan baru
+   * Tombol Edit. Setelah menekan tombol ini, pengguna bisa mengganti nama kegiatan pada form yang sama saat menambahkan kegiatan baru
    <p align="center">
-      <img src="https://github.com/ramadanriz/do-it/blob/59edbfac58f451f2dd9b161fd200214bf93c62a0/readme%20image/goals_9.PNG">
-      <img src="https://github.com/ramadanriz/do-it/blob/59edbfac58f451f2dd9b161fd200214bf93c62a0/readme%20image/goals_10.PNG">
+      <img src="https://github.com/ramadanriz/do-it/blob/1efdc29a3ce411f6fd97e94e20a1282e7821b44f/readme%20image/goals_9.png">
    </p>
-   * 
+   
+   * Tombol Hapus. Sebelum pengguna benar-benar akan menghapus kegiatan, akan muncul pop-up konfirmasi.
+   <p align="center">
+      <img src="https://github.com/ramadanriz/do-it/blob/ed9853348c8cd668e9473f40a75e4c27ab50c282/readme%20image/goals_11.png">
+   </p>
+   
+3. Jika pengguna hanya ingin membuat daftar kegiatan harian tanpa adanya goals tertentu, bisa menggunakan fitur daily todo yang berada di sebelah kanan. Setiap nama kegiatan memiliki 3 fungsionalitas yang sama seperti goals todo, yaitu tombol selesai, tombol edit, dan tombol hapus.
+      <p align="center">
+         <img src="https://github.com/ramadanriz/do-it/blob/ed9853348c8cd668e9473f40a75e4c27ab50c282/readme%20image/daily_todo_1.PNG">
+      </p>
 
 ### Focus Timer
 
