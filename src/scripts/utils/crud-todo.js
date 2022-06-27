@@ -9,9 +9,6 @@ function crudTodo () {
     inputNewTaskElement.setAttribute('id', 'new-task')
     inputNewTaskElement.classList.add('input-new-task', 'mb-0')
     inputNewTaskElement.setAttribute('value', `${todoObject.task}`)
-    // inputNewTaskElement.addEventListener('focus', function () {
-    //   saveTodoBtn.setAttribute('disabled', '')
-    // })
 
     const todoTitleElement = document.createElement('p')
     todoTitleElement.classList.add('mb-0')
