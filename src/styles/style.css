@@ -58,7 +58,7 @@ app-bar .app-bar__brand {
    
 app-bar .app-bar__navigation {
     position: absolute;
-    top: 83px;
+    top: 81px;
     left: -180px;
     width: 150px;
     transition: all 0.3s;

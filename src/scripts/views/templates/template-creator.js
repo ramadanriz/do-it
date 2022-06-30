@@ -173,7 +173,7 @@ const timerPageTemplate = () => `
 `
 
 const todoPageTemplate = () => `
-  <div class="todopage-container mx-4 mt-md-5 mx-md-0">
+  <div class="todopage-container mx-4 mt-4 mt-md-5 mx-md-0">
     <div class="mx-0 mx-md-5">
       <div class="row my-3">
 
